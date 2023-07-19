@@ -1,32 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&display=swap");
 * {
   box-sizing: border-box;
 }
 body {
-  min-width: 325px;
-}
-
-nav,
-.footer {
+  min-width: 300px;
   font-family: "Playfair Display", serif;
-}
-@media screen and (max-width: 650px) {
-  nav {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-}
-nav .menu {
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
 }
 
 .main {
   color: black;
-  font-family: "Cormorant Garamond", serif;
   font-size: 1.2em;
 }
 .dark {
@@ -47,7 +29,7 @@ nav .menu {
 
 .about {
   margin-top: 2em;
-  font-size: 2.2em;
+  font-size: 2em;
   font-weight: 100;
 }
 .about a {
@@ -59,6 +41,21 @@ nav {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 800px) {
+  nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  nav .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  nav .logo {
+    font-size: 1.5em;
+  }
+}
 .logo {
   text-decoration: none;
   font-size: 2em;

@@ -57,7 +57,11 @@ const month = [
     a {
       color: black;
       text-decoration: none;
+      & .dark {
+        color: white;
+      }
     }
+
     &__preview {
       border-bottom: 1px solid;
       padding: 1em 0;

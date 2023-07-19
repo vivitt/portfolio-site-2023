@@ -55,11 +55,7 @@ const month = [
   &__feed {
     list-style-type: none;
     a {
-      color: black;
       text-decoration: none;
-      & .dark {
-        color: white;
-      }
     }
 
     &__preview {

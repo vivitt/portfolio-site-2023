@@ -44,7 +44,7 @@ const { frontmatter } = useData();
 
     <span class="project__findmore">
       <img
-        src="../../public/github-mark.svg"
+        src="/github-mark.png"
         height="50"
         width="50"
         role="icon"

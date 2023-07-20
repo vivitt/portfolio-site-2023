@@ -7,7 +7,10 @@ const { site, frontmatter, page } = useData();
 <template>
   <div class="main">
     <nav>
-      <a class="logo" href="/">Hi, I am Viviana ⚡️</a>
+      <a class="logo" href="/"
+        >Hi, I am Viviana
+        <span role="img" aria-label="High Voltage emoji">⚡️</span></a
+      >
       <div class="menu">
         <a
           :class="{ active: frontmatter.title === 'Projects' }"

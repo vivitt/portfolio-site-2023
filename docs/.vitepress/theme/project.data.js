@@ -15,6 +15,7 @@ export default createContentLoader("projects/projects/*.md", {
         date: frontmatter.date,
         id: frontmatter.id,
         imageUrl: frontmatter.imageUrl,
+        alt: frontmatter.alt,
         stack: frontmatter.stack,
         deploy: frontmatter.deploy,
         github: frontmatter.github,

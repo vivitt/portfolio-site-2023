@@ -15,12 +15,13 @@ const { frontmatter } = useData();
           date,
           excerpt,
           imageUrl,
+          alt,
           deploy,
           github,
           stack,
         } of projects"
       >
-        <img :src="imageUrl" />
+        <img :src="imageUrl" :alt="alt" />
 
         <h2 class="project__feed__preview-title">
           <a>{{ title }}</a>

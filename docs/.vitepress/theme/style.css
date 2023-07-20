@@ -106,6 +106,6 @@ nav .menu a:hover {
   color: rgb(72, 48, 226);
 }
 .dark .footer a:hover,
-.dark nav a:hover {
+.dark .menu a:hover {
   color: slateblue;
 }

@@ -14,7 +14,7 @@ I am passionate <span role='img' aria-label='heart'>💗</span> about developing
 </p>
 
 <p>
-During the last months, I have worked as a Software Engineering intern at Wikimedia Foundation. See <a href="https://github.com/wikimedia/mediawiki-extensions-GrowthExperiments/commits?author=vivitt" target='_blank'>my contributions</a> or <a href="">download my CV</a>.
+During the last months, I have worked as a Software Engineering intern at Wikimedia Foundation. See <a href="https://github.com/wikimedia/mediawiki-extensions-GrowthExperiments/commits?author=vivitt" target='_blank'>my contributions</a> or <a href="/cv-viviana-yanez-2023.pdf" target="_blank" >download my CV</a>.
 </p>
 I love discovering and learning new technologies. Sometimes I <a href="/blog/">blog</a> <span role='img' aria-label='notebook'>📓</span> about my interest or what I do.
 <p>

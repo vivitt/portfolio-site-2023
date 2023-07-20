@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from "vue";
-import { data as posts } from "../.vitepress/theme/posts.data.js";
+import { data as posts } from "./posts.data.js";
 import { useData } from "vitepress";
 const { frontmatter } = useData();
 

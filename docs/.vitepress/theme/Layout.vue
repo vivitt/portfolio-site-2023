@@ -1,7 +1,7 @@
 <script setup>
 import { useData } from "vitepress";
-import Footer from "../../components/Footer.vue";
-import NotFound from "../../components/NotFound.vue";
+import Footer from "./Footer.vue";
+import NotFound from "./NotFound.vue";
 const { site, frontmatter, page } = useData();
 </script>
 <template>
@@ -20,6 +20,8 @@ const { site, frontmatter, page } = useData();
         <a :class="{ active: frontmatter.title === 'Blog' }" href="/blog/"
           >/blog</a
         >
+        <a href="https://github.com/vivitt" target="_blank">/GitHub</a>
+
         <a href="https://www.linkedin.com/in/viviana-yanez/" target="_blank"
           >/LinkedIn</a
         >

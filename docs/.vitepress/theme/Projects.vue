@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from "vue";
-import { data as projects } from "../.vitepress/theme/project.data.js";
+import { data as projects } from "./project.data.js";
 import { useData } from "vitepress";
 const { frontmatter } = useData();
 </script>

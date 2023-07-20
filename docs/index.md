@@ -7,7 +7,7 @@ home: true
 I am a frontend developer, with a background in audiovisual and visual arts.
 </p>
 <p>
-I am a collaborative person, enjoy teamwork working, and can quickly adapt to new environments and tasks. <span role='img' aria-label='eyes'>👀</span> I am keen on details and empathize with the user perspective.
+I am a collaborative person who can quickly adapt to new environments and tasks. <span role='img' aria-label='eyes'>👀</span> I am keen on details and empathize with the user perspective.
 </p>
 <p>
 I am passionate about developing accessible and inclusive experiences along the web <span role='img' aria-label='heart'>💗</span>.

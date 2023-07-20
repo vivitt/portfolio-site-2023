@@ -10,7 +10,7 @@
     </div>
     <div class="footer__atribution">
       Viviana Yanez 2023 | Made with
-      <span role="image" aria-label="heart">♥︎</span>
+      <span role="img" aria-label="heart">♥︎</span>
     </div>
   </div>
 </template>

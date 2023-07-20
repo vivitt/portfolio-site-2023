@@ -5,6 +5,7 @@ export { data };
 
 export default createContentLoader("projects/projects/*.md", {
   excerpt: true,
+  includeSrc: true,
   transform(raw) {
     return raw
       .map(({ url, frontmatter, excerpt }) => ({
@@ -15,6 +16,8 @@ export default createContentLoader("projects/projects/*.md", {
         id: frontmatter.id,
         imageUrl: frontmatter.imageUrl,
         stack: frontmatter.stack,
+        deploy: frontmatter.deploy,
+        github: frontmatter.github,
       }))
       .sort((a, b) => a.id - b.id);
   },

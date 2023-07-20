@@ -4,7 +4,7 @@ home: true
 
 <div class="about">
 <p>
-I am a software developer, with a background in audiovisual and visual arts.
+I am a frontend developer, with a background in audiovisual and visual arts.
 </p>
 <p>
 I am a collaborative person, enjoy teamwork working, and can quickly adapt to new environments and tasks. <span role='img' aria-label='eyes'>👀</span> I am keen on details and empathize with the user perspective.

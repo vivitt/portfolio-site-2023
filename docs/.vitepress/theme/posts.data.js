@@ -13,7 +13,8 @@ export default createContentLoader("blog/posts/*.md", {
         excerpt,
         date: frontmatter.date,
         id: frontmatter.id,
+        link: frontmatter.link,
       }))
-      .sort((a, b) => a.id - b.id);
+      .sort((a, b) => b.id - a.id);
   },
 });

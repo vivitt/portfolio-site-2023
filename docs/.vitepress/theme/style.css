@@ -31,6 +31,9 @@ nav a,
 nav .menu a:hover {
   color: slateblue;
 }
+.menu .active {
+  color: rgb(72, 48, 226);
+}
 
 @media screen and (max-width: 800px) {
   nav {
@@ -38,13 +41,17 @@ nav .menu a:hover {
     justify-content: flex-start;
     align-items: flex-start;
   }
+
+  nav .logo {
+    font-size: 1.5em;
+  }
   nav .menu {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
   }
-  nav .logo {
-    font-size: 1.5em;
+  nav .menu a {
+    padding: 0.2em;
   }
 }
 .logo {
@@ -65,11 +72,13 @@ nav .menu a:hover {
   max-width: 80%;
   margin: auto;
 }
-.blog div > a {
+.blog div > a,
+.projects div > a {
   color: rgb(72, 48, 226);
 }
 
-.blog div > a:hover {
+.blog div > a:hover,
+.projects div > a:hover {
   color: rgb(188, 178, 255);
 }
 
@@ -87,10 +96,13 @@ nav .menu a:hover {
   color: white;
 }
 .dark .footer a,
-.dark .blog div > a {
+.dark .blog div > a,
+.dark .projects div > a,
+.dark .menu .active {
   color: rgb(188, 178, 255);
 }
-.dark .blog div > a:hover {
+.dark .blog div > a:hover,
+.dark .projects div > a:hover {
   color: rgb(72, 48, 226);
 }
 .dark .footer a:hover,

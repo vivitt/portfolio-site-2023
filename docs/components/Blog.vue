@@ -24,7 +24,7 @@ const month = [
     <ul class="blog__feed">
       <li
         class="blog__feed__preview"
-        v-for="{ title, url, date, excerpt } of posts"
+        v-for="{ title, url, date, excerpt, link } of posts"
       >
         <span>{{
           `${month[Number(date.slice(5, 7)) - 1]} ${date.slice(
@@ -34,7 +34,7 @@ const month = [
         }}</span>
         <article>
           <h2 class="blog__feed__preview-title">
-            <a :href="url">{{ title }}</a>
+            <a :href="link">{{ title }}</a>
           </h2>
           <div
             v-if="excerpt"
@@ -43,7 +43,14 @@ const month = [
           ></div>
 
           <div class="blog__feed__preview-link">
-            <a aria-label="read more" :href="url">Read more...</a>
+            <a
+              v-if="link !== ''"
+              aria-label="read more"
+              :href="link"
+              target="_blank"
+              >Read more...</a
+            >
+            <a v-else aria-label="read more" :href="url">Read more...</a>
           </div>
         </article>
       </li>

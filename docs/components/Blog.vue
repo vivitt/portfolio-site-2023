@@ -43,7 +43,7 @@ const month = [
           ></div>
 
           <div class="blog__feed__preview-link">
-            <a class="link" aria-label="read more" :href="url">Read more...</a>
+            <a aria-label="read more" :href="url">Read more...</a>
           </div>
         </article>
       </li>

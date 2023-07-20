@@ -28,6 +28,10 @@ export default {};
     padding: 1em 0;
     a {
       text-decoration: none;
+      color: slateblue;
+      :hover {
+        color: rgb(188, 178, 255);
+      }
     }
   }
   &__atribution {

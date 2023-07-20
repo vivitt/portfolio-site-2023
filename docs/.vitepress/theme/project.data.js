@@ -3,7 +3,7 @@ import { createContentLoader } from "vitepress";
 const data = {};
 export { data };
 
-export default createContentLoader("blog/posts/*.md", {
+export default createContentLoader("projects/projects/*.md", {
   excerpt: true,
   transform(raw) {
     return raw
@@ -13,6 +13,8 @@ export default createContentLoader("blog/posts/*.md", {
         excerpt,
         date: frontmatter.date,
         id: frontmatter.id,
+        imageUrl: frontmatter.imageUrl,
+        stack: frontmatter.stack,
       }))
       .sort((a, b) => a.id - b.id);
   },

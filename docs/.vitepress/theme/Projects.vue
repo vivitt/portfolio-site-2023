@@ -21,7 +21,7 @@ const { frontmatter } = useData();
           stack,
         } of projects"
       >
-        <img :src="imageUrl" :alt="alt" />
+        <img :src="imageUrl" :alt="alt" height="430" width="430" />
 
         <h2 class="project__feed__preview-title">
           <a>{{ title }}</a>
@@ -81,9 +81,6 @@ const { frontmatter } = useData();
       @media screen and (max-width: 800px) {
         max-width: 70%;
         padding: auto;
-      }
-      img {
-        max-width: 100%;
       }
       &-title {
         font-size: 2em;

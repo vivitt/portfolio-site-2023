@@ -44,13 +44,7 @@ const { frontmatter } = useData();
     </ul>
 
     <span class="project__findmore">
-      <img
-        src="/github-mark.png"
-        height="50"
-        width="50"
-        role="icon"
-        alt="GitHub icon"
-      />
+      <img src="/github-mark.png" height="50" width="50" alt="GitHub icon" />
       <p>
         Find more on
         <a href="https://github.com/vivitt" target="_blank"

@@ -2,6 +2,10 @@
 home: true
 ---
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
 <div class="about">
 <p>
 I am a frontend developer, with a background in audiovisual and visual arts.

@@ -1,11 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@font-face {
+  font-family: "Playfair Display";
+  src: url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+  font-display: fallback;
+}
+
 * {
   box-sizing: border-box;
 }
 body {
   min-width: 300px;
   font-family: "Playfair Display", serif;
-  font-display: fallback;
 }
 
 .main {

@@ -1,7 +1,23 @@
 @font-face {
   font-family: "Playfair Display";
-  src: url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-  font-display: fallback;
+  font-weight: 400;
+  src: url('/assets/fonts/playfairdisplay-regular-webfont.woff2') format('woff2'),
+  url('/assets/fonts/playfairdisplay-regular-webfont.woff') format('woff')
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-style: italic;
+  src: url('/assets/fonts/playfairdisplay-italic-webfont.woff2') format('woff2'),
+  url('/assets/fonts/playfairdisplay-italic-webfont.woff') format('woff')
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 900;
+  src: url('/assets/fonts/playfairdisplay-bold-webfont.woff2') format('woff2'),
+  url('/assets/fonts/playfairdisplay-bold-webfont.woff') format('woff')
 }
 
 * {
@@ -38,6 +54,9 @@ nav a {
 }
 nav div {
   flex-grow: 4;
+}
+nav ul {
+  list-style: none;
 }
 .about a,
 nav a,

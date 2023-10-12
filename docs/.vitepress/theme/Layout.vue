@@ -1,7 +1,7 @@
 <script setup>
 import { useData } from "vitepress";
-import Footer from "./Footer.vue";
-import NotFound from "./NotFound.vue";
+import Footer from "./FooterTemplate.vue";
+import NotFound from "./NotFoundTemplate.vue";
 const { site, frontmatter, page } = useData();
 </script>
 <template>

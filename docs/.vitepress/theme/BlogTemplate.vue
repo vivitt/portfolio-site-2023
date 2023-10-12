@@ -1,22 +1,23 @@
 <script setup>
-import { computed } from "vue";
-import { data as posts } from "./posts.data.js";
-import { useData } from "vitepress";
-const { frontmatter } = useData();
+
+// eslint-disable-next-line import/extensions
+import { data as posts } from './posts.data.js';
+
+// const { frontmatter } = useData();
 
 const month = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
 ];
 </script>
 <template>
@@ -24,7 +25,8 @@ const month = [
     <ul class="blog__feed">
       <li
         class="blog__feed__preview"
-        v-for="{ title, url, date, excerpt, link } of posts"
+        v-for="{ id, title, url, date, excerpt, link } of posts"
+        :key="{id}"
       >
         <span>{{
           `${month[Number(date.slice(5, 7)) - 1]} ${date.slice(

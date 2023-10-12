@@ -5,7 +5,7 @@ export default defineConfig({
   lang: 'en-US',
   title: 'Viviana Yanez',
   titleTemplate: 'Frontend Developer',
-  description: 'I am Viviana Yanez (aka Vivi). I am a frontend developer a visual and audiovisual communication background. I create and build accessible and inclusive user interfaces to provide users with enjoyable web experiences.',
+  description: 'I am Viviana Yanez (aka Vivi Yañez). I am a creative visual and audiovisual communicator who transitioned to software development. I create and build accessible and inclusive user interfaces to deliver enjoyable web experiences.',
   cleanUrls: true,
   themeConfig: {
     socialLinks: [

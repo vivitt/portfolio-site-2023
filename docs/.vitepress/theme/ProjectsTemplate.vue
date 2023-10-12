@@ -1,8 +1,8 @@
 <script setup>
-import { computed } from "vue";
-import { data as projects } from "./project.data.js";
-import { useData } from "vitepress";
-const { frontmatter } = useData();
+// eslint-disable-next-line import/extensions
+import { data as projects } from './project.data.js';
+
+// const { frontmatter } = useData();
 </script>
 <template>
   <div class="project">
@@ -10,9 +10,8 @@ const { frontmatter } = useData();
       <li
         class="project__feed__preview"
         v-for="{
+          id,
           title,
-          url,
-          date,
           excerpt,
           imageUrl,
           alt,
@@ -20,6 +19,7 @@ const { frontmatter } = useData();
           github,
           stack,
         } of projects"
+        :key="{id}"
       >
         <img :src="imageUrl" :alt="alt" height="430" width="430" />
 
@@ -44,7 +44,7 @@ const { frontmatter } = useData();
     </ul>
 
     <span class="project__findmore">
-      <img src="/github-mark.png" height="50" width="50" alt="GitHub icon" />
+      <img src="/assets/github-mark.png" height="50" width="50" alt="GitHub icon" />
       <p>
         Find more on
         <a href="https://github.com/vivitt" target="_blank"

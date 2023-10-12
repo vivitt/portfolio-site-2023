@@ -1,9 +1,9 @@
-import { createContentLoader } from "vitepress";
+import { createContentLoader } from 'vitepress';
 
 const data = {};
 export { data };
 
-export default createContentLoader("projects/projects/*.md", {
+export default createContentLoader('projects/projects/*.md', {
   excerpt: true,
   includeSrc: true,
   transform(raw) {

@@ -17,7 +17,7 @@ watch(isDarkMode, (() => {
 
 </script>
 <template>
-  <div class="main" ref="main">
+  <div class="main">
     <nav>
       <a class="logo" href="/" >
         Hi, I am Viviana

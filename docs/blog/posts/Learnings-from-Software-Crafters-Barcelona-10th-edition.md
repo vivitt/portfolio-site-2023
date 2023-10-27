@@ -3,7 +3,7 @@ title: ""
 date: 2023-10-27
 author: Viviana Yanez
 id: 5
-link: ./posts/learnings-from-Software-Crafters-Barcelona-10th-edition
+link: ""
 
 ---
 # Some of my learnings from the Software Crafters Barcelona 10th edition

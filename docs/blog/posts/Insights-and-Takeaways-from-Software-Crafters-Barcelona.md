@@ -6,7 +6,7 @@ id: 5
 link: ""
 
 ---
-# Software Crafters Barcelona: attending a tech event
+# Some insights and takeaways from Software Crafters Barcelona 2023
 I had the opportunity to attend the Software Crafters Barcelona event last weekend. It was the 10th edition but for me, it was my first in-person tech event and I've collected some notes, learnings, and thoughts to share about my experience.
 
 ---

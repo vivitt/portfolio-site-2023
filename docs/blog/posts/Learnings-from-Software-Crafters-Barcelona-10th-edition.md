@@ -13,31 +13,31 @@ I had the opportunity to attend the Software Crafters Barcelona event last weeke
 
 ### Junior 2.0
 
-The event started on Friday with an open-space discussion. I joined a group talking about a subject proposed by Concha Asensio: the challenges of transitioning to the tech field bringing years of experience from another field, which is my current situation.
+The event started on Friday with an open-space discussion. I joined a group talking about a subject proposed by Concha Asensio: the challenges of transitioning to tech bringing years of experience from another field, which is my current situation.
 
 The conversation went around how to manage expectations when you are a junior again and your impact is not the one that you used to have in your previous field. How is it possible in this scenario to leverage all your existing skills to provide real value to your team?
 
-As a takeaway from this conversation:
+Some takeaways from this conversation:
 
-strive for a safe space where you can have open conversations with managers and mentors. Is key to distinguishing between expectations from your manager and team and the ones that you are setting
+- strive for a safe space where you can have open conversations with managers and mentors. Is key to distinguishing between expectations from your manager and team and the ones that you are setting
 
-be proactive and look for opportunities where your existing skills can be needed
+- be proactive and look for opportunities where your existing skills can be needed
 
-stay open to learning and sharing what you know, it can be useful for others
+- stay open to learning and sharing what you know, it can be useful for others
 
-### Making an impact at any level in your career
+### Making an impact at any point in your career
 
 During day two, the day of talks, Maria Calzada shared cool insights on how to have an impact whatever it is your level.
 
 She talked about three pillars that are the basis of making a meaningful impact and shared examples of how her team adopted these practices:
 
-mindset: everything goes through our mind and is key to choosing from where we want to approach what we face
+- Mindset: everything goes through our mind and is key to choosing from where we want to approach what we face.
 
-measurement: the only way to keep improving is to measure
+- Measurement: is the only way to keep improving.
 
-teamwork: be able to show vulnerability and keep egos in place
+- Teamwork: be able to show vulnerability and keep egos in place.
 
-One of the things that I found useful was the idea of the responsibility ladder, which you can use to figure out where are you standing in a specific situation:
+My favourite moments from this talks include a phrase  One of the things that I found useful was the idea of the responsibility ladder, which you can use to figure out where are you standing in a specific situation:
 
 ### Ideation to integration
 
@@ -45,7 +45,7 @@ This was a workshop session by Daniel Phillips, Head of Engineering at Trainline
 
 We discussed the importance of thinking far-off coding to adopt a problem-solving-focused approach, as well as embracing collaboration and the importance of setting from the beginning on the same page with all the team members.
 
-During the session, one of the things we talked about was the importance of having clear acceptance criteria defined upfront to start working on a specific requirement. Well-defined acceptance criteria will provide clear guidelines to developers but also will align the expectations and smooth communication among the team because it will reduce misinterpretations of the requirements. It will also contribute to having a clear basis to test against, as it will be clear when a product or feature is working as expected.
+One of the things we talked about during this workshop, was the importance of having clear acceptance criteria defined upfront to start working on a specific requirement. Well-defined acceptance criteria will provide clear guidelines to developers but also will align the expectations and smooth communication among the team because it will reduce misinterpretations of the requirements. It will also contribute to having a clear basis to test against, as it will be clear when a product or feature is working as expected.
 
 ### Pair programming
 

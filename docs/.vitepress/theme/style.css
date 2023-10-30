@@ -10,23 +10,34 @@
 body {
   min-width: 300px;
   font-family: "Playfair Display", serif;
+  font-size: 1.2em;
 }
 
 .main {
   color: black;
-  font-size: 1.3em;
 }
 
 .about {
   margin-top: 2em;
+  font-weight: 80;
   font-size: 2em;
-  font-weight: 100;
 }
 
 nav {
-  font-size: 1.2em;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  font-size: 1.5em;
+}
+nav img {
+  max-width: 60%;
+  width: auto;
+}
+nav a {
+  flex-grow: 1;
+}
+nav div {
+  flex-grow: 4;
 }
 .about a,
 nav a,
@@ -40,16 +51,18 @@ nav .menu a:hover {
   color: rgb(72, 48, 226);
 }
 
+
 @media screen and (max-width: 800px) {
   nav {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
   }
-
-  nav .logo {
-    font-size: 1.5em;
+  nav img {
+    max-width: 80%;
+    width: auto;
   }
+
   nav .menu {
     flex-direction: column;
     align-items: flex-start;
@@ -59,23 +72,20 @@ nav .menu a:hover {
     padding: 0.2em;
   }
 }
-.logo {
-  text-decoration: none;
-  font-size: 2em;
-  flex-grow: 2;
-}
+
 .menu {
   display: flex;
   align-items: flex-end;
-  flex-grow: 2;
   justify-content: space-evenly;
 }
 .menu a {
   text-decoration: none;
+  margin-inline-start: 5px;
 }
 .content {
-  max-width: 80%;
+  max-width: 70%;
   margin: auto;
+  margin-top: 2em;
 }
 .blog div > a,
 .projects div > a {

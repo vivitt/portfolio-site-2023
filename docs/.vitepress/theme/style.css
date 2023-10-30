@@ -74,18 +74,18 @@ nav .menu a:hover {
 
 @media screen and (max-width: 800px) {
   nav {
-    flex-direction: column;
+  
     justify-content: flex-start;
     align-items: flex-start;
   }
   nav img {
-    max-width: 80%;
+    max-width: 70%;
     width: auto;
   }
 
   nav .menu {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: flex-start;
   }
   nav .menu a {
@@ -95,6 +95,17 @@ nav .menu a:hover {
     margin-top: 5em;
     font-weight: 400;
     font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 500px) {
+  nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  nav img {
+    max-width: 80%;
+    width: auto;
   }
 }
 

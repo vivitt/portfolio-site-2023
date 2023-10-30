@@ -4,13 +4,13 @@ home: true
 
 <div class="about">
 <p>
-I am a creative frontend developer, with a background in audiovisual and visual communication 👩🏽‍💻.
+I am a creative frontend developer, with a background in audiovisual and visual communication <span role='img' aria-label='woman technologist'>👩🏽‍💻</span>.
 </p>
 <p>
 I am passionate <span role='img' aria-label='heart'>💗</span> about developing enjoyable experiences that make the web more accessible and inclusive.
 </p>
 <p>
-I am a collaborative team player <span role='img' aria-label='ball'>⚽️</span> who can quickly adapt to new environments and tasks. I am keen <span role='img' aria-label='eyes'>👀</span> on design details and empathize with the user's perspective.
+I am a collaborative team player <span role='img' aria-label='soccer ball'>⚽️</span> who can quickly adapt to new environments and tasks. I am keen <span role='img' aria-label='eyes'>👀</span> on design details and empathize with the user's perspective.
 </p>
 <p>
 During the last few months, I have worked as a Software Engineering intern at Wikimedia Foundation. See <a href="https://github.com/wikimedia/mediawiki-extensions-GrowthExperiments/commits?author=vivitt" target='_blank'>my contributions</a> or <a href="/cv-viviana-yanez-2023.pdf" target="_blank" >download my CV</a>.

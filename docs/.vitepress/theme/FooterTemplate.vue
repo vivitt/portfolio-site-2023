@@ -19,7 +19,7 @@
 .footer {
   text-align: center;
   padding: 1em 0;
-  margin-top: 5em;
+  margin-top: 10em;
   &__menu {
     display: flex;
     justify-content: space-evenly;
@@ -27,7 +27,7 @@
     a {
       text-decoration: none;
       color: slateblue;
-      :hover {
+      &:hover {
         color: rgb(188, 178, 255);
       }
     }

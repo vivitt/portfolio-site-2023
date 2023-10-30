@@ -1,8 +1,9 @@
 <script setup>
-import { useData } from "vitepress";
-import Footer from "./FooterTemplate.vue";
-import NotFound from "./NotFoundTemplate.vue";
-const { site, frontmatter, page } = useData();
+import { useData } from 'vitepress';
+import FooterTemplate from './FooterTemplate.vue';
+import NotFound from './NotFoundTemplate.vue';
+
+const { frontmatter, page } = useData();
 </script>
 <template>
   <div class="main">
@@ -30,6 +31,6 @@ const { site, frontmatter, page } = useData();
       <NotFound v-if="page.isNotFound" />
       <Content v-else />
     </div>
-    <Footer></Footer>
+    <footer-template></footer-template>
   </div>
 </template>

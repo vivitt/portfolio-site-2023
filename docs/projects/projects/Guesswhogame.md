@@ -3,7 +3,7 @@ title: "Guess Who game"
 date: 2022-06-13
 author: Viviana Yanez
 id: 4
-imageUrl: "/assets/111.jpg"
+imageUrl: "/assets/guesswhogame.png"
 alt: "Two screenshots of the Guess Who game application"
 stack: React | MaterialUI
 deploy: "https://guess-who-game.vercel.app/"

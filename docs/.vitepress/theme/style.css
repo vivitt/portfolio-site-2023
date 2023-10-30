@@ -34,9 +34,9 @@ body {
 }
 
 .about {
-  margin-top: 2em;
-  font-weight: 80;
-  font-size: 2em;
+  margin-top: 5em;
+  font-weight: 400;
+  font-size: 1.5em;
 }
 
 nav {
@@ -89,6 +89,11 @@ nav .menu a:hover {
   }
   nav .menu a {
     padding: 0.2em;
+  }
+  .about {
+    margin-top: 5em;
+    font-weight: 400;
+    font-size: 1.2em;
   }
 }
 

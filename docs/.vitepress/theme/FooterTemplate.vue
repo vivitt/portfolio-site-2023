@@ -19,6 +19,7 @@
 .footer {
   text-align: center;
   padding: 1em 0;
+  margin-top: 5em;
   &__menu {
     display: flex;
     justify-content: space-evenly;

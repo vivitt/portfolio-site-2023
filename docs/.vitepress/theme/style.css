@@ -70,8 +70,14 @@ nav .menu a:hover {
 .menu .active {
   color: rgb(72, 48, 226);
 }
-
-
+.blog__illustration {
+ display: flex;
+ justify-content: center;
+ width: 100%;
+}
+.blog__illustration img {
+width: 80%
+}
 @media screen and (max-width: 800px) {
   nav {
   

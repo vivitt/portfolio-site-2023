@@ -6,59 +6,60 @@ id: 5
 link: ""
 
 ---
-# Some of my learnings from the Software Crafters Barcelona 10th edition
-I had the opportunity to attend the Software Crafters Barcelona event last weekend. It was the 10th edition but for me, it was my first in-person tech event so I wanted to share some of my learnings and thoughts from this experience.
+# Software Crafters Barcelona: attending a tech event
+I had the opportunity to attend the Software Crafters Barcelona event last weekend. It was the 10th edition but for me, it was my first in-person tech event and I've collected some notes, learnings, and thoughts to share about my experience.
 
 ---
 
 ### Junior 2.0
 
-The event started on Friday with an open-space discussion. I joined a group talking about a subject proposed by Concha Asensio: the challenges of transitioning to tech bringing years of experience from another field, which is my current situation.
+The event started on Friday with an open-space discussion. I joined a group that was discusing a subject proposed by [Concha Asensio](https://twitter.com/conchaasensio): the challenges of transitioning to tech with years of experience in another field, which is my current situation.
 
-The conversation went around how to manage expectations when you are a junior again and your impact is not the one that you used to have in your previous field. How is it possible in this scenario to leverage all your existing skills to provide real value to your team?
+The conversation went around how to manage expectations being a junior again and having an impact that is not the same that you used to have in your previous field. How is it possible in this scenario to leverage all your existing skills to provide real value to your team?
 
-Some takeaways from this conversation:
+Some highlights from this conversation:
 
-- strive for a safe space where you can have open conversations with managers and mentors. Is key to distinguishing between expectations from your manager and team and the ones that you are setting
-
-- be proactive and look for opportunities where your existing skills can be needed
-
-- stay open to learning and sharing what you know, it can be useful for others
+- Strive for a safe space where open conversations with managers and mentors can happen. It is essential to distinguishing between expectations from your manager and team and the ones that you are setting for yourself.
+- Be proactive and look for any opportunity for your existing skills from other fields to be applied.
+- Stay open to sharing what you know.
 
 ### Making an impact at any point in your career
 
-During day two, the day of talks, Maria Calzada shared cool insights on how to have an impact whatever it is your level.
+During day two, the day of talks, [Maria Calzada](https://twitter.com/m4riacg) shared valuable insights on how to make an impact regardless of your level.
 
 She talked about three pillars that are the basis of making a meaningful impact and shared examples of how her team adopted these practices:
-
-- Mindset: everything goes through our mind and is key to choosing from where we want to approach what we face.
-
-- Measurement: is the only way to keep improving.
-
+- Mindset: everything goes through our mind. 
+- Measurement: it is necesary measure to improve, and it is necesary improve to avoid degrading.
 - Teamwork: be able to show vulnerability and keep egos in place.
 
-My favourite moments from this talks include a phrase  One of the things that I found useful was the idea of the responsibility ladder, which you can use to figure out where are you standing in a specific situation:
+I found the first very insightful: choosing from where we want to approach any challenge will directly impact our outcome. To have this is mind, Maria shared the idea of the 'responsibility ladder'. It provides an scale to be aware and refect about what is your position in any given situation.
+
+<div class='blog__illustration'>
+<img  src='../../public/assets/ilustrations/ladder.jpg' alt=''/>
+</div>
+
+
 
 ### Ideation to integration
 
-This was a workshop session by Daniel Phillips, Head of Engineering at Trainline. He shared with us their approach to delivering high-quality software, from the idea to the merge of a pull request.
+This was a workshop session by [Daniel Phillips](https://www.linkedin.com/in/danieljamesphillips/), Head of Engineering at Trainline. He shared with us their approach to delivering high-quality software, from the idea to the merge of a pull request.
 
-We discussed the importance of thinking far-off coding to adopt a problem-solving-focused approach, as well as embracing collaboration and the importance of setting from the beginning on the same page with all the team members.
+We discussed the importance of thinking far-off coding to adopt a problem-solving-focused approach, embracing collaboration, and the importance of setting from the beginning on the same page with all the team members.
 
-One of the things we talked about during this workshop, was the importance of having clear acceptance criteria defined upfront to start working on a specific requirement. Well-defined acceptance criteria will provide clear guidelines to developers but also will align the expectations and smooth communication among the team because it will reduce misinterpretations of the requirements. It will also contribute to having a clear basis to test against, as it will be clear when a product or feature is working as expected.
+One of the things we talked during the workshop was the importance of having clear acceptance criteria defined upfront to start working on a specific requirement. Well-defined acceptance criteria will provide clear guidelines to developers but also will align the expectations and smooth communication among the team because it will reduce misinterpretations of the requirements. It will also contribute to having a clear basis to test against, as it will be clear when a product or feature is works as expected.
 
 ### Pair programming
 
-On Sunday I joined a session about pair programming hosted by Elena Navarro Molina and Josep Ma Rocamona. Even though I could only join at the final part of the session, it was truly useful to learn more about the different roles involved, benefits, and common anti-patterns that can get in the way and prevent us from getting the most out of our sessions.
+On Sunday, I joined a session about pair programming hosted by [Elena Navarro Molina](https://twitter.com/elenita_lenore) and [Josep Ma Rocamona](https://twitter.com/agiletgn). Even though I could only attend at the final part of the session, it was great to learn more about the different roles involved, benefits, and common anti-patterns that can get in the way and prevent us from getting the most out of our pairing sessions.
 
-For me, defining these roles thoughtfully was particularly helpful. I always learn a lot from pair programming sessions and this workshop provided useful strategies to better prepare for and have more productive pair sessions.
+<div class='blog__illustration'>
+<img  src='../../public/assets/ilustrations/pairprogramming.jpg' alt=''/>
+</div>
+
+Defining these roles thoughtfully has been particularly helpful for me to become aware of my tendencies and approach pair programming sessions more effectively. I always learn a lot from these sessions, and the workshop provided useful strategies to better prepare for and have more productive and enjoyable pair sessions.
 
 ------------------------------
 
-Software Crafters Barcelona is an event with a warm and welcoming atmosphere that made me feel comfortable from the first moment.
+Software Crafters Barcelona is a great event with a warm and inclusive atmosphere.
 
-If you are new to the tech feel, attending an in-person event is an excellent opportunity to learn new things and expand your network.
-
-For me, it was a great experience to listen to interesting talks and ask questions to more experienced engineers. Additionally, it was very positive to connect with new people, share experiences, and feel supported by the community.
-
-So before summing up, I wanted to express my gratitude to the organizers. I am looking forward to attending more events like this in the future.
+If you are new to the tech feel, attending an in-person event is an excellent opportunity to learn new things and expand your network. For me, it was a great experience to listen to interesting talks and ask questions to more experienced engineers, connect with new people and share experiences. I am looking forward to attending more events like this in the future.

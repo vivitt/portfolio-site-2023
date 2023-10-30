@@ -49,7 +49,7 @@ import { data as projects } from './project.data.js';
     <span class="project__findmore">
       <img src="/assets/github-mark.png" height="50" width="50" alt="GitHub icon" />
       <p>
-        Find more on
+        Find out more on
         <a href="https://github.com/vivitt" target="_blank"
           >my GitHub profile</a
         >

@@ -7,7 +7,7 @@ link: ""
 
 ---
 # Some insights and takeaways from Software Crafters Barcelona 2023
-I had the opportunity to attend the Software Crafters Barcelona event last weekend. It was the 10th edition but for me, it was my first in-person tech event and I've collected some notes, learnings, and thoughts to share about my experience.
+I had the opportunity to attend the Software Crafters Barcelona event last weekend. It was the 10th edition but for me, it was my first in-person tech event and I've collected some notes, learnings, and thoughts that I wanted to share about this experience.
 
 ---
 
@@ -35,7 +35,7 @@ She talked about three pillars that are the basis of making a meaningful impact 
 I found the first very insightful: choosing from where we want to approach any challenge will directly impact our outcome. To have this is mind, Maria shared the idea of the 'responsibility ladder'. It provides an scale to be aware and refect about what is your position in any given situation.
 
 <div class='blog__illustration'>
-<img  src='../../public/assets/ilustrations/ladder.jpg' alt=''/>
+<img  src='../../public/assets/ilustrations/ladder.jpg' alt='Illustartion of the "responsibility ladder". The first four steps represent the "victim zone" which includes starting from bottom: "being uncounsious", "not responsible", "look for excuses" and "wait to be told what to do" steps. The next four steps are the "action zone" and includes: "admit reality", "compromise to act", "seek solutions",and "take action" in the top.'/>
 </div>
 
 
@@ -44,25 +44,24 @@ I found the first very insightful: choosing from where we want to approach any c
 
 This was a workshop session by [Daniel Phillips](https://www.linkedin.com/in/danieljamesphillips/), Head of Engineering at Trainline. He shared with us their approach to delivering high-quality software, from the idea to the merge of a pull request.
 
-We discussed the importance of thinking far-off coding to adopt a problem-solving-focused approach, embracing collaboration, and the importance of setting from the beginning on the same page with all the team members.
+We discussed the importance of thinking beyond coding to adopt a problem-solving-focused approach, embracing collaboration, and the importance of setting from the beginning on the same page with all the team members, in which documentation plays a key role.
 
-One of the things we talked during the workshop was the importance of having clear acceptance criteria defined upfront to start working on a specific requirement. Well-defined acceptance criteria will provide clear guidelines to developers but also will align the expectations and smooth communication among the team because it will reduce misinterpretations of the requirements. It will also contribute to having a clear basis to test against, as it will be clear when a product or feature is works as expected.
+One of the things discussed during the workshop was the importance of having clear acceptance criteria defined upfront to start working on a specific requirement. Well-defined acceptance criteria will provide clear guidelines to developers but also will align the expectations and smooth communication among the team because it will reduce misinterpretations of the requirements. It will also contribute to having a clear basis to test against, as it will be clear when a product or feature works as expected. 
 
 <div class='blog__illustration'>
-<img  src='../../public/assets/ilustrations/acceptance.jpg' alt=''/>
+<img  src='../../public/assets/ilustrations/acceptance.jpg' alt='How to write a clear aceptance criteria. GIVEN: description of some initial context to an event to occur. Provide the necessary information to understand the scenario. WHEN: An event or action triggering the behavior described in the user story. Use a verb to describe the main action. No "and" clauses, keep it to one action!. THEN: Expected outcome. Describe observable changes applied after the action.'/>
 </div>
 
 ## Pair programming
 
-On Sunday, I joined a session about pair programming hosted by [Elena Navarro Molina](https://twitter.com/elenita_lenore) and [Josep Ma Rocamona](https://twitter.com/agiletgn). Even though I could only attend at the final part of the session, it was great to learn more about the different roles involved, benefits, and common anti-patterns that can get in the way and prevent us from getting the most out of our pairing sessions.
+On Sunday, I joined a session about pair programming hosted by [Elena Navarro Molina](https://twitter.com/elenita_lenore) and [Josep Ma Rocamona](https://twitter.com/agiletgn). Even though I could only attend the final part of the session, it was great to learn more about the different roles involved, benefits, and common anti-patterns that can get in the way and prevent us from getting the most out of our pairing sessions.
+Defining these roles thoughtfully has been particularly helpful for me to become aware of my tendencies and approach pair programming more effectively. Pairing sessions have been a great source of learning for me, and the workshop provided useful strategies to better prepare for and have more productive and enjoyable pair sessions.
 
 <div class='blog__illustration'>
-<img  src='../../public/assets/ilustrations/pairprogramming.jpg' alt=''/>
+<img  src="../../public/assets/ilustrations/pairprogramming.jpg" alt="Navigator: - observer position,  - think about how to solve a big scale problem, possible next steps and obstacles,  - give directions, - review code. Driver: - type position, - write the cod eto solve one little problem at time, - talk about what is doing. Dos: set a clear objective for the session, wait before interrupting/ask for time if needed, swap roles, share feedback frecuently. Don'ts: keyboard hogging: take the keyboard and start writing, passive pairing: don't apport actively to the session, distractions: not being present, pair affinity: pairing always and only with the same person."/>
 </div>
 
-Defining these roles thoughtfully has been particularly helpful for me to become aware of my tendencies and approach pair programming sessions more effectively. I always learn a lot from these sessions, and the workshop provided useful strategies to better prepare for and have more productive and enjoyable pair sessions.
-
-------------------------------
+---
 
 Software Crafters Barcelona is a great event with a warm and inclusive atmosphere.
 

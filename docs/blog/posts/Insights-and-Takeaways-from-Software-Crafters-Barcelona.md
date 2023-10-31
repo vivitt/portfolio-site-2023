@@ -19,8 +19,6 @@ I had the opportunity to attend the Software Crafters Barcelona event last weeke
 
 ---
 
-
-
 ## Junior 2.0
 
 The event started on Friday with an open-space discussion. I joined a group that was discusing a subject proposed by [Concha Asensio](https://twitter.com/conchaasensio): the challenges of transitioning to tech with years of experience in another field, which is my current situation.

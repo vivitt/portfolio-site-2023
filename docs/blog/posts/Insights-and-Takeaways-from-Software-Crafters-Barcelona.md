@@ -1,13 +1,11 @@
 ---
-title: ""
+title: "Some insights and takeaways from Software Crafters Barcelona 2023"
 date: 2023-10-27
 author: Viviana Yanez
 id: 5
 link: ""
 
 ---
-
-# Some insights and takeaways from Software Crafters Barcelona 2023
 
 I had the opportunity to attend the Software Crafters Barcelona event last weekend. It was the 10th edition but for me, it was my first in-person tech event and I've collected some notes, learnings, and thoughts that I wanted to share about this experience.
 
@@ -17,7 +15,7 @@ I had the opportunity to attend the Software Crafters Barcelona event last weeke
 <img  src='../../public/assets/ilustrations/swcbcn.jpg' alt='Some insights and takeaways from Software Crafters Barcelona 2023'/>
 </div>
 
----
+--- 
 
 ## Junior 2.0
 
@@ -63,6 +61,7 @@ One of the things discussed during the workshop was the importance of having cle
 ## Pair programming
 
 On Sunday, I joined a session about pair programming hosted by [Elena Navarro Molina](https://twitter.com/elenita_lenore) and [Josep Ma Rocamona](https://twitter.com/agiletgn). Even though I could only attend the final part of the session, it was great to learn more about the different roles involved, benefits, and common anti-patterns that can get in the way and prevent us from getting the most out of our pairing sessions.
+
 Defining these roles thoughtfully has been particularly helpful for me to become aware of my tendencies and approach pair programming more effectively. Pairing sessions have been a great source of learning for me, and the workshop provided useful strategies to better prepare for and have more productive and enjoyable pair sessions.
 
 <div class='blog__illustration'>

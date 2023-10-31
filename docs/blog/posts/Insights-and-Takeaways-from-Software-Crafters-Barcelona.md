@@ -62,7 +62,5 @@ Defining these roles thoughtfully has been particularly helpful for me to become
 </div>
 
 ---
-
-Software Crafters Barcelona is a great event with a warm and inclusive atmosphere.
-
-If you are new to the tech feel, attending an in-person event is an excellent opportunity to learn new things and expand your network. For me, it was a great experience to listen to interesting talks and ask questions to more experienced engineers, connect with new people and share experiences. I am looking forward to attending more events like this in the future.
+Attending the Software Crafters Barcelona event was an amazing experience. The atmosphere was welcoming and inclusive, making it a great opportunity to learn and connect with other professionals in the tech industry.
+If you are a newcomer to the field, attending an in-person event is an excellent opportunity to learn new things and expand your network. During the event, I had the chance to listen to insightful talks, ask questions to experienced engineers, connect with new people, and share experiences. Thank you for taking the time to read this, and if you enjoyed, stay tunned for future updates.

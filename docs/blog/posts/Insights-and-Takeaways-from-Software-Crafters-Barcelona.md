@@ -6,10 +6,18 @@ id: 5
 link: ""
 
 ---
+<div class='blog__cover'>
+<img  src='../../public/assets/ilustrations/swcbcn.jpg' alt='Some insights and takeaways from Software Crafters Barcelona 2023'/>
+</div>
+
 # Some insights and takeaways from Software Crafters Barcelona 2023
+
 I had the opportunity to attend the Software Crafters Barcelona event last weekend. It was the 10th edition but for me, it was my first in-person tech event and I've collected some notes, learnings, and thoughts that I wanted to share about this experience.
 
 ---
+
+
+
 
 ## Junior 2.0
 

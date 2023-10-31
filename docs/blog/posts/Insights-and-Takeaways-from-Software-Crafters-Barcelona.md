@@ -11,7 +11,7 @@ I had the opportunity to attend the Software Crafters Barcelona event last weeke
 
 ---
 
-### Junior 2.0
+## Junior 2.0
 
 The event started on Friday with an open-space discussion. I joined a group that was discusing a subject proposed by [Concha Asensio](https://twitter.com/conchaasensio): the challenges of transitioning to tech with years of experience in another field, which is my current situation.
 
@@ -23,7 +23,7 @@ Some highlights from this conversation:
 - Be proactive and look for any opportunity for your existing skills from other fields to be applied.
 - Stay open to sharing what you know.
 
-### Making an impact at any point in your career
+## Making an impact at any point in your career
 
 During day two, the day of talks, [Maria Calzada](https://twitter.com/m4riacg) shared valuable insights on how to make an impact regardless of your level.
 
@@ -40,7 +40,7 @@ I found the first very insightful: choosing from where we want to approach any c
 
 
 
-### Ideation to integration
+## Ideation to integration
 
 This was a workshop session by [Daniel Phillips](https://www.linkedin.com/in/danieljamesphillips/), Head of Engineering at Trainline. He shared with us their approach to delivering high-quality software, from the idea to the merge of a pull request.
 
@@ -48,7 +48,11 @@ We discussed the importance of thinking far-off coding to adopt a problem-solvin
 
 One of the things we talked during the workshop was the importance of having clear acceptance criteria defined upfront to start working on a specific requirement. Well-defined acceptance criteria will provide clear guidelines to developers but also will align the expectations and smooth communication among the team because it will reduce misinterpretations of the requirements. It will also contribute to having a clear basis to test against, as it will be clear when a product or feature is works as expected.
 
-### Pair programming
+<div class='blog__illustration'>
+<img  src='../../public/assets/ilustrations/acceptance.jpg' alt=''/>
+</div>
+
+## Pair programming
 
 On Sunday, I joined a session about pair programming hosted by [Elena Navarro Molina](https://twitter.com/elenita_lenore) and [Josep Ma Rocamona](https://twitter.com/agiletgn). Even though I could only attend at the final part of the session, it was great to learn more about the different roles involved, benefits, and common anti-patterns that can get in the way and prevent us from getting the most out of our pairing sessions.
 

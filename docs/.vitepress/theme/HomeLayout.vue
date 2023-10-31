@@ -28,7 +28,7 @@ const { frontmatter, page } = useData();
       </div>
     </nav>
     <div class="content">
-      <NotFound v-if="page.isNotFound" />
+      <not-found v-if="page.isNotFound" />
       <Content v-else />
     </div>
     <footer-template></footer-template>

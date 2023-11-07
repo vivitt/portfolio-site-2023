@@ -9,7 +9,7 @@ const { frontmatter, page } = useData();
   <div class="main">
     <nav>
       <a class="logo" href="/">
-        <img src="../../public/logo-viviyanez.png" alt="viviyanez.dev"/>
+        <img src="/logo-viviyanez.png" alt="viviyanez.dev"/>
       </a>
       <div class="menu">
         <a

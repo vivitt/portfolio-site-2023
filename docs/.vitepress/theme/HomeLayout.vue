@@ -1,9 +1,21 @@
 <script setup>
 import { useData } from 'vitepress';
+import { ref, watch } from 'vue';
 import FooterTemplate from './FooterTemplate.vue';
 import NotFound from './NotFoundTemplate.vue';
+import VivittSwitcher from './ThemeSwitcher';
 
 const { frontmatter, page } = useData();
+
+const isDarkMode = ref(false);
+watch(isDarkMode, () => {
+  if (isDarkMode.value === true) {
+    console.log(document.body)
+  } else {
+    document.body.classList.remove('dark');
+  }
+});
+
 </script>
 <template>
   <div class="main">
@@ -25,6 +37,11 @@ const { frontmatter, page } = useData();
         <a href="https://www.linkedin.com/in/viviana-yanez/" target="_blank"
           >/LinkedIn</a
         >
+        <vivitt-switcher
+          label="dark mode"
+          @checked-changed="(e) => e.detail === 'true' ?isDarkMode = true :isDarkMode=false"
+        >
+        </vivitt-switcher>
       </div>
     </nav>
     <div class="content">

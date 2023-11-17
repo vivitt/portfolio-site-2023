@@ -13,4 +13,12 @@ export default defineConfig({
     ],
   },
   appearance: true,
+  vue: ({
+    template: {
+      compilerOptions: {
+        // treat all tags with a dash as custom elements
+        isCustomElement: (tag) => tag.includes('-'),
+      },
+    },
+  }),
 });

@@ -7,10 +7,17 @@ import VivittSwitcher from './ThemeSwitcher';
 
 const { frontmatter, page } = useData();
 
-const isDarkMode = ref(false);
+const getColorMode = window.localStorage.getItem('vitepress-theme-appearance');
+
+const isDarkMode = ref(document.body.hasAttribute('class', 'dark') || false);
+
+const handleSwitch = (e) => {
+  isDarkMode.value = e.detail;
+};
+
 watch(isDarkMode, () => {
   if (isDarkMode.value === true) {
-    console.log(document.body)
+    document.body.classList.add('dark');
   } else {
     document.body.classList.remove('dark');
   }
@@ -24,6 +31,12 @@ watch(isDarkMode, () => {
         <img src="/logo-viviyanez.png" alt="viviyanez.dev"/>
       </a>
       <div class="menu">
+        <vivitt-switcher
+          label="dark mode"
+          @checked-changed="(e) => handleSwitch(e)"
+          :checked="isDarkMode"
+        >
+        </vivitt-switcher>
         <a
           :class="{ active: frontmatter.title === 'Projects' }"
           href="/projects/"
@@ -37,11 +50,6 @@ watch(isDarkMode, () => {
         <a href="https://www.linkedin.com/in/viviana-yanez/" target="_blank"
           >/LinkedIn</a
         >
-        <vivitt-switcher
-          label="dark mode"
-          @checked-changed="(e) => e.detail === 'true' ?isDarkMode = true :isDarkMode=false"
-        >
-        </vivitt-switcher>
       </div>
     </nav>
     <div class="content">

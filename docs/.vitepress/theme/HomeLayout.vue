@@ -36,6 +36,11 @@ const VivittSwitcher = defineClientComponent(
         <a href="https://www.linkedin.com/in/viviana-yanez/" target="_blank"
           ><span role="img">/</span>LinkedIn</a
         >
+        <vivitt-switcher
+          label="dark mode"
+          @checked-changed="(e) => e.detail === 'true' ?isDarkMode = true :isDarkMode=false"
+        >
+        </vivitt-switcher>
       </div>
     </nav>
     <div class="content">

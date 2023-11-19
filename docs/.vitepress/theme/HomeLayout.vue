@@ -1,27 +1,35 @@
 <script setup>
 import { useData } from 'vitepress';
-import { ref, watch } from 'vue';
+import {
+  onMounted, ref,
+} from 'vue';
 import FooterTemplate from './FooterTemplate.vue';
 import NotFound from './NotFoundTemplate.vue';
-import VivittSwitcher from './ThemeSwitcher';
+import VivittSwitcher from './ColorModeSwitcher';
+import { getMediaPreference, getStoredThemePreference, setStoredThemePreference } from './ColorModeUtils';
 
 const { frontmatter, page } = useData();
 
-const getColorMode = window.localStorage.getItem('vitepress-theme-appearance');
+const selectedColorMode = ref('light');
+const isChecked = ref(getStoredThemePreference() === 'dark' || getMediaPreference() === 'dark');
 
-const isDarkMode = ref(document.body.hasAttribute('class', 'dark') || false);
+onMounted(() => {
+  const preferredColorMode = ref(getStoredThemePreference() || getMediaPreference());
+  setStoredThemePreference(preferredColorMode.value);
+  selectedColorMode.value = preferredColorMode.value;
+});
 
 const handleSwitch = (e) => {
-  isDarkMode.value = e.detail;
-};
-
-watch(isDarkMode, () => {
-  if (isDarkMode.value === true) {
+  if (e.detail === true) {
+    setStoredThemePreference('dark');
     document.body.classList.add('dark');
+    selectedColorMode.value = 'dark';
   } else {
+    setStoredThemePreference('light');
     document.body.classList.remove('dark');
+    selectedColorMode.value = 'light';
   }
-});
+};
 
 </script>
 <template>
@@ -32,9 +40,10 @@ watch(isDarkMode, () => {
       </a>
       <div class="menu">
         <vivitt-switcher
+          disabled
           label="dark mode"
           @checked-changed="(e) => handleSwitch(e)"
-          :checked="isDarkMode"
+          :checked="isChecked"
         >
         </vivitt-switcher>
         <a

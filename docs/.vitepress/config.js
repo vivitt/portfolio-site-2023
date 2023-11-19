@@ -12,7 +12,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
     ],
   },
-  appearance: true,
+  appearance: false,
   vue: ({
     template: {
       compilerOptions: {

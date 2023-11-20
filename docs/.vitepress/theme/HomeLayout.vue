@@ -6,7 +6,9 @@ import {
 import FooterTemplate from './FooterTemplate.vue';
 import NotFound from './NotFoundTemplate.vue';
 import VivittSwitcher from './ColorModeSwitcher';
-import { getMediaPreference, getStoredThemePreference, setStoredThemePreference } from './ColorModeUtils';
+import {
+  getMediaPreference, getStoredThemePreference, setStoredThemePreference, handleSwitchTheme,
+} from './ColorModeUtils';
 
 const { frontmatter, page } = useData();
 
@@ -20,15 +22,7 @@ onMounted(() => {
 });
 
 const handleSwitch = (e) => {
-  if (e.detail === true) {
-    setStoredThemePreference('dark');
-    document.body.classList.add('dark');
-    selectedColorMode.value = 'dark';
-  } else {
-    setStoredThemePreference('light');
-    document.body.classList.remove('dark');
-    selectedColorMode.value = 'light';
-  }
+  selectedColorMode.value = handleSwitchTheme(e);
 };
 
 </script>

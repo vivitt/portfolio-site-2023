@@ -6,6 +6,6 @@ title: Blog
 import Blog from '../.vitepress/theme/BlogTemplate.vue'
 </script>
  
-<div class="blog">
+<div class="blog centered">
     <Blog></Blog>
 </div>

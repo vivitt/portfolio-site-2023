@@ -67,6 +67,9 @@ content: "🌞";
 --color: var(--color-background-dark);
 --color-border: var(--color-border-background-dark);
 }
+.switch__background:focus {
+  outline-offset: 8px;
+}
 
 @media (max-width: 500px) {
   :host {

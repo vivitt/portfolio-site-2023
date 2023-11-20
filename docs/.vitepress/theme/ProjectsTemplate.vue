@@ -1,9 +1,8 @@
 <script setup>
 // eslint-disable-next-line import/extensions
 import { data as projects } from './project.data.js';
-
-// const { frontmatter } = useData();
 </script>
+
 <template>
   <div class="project">
     <ul class="project__feed">
@@ -59,11 +58,16 @@ import { data as projects } from './project.data.js';
 </template>
 <style scoped lang="less">
 .project {
+  width: 100%;
   &__feed {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50%;
+    box-sizing: content-box;
     list-style-type: none;
     padding: 0;
     display: flex;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 700px) {
       flex-direction: column;
     }
     a {
@@ -72,21 +76,22 @@ import { data as projects } from './project.data.js';
     }
 
     &__preview {
-      border: 1px solid black;
-      box-shadow: 9px 9px 0px 1px black;
-      max-width: 45%;
-      margin: 1em;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      border-inline-end: 1px solid black;
       padding: 1em 0 ;
+      background-color: white;
+
       @media screen and (max-width: 800px) {
-        max-width: 70%;
         padding: auto;
       }
       &__image {
-
+        display: flex;
+        justify-content: center;
         img {
           object-fit: cover;
-          width: 100%;
-        height: 100%;
+          width: 50%;
+          height: 50%;
         }
         border-bottom: 1px solid black;
       }
@@ -111,6 +116,13 @@ import { data as projects } from './project.data.js';
       }
     }
     }
+    &__preview:hover {
+            animation-name: move-box;
+            animation-duration: 100ms;
+            animation-fill-mode: forwards;
+            box-shadow: 5px 4px 0px 1px black;
+            border-inline-start: 1px solid black;
+          }
   }
   &__findmore {
     font-size: 1.5em;
@@ -122,10 +134,26 @@ import { data as projects } from './project.data.js';
   }
 }
 .dark .project__feed__preview {
-  border: solid 1px white;
-  box-shadow: 9px 9px 0px black, 9px 9px 0px 2px white;
+  background-color: black;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-inline-end: 1px solid white;
   &__image {
     border-bottom: 1px solid white;
+  }
+
+}
+.dark .project__feed__preview:hover {
+            animation-name: move-box;
+            animation-duration: 100ms;
+            animation-fill-mode: forwards;
+            box-shadow: 5px 4px 0px 1px white;
+            border-inline-start: 1px solid white;
+          }
+
+@keyframes move-box {
+  to {
+    transform: translateX(-5px) translateY(-5px);
   }
 }
 </style>

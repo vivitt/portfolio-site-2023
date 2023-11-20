@@ -1,4 +1,4 @@
-<div class="about">
+<div class="about centered">
     <p>
         I am a Junior Software Developer, with a background in audiovisual and visual arts.
     </p>

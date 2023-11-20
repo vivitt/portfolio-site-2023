@@ -2,7 +2,7 @@
 home: true
 ---
 
-<div class="about">
+<div class="about centered">
 <p>
 I am a creative frontend developer, with a background in audiovisual and visual communication <span role='img' aria-label='woman technologist'>👩🏽‍💻</span>.
 </p>

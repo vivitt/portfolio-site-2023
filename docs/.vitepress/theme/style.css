@@ -41,33 +41,46 @@ nav {
   align-items: flex-start;
   font-size: 1.5em;
 }
+
 nav img {
- 
   max-width: 60%;
   width: auto;
 }
-nav a {
+
+.logo {
   flex-grow: 1;
 }
-nav div {
-  flex-grow: 4;
+
+.switcher {
+  order: 2;
+  padding: 0.3em;
 }
+.menu {
+  flex-grow: 4;
+  margin-inline-end: 0.3em;
+}
+
 nav ul {
   list-style: none;
 }
+
+
 .content {
   margin-top: 5em;
 }
+
 .centered {
   max-width: 70%;
   margin: auto;
 }
+
 .about {
   margin-top: 5em;
   font-weight: 400;
   font-size: 2.5em;
   line-height: 150%;
 }
+
 .about a,
 nav a,
 .blog a {

@@ -29,17 +29,22 @@ const handleSwitch = (e) => {
 <template>
   <div class="main">
     <nav>
-      <a class="logo" href="/">
+      <div class="logo">
+      <a  href="/">
         <img src="/logo-viviyanez.png" alt="viviyanez.dev"/>
       </a>
-      <div class="menu">
-        <vivitt-switcher
+    </div>
+    <div class="switcher">
+      <vivitt-switcher
           disabled
           label="dark mode"
           @checked-changed="(e) => handleSwitch(e)"
           :checked="isChecked"
         >
         </vivitt-switcher>
+      </div>
+      <div class="menu">
+
         <a
           :class="{ active: frontmatter.title === 'Projects' }"
           href="/projects/"

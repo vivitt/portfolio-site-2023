@@ -23,7 +23,7 @@ template.innerHTML = `
 .switch__label {
   color: var(--color-label);
   font-family: var(--label-font-family);
-  font-size: 1.2em;
+  font-size: 1.5em;
   padding-inline-end: 0.3em;
 }
 
@@ -45,9 +45,9 @@ template.innerHTML = `
   position: absolute;
  border: none;
   --size: calc(var(--container-width) / 2);
-  font-size: 2.2em;
-  top: -9px;
-  left: -5px;
+  font-size: 2.5em;
+  top: -14px;
+  left: -9px;
   transition: left 300ms;
 }
 .switch__control:after {
@@ -56,7 +56,7 @@ content: "🌚";
 
 [aria-checked="true"] > .switch__control  {
   left: var(--size); 
-  top: -9px;
+  top: -14px;
 } 
 
 [aria-checked="true"] > .switch__control:after {
@@ -77,11 +77,11 @@ content: "🌞";
       width: calc(var(--container-width)/3);
   } 
   .switch__control {
-      left: -8px;
+      left: -10px;
       transition: top 300ms;
   }
-  .switch__control.checked {
-      left: -8px;
+  [aria-checked="true"] > .switch__control  {
+      left: -10px;
       top: var(--size);
   }
   .switch__label {

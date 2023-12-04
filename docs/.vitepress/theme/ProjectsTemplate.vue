@@ -59,16 +59,20 @@ import { data as projects } from './project.data.js';
 <style scoped lang="less">
 .project {
   width: 100%;
+  padding-top: 2em;
   &__feed {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50%;
+    // Change number of colums when more project are added
+    // grid-template-columns: repeat( 3, 33.33%);
+    grid-template-columns: repeat( 2, 50%);
     box-sizing: content-box;
     list-style-type: none;
     padding: 0;
-    display: flex;
-    @media screen and (max-width: 700px) {
-      flex-direction: column;
+    @media screen and (max-width: 800px) {
+      grid-template-columns: repeat( 2, 50%);
+    }
+    @media screen and (max-width: 570px) {
+      grid-template-columns: 1fr;
     }
     a {
       text-decoration: none;

@@ -59,7 +59,7 @@ import { data as projects } from './project.data.js';
 <style scoped lang="less">
 .project {
   width: 100%;
-  padding-top: 2em;
+  padding: 2em;
   &__feed {
     display: grid;
     // Change number of colums when more project are added
@@ -67,9 +67,12 @@ import { data as projects } from './project.data.js';
     grid-template-columns: repeat( 2, 50%);
     box-sizing: content-box;
     list-style-type: none;
+    column-gap: 1em;
+    row-gap: 1em;
     padding: 0;
-    @media screen and (max-width: 800px) {
-      grid-template-columns: repeat( 2, 50%);
+    @media screen and (max-width: 700px) {
+      //grid-template-columns: repeat( 2, 50%);
+      grid-template-columns: 1fr;
     }
     @media screen and (max-width: 570px) {
       grid-template-columns: 1fr;
@@ -82,6 +85,7 @@ import { data as projects } from './project.data.js';
     &__preview {
       border-top: 1px solid black;
       border-bottom: 1px solid black;
+      border-inline-start: 1px solid black;
       border-inline-end: 1px solid black;
       padding: 1em 0 ;
       background-color: white;
@@ -142,6 +146,8 @@ import { data as projects } from './project.data.js';
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   border-inline-end: 1px solid white;
+  border-inline-start: 1px solid white;
+
   &__image {
     border-bottom: 1px solid white;
   }

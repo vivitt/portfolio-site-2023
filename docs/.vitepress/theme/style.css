@@ -76,16 +76,15 @@ nav ul {
 
 .content {
   margin-top: 5em;
+  margin: auto;
+  max-width: 70%;
 }
 
 .centered {
   max-width: 70%;
   margin: auto;
 }
-.centered {
-  max-width: 70%;
-  margin: auto;
-}
+
 
 .about {
   margin-top: 5em;

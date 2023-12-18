@@ -6,7 +6,6 @@ id: 5
 link: ""
 
 ---
-
 I had the opportunity to attend the Software Crafters Barcelona event last weekend. It was the 10th edition but for me, it was my first in-person tech event and I've collected some notes, learnings, and thoughts that I wanted to share about this experience.
 
 ---
@@ -59,5 +58,3 @@ The atmosphere was welcoming and inclusive, making it a great opportunity to lea
 If you are a newcomer to the field, attending an in-person event is an excellent opportunity to learn new things and expand your network. During the event, I had the chance to listen to insightful talks, ask questions to experienced engineers, connect with new people, and share experiences.
 
 Thanks for reading and stay tuned for more insights from other talks coming soon.
-
-

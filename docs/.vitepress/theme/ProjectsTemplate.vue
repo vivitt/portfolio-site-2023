@@ -4,7 +4,7 @@ import { data as projects } from './project.data.js';
 </script>
 
 <template>
-  <div class="project">
+  <div class="project expend-w">
     <ul class="project__feed">
       <li
         class="project__feed__preview"
@@ -58,7 +58,7 @@ import { data as projects } from './project.data.js';
 </template>
 <style scoped lang="less">
 .project {
-  width: 100%;
+
   padding: 2em;
   &__feed {
     display: grid;

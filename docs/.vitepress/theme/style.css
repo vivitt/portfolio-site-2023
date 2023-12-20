@@ -62,6 +62,7 @@ nav img {
 }
 .menu {
   margin-inline-end: 0.3em;
+  flex-grow: 3;
 }
 
 nav ul {

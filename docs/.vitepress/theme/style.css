@@ -64,10 +64,6 @@ nav img {
   margin-inline-end: 0.3em;
   flex-grow: 3;
 }
-.menu {
-  flex-grow: 4;
-  margin-inline-end: 0.3em;
-}
 
 nav ul {
   list-style: none;

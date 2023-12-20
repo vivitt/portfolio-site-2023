@@ -94,7 +94,7 @@ content: "🌞";
 }
 </style>
 <button role="switch" class="switch__background" id="background">
-<span class="switch__control" role='image' aria-label='dark-mode' id="control"> 
+<span id="control" class="switch__control" role='img' id="control"> 
 </span>
 
 </button>
@@ -118,6 +118,9 @@ export default class VivittSwitcher extends HTMLElement {
     this.checked = this.hasAttribute('checked') || false;
     this.update();
     this.handleDisabled();
+
+    const switchControl = this.shadowRoot.getElementById('control');
+    switchControl.setAttribute('aria-label', this.label)
   }
 
   disconnectedCallback() {

@@ -45,18 +45,22 @@ nav {
 nav img {
   max-width: 60%;
   width: auto;
+  
+}
+@media screen and (max-width: 1000px) {
+  nav img {
+    max-width: 80%;
+    width: auto; 
+  }
 }
 
-.logo {
-  flex-grow: 1;
-}
+
 
 .switcher {
   order: 2;
   padding: 0.4em;
 }
 .menu {
-  flex-grow: 4;
   margin-inline-end: 0.3em;
 }
 
@@ -118,7 +122,7 @@ nav .menu a:hover {
     flex-wrap: wrap;
   }
   .logo {
-    max-width: 85%;
+    max-width: 80%;
     width: auto;
   }
   .switcher {

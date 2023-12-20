@@ -94,7 +94,7 @@ content: "🌞";
 }
 </style>
 <button role="switch" class="switch__background" id="background">
-<span class="switch__control" id="control"> 
+<span class="switch__control" role='image' aria-label='dark-mode' id="control"> 
 </span>
 
 </button>

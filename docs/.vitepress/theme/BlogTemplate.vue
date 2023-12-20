@@ -63,6 +63,7 @@ const month = [
 .blog {
   &__feed {
     list-style-type: none;
+    padding: 0;
     a {
       text-decoration: none;
     }

@@ -1,11 +1,11 @@
 <template>
   <div class="footer">
     <div class="footer__menu">
-      <a href="/blog/">/blog</a>
-      <a href="/projects/">/projects</a>
-      <a href="https://github.com/vivitt" target="_blank">/GitHub</a>
+      <a href="/blog/"><span role="image">/</span>blog</a>
+      <a href="/projects/"><span role="image">/</span>projects</a>
+      <a href="https://github.com/vivitt" target="_blank"><span role="image">/</span>GitHub</a>
       <a href="https://www.linkedin.com/in/viviana-yanez/" target="_blank"
-        >/LinkedIn</a
+        ><span role="image">/</span>LinkedIn</a
       >
     </div>
     <div class="footer__atribution">
@@ -33,7 +33,7 @@
     }
   }
   &__atribution {
-    padding: 2em 0;
+    padding: 6em 0 3em 0;
   }
 }
 </style>

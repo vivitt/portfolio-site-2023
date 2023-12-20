@@ -31,7 +31,7 @@ const handleSwitch = (e) => {
     <nav>
       <div class="logo">
       <a  href="/">
-        <img src="/logo-viviyanez.png" alt="viviyanez.dev"/>
+        <img src="/logo-viviyanez.png" alt="viviyanez.dev home"/>
       </a>
     </div>
     <div class="switcher">
@@ -48,20 +48,21 @@ const handleSwitch = (e) => {
         <a
           :class="{ active: frontmatter.title === 'Projects' }"
           href="/projects/"
-          >/projects</a
+          ><span role="img">/</span>projects</a
         >
         <a :class="{ active: frontmatter.title === 'Blog' }" href="/blog/"
-          >/blog</a
+          ><span role="img">/</span>blog</a
         >
-        <a href="https://github.com/vivitt" target="_blank">/GitHub</a>
+        <a href="https://github.com/vivitt" target="_blank"><span role="img">/</span>GitHub</a>
 
         <a href="https://www.linkedin.com/in/viviana-yanez/" target="_blank"
-          >/LinkedIn</a
+          ><span role="img">/</span>LinkedIn</a
         >
       </div>
     </nav>
     <div class="content">
       <not-found v-if="page.isNotFound" />
+      <Content v-if="page.relativePath.includes('blog/')" class="centered" />
       <Content v-else />
     </div>
     <footer-template></footer-template>

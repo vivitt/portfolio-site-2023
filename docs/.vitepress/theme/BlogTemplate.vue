@@ -35,9 +35,11 @@ const month = [
           )}, ${date.slice(0, 4)}`
         }}</span>
         <article>
+          <a :href="link">
           <h2 class="blog__feed__preview-title">
-            <a :href="link">{{ title }}</a>
+            {{ title }}
           </h2>
+        </a>
           <div
             v-if="excerpt"
             class="blog__feed__preview-text"

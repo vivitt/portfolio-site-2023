@@ -1,29 +1,13 @@
 <script setup>
-import { useData } from 'vitepress';
-import {
-  onMounted, ref,
-} from 'vue';
+import { useData, defineClientComponent } from 'vitepress';
 import FooterTemplate from './FooterTemplate.vue';
 import NotFound from './NotFoundTemplate.vue';
-import VivittSwitcher from './ColorModeSwitcher';
-import {
-  getMediaPreference, getStoredThemePreference, setStoredThemePreference, handleSwitchTheme,
-} from './ColorModeUtils';
 
 const { frontmatter, page } = useData();
 
-const selectedColorMode = ref('light');
-const isChecked = ref(getStoredThemePreference() === 'dark' || getMediaPreference() === 'dark');
-
-onMounted(() => {
-  const preferredColorMode = ref(getStoredThemePreference() || getMediaPreference());
-  setStoredThemePreference(preferredColorMode.value);
-  selectedColorMode.value = preferredColorMode.value;
-});
-
-const handleSwitch = (e) => {
-  selectedColorMode.value = handleSwitchTheme(e);
-};
+const VivittSwitcher = defineClientComponent(
+  () => import('./VivittSwitcher.vue'),
+);
 
 </script>
 <template>
@@ -35,13 +19,7 @@ const handleSwitch = (e) => {
       </a>
     </div>
     <div class="switcher">
-      <vivitt-switcher
-          disabled
-          label="dark mode"
-          @checked-changed="(e) => handleSwitch(e)"
-          :checked="isChecked"
-        >
-        </vivitt-switcher>
+   <VivittSwitcher />
       </div>
       <div class="menu">
 

@@ -2,7 +2,7 @@ const template = document.createElement('template');
 template.innerHTML = `
 <style>
 :host {
-  --container-width: 3rem; 
+  --container-width: 45px; 
   display: flex;
   align-items: center;
 
@@ -20,12 +20,6 @@ template.innerHTML = `
   --background-border-dark: 1px solid var(--color-border-dark);
 } 
 
-.switch__label {
-  color: var(--color-label);
-  font-family: var(--label-font-family);
-  font-size: 1.5em;
-  padding-inline-end: 0.3em;
-}
 
 .switch__background {
   --color: var(--color-background);
@@ -35,7 +29,7 @@ template.innerHTML = `
   width: var(--container-width);
   height: calc(var(--container-width) / 3);
   border: 1px solid var(--color-border);
-  border-radius: calc(var(--container-width) / 2 );
+  border-radius: 30px;
   position: relative;
   cursor: pointer;   
 }   
@@ -45,8 +39,8 @@ template.innerHTML = `
   position: absolute;
  border: none;
   --size: calc(var(--container-width) / 2);
-  font-size: 2.5em;
-  top: -14px;
+  font-size: 30px;
+  top: -12px;
   left: -9px;
   transition: left 300ms;
 }
@@ -55,8 +49,8 @@ content: "🌚";
 }
 
 [aria-checked="true"] > .switch__control  {
+  top: -12px;
   left: var(--size); 
-  top: -14px;
 } 
 
 [aria-checked="true"] > .switch__control:after {
@@ -80,17 +74,14 @@ content: "🌞";
       width: calc(var(--container-width)/3);
   } 
   .switch__control {
-      left: -10px;
+      left: -9px;
       transition: top 300ms;
   }
   [aria-checked="true"] > .switch__control  {
-      left: -10px;
+    left: -9px;
       top: var(--size);
   }
-  .switch__label {
-      padding-inline-end: 0px;
-      padding-bottom: 0.3em;
-  }
+
 }
 </style>
 <button role="switch" class="switch__background" id="background">

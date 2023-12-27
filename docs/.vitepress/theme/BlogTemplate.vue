@@ -22,19 +22,13 @@ const month = [
 ];
 </script>
 <template>
-  <div class="blog">
+  <div class="blog centered">
     <ul class="blog__feed">
       <li
         class="blog__feed__preview"
         v-for="{ id, title, url, date, excerpt, link } of posts"
         :key="{id}"
       >
-        <!-- <span>{{
-          `${month[Number(date.slice(5, 7)) - 1]} ${date.slice(
-            8,
-            10
-          )}, ${date.slice(0, 4)}`
-        }}</span> -->
         <BlogPostDate :date="date"></BlogPostDate>
         <article>
           <a :href="link">

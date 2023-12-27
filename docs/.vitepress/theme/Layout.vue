@@ -43,7 +43,6 @@ const VivittSwitcher = defineClientComponent(
 
       <not-found v-if="page.isNotFound" />
       <BlogPost v-if="frontmatter.isBlogPost" />
-      <Content v-else-if="page.relativePath.includes('blog/')" class="centered" />
       <Content v-else />
     </div>
     <footer-template></footer-template>

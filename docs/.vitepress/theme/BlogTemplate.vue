@@ -1,25 +1,7 @@
 <script setup>
-
 // eslint-disable-next-line import/extensions
-import BlogPostDate from './BlogPostDate.vue';
 import { data as posts } from './posts.data.js';
-
-// const { frontmatter } = useData();
-
-const month = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
+import BlogPostDate from './BlogPostDate.vue';
 </script>
 <template>
   <div class="blog centered">

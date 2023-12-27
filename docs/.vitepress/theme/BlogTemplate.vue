@@ -1,6 +1,7 @@
 <script setup>
 
 // eslint-disable-next-line import/extensions
+import BlogPostDate from './BlogPostDate.vue';
 import { data as posts } from './posts.data.js';
 
 // const { frontmatter } = useData();
@@ -28,12 +29,13 @@ const month = [
         v-for="{ id, title, url, date, excerpt, link } of posts"
         :key="{id}"
       >
-        <span>{{
+        <!-- <span>{{
           `${month[Number(date.slice(5, 7)) - 1]} ${date.slice(
             8,
             10
           )}, ${date.slice(0, 4)}`
-        }}</span>
+        }}</span> -->
+        <BlogPostDate :date="date"></BlogPostDate>
         <article>
           <a :href="link">
           <h2 class="blog__feed__preview-title">

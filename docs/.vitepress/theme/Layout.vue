@@ -1,7 +1,9 @@
 <script setup>
 import { useData, defineClientComponent } from 'vitepress';
 import FooterTemplate from './FooterTemplate.vue';
+import BlogTemplate from './BlogTemplate.vue';
 import NotFound from './NotFoundTemplate.vue';
+import BlogPost from './BlogPost.vue';
 
 const { frontmatter, page } = useData();
 
@@ -38,8 +40,11 @@ const VivittSwitcher = defineClientComponent(
       </div>
     </nav>
     <div class="content">
-      <not-found v-if="page.isNotFound" />
-      <Content v-if="page.relativePath.includes('blog/')" class="centered" />
+
+      <!-- <Content v-if="frontmatter.index"></Content> -->
+      <BlogPost v-if="frontmatter.isBlogPost" />
+      <not-found v-else-if="page.isNotFound" />
+      <Content v-else-if="page.relativePath.includes('blog/')" class="centered" />
       <Content v-else />
     </div>
     <footer-template></footer-template>

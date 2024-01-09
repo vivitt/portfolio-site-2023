@@ -1,7 +1,7 @@
 <script setup>
 // eslint-disable-next-line import/extensions
 import { data as posts } from './posts.data.js';
-import BlogPostDate from './BlogPostDate.vue';
+import blogPostDate from './blogPostDate';
 </script>
 <template>
   <div class="blog centered">
@@ -11,7 +11,7 @@ import BlogPostDate from './BlogPostDate.vue';
         v-for="{ id, title, url, date, excerpt, link } of posts"
         :key="{id}"
       >
-        <BlogPostDate :date="date"></BlogPostDate>
+        <span>{{blogPostDate(date)}}</span>
         <article>
           <a :href="link">
           <h2 class="blog__feed__preview-title">

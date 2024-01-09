@@ -3,8 +3,7 @@ import { useData, useRoute } from 'vitepress';
 import { computed } from 'vue';
 // eslint-disable-next-line import/extensions
 import { data as posts } from './posts.data.js';
-import BlogPostDate from './BlogPostDate.vue';
-
+import blogPostDate from './blogPostDate';
 const route = useRoute();
 
 const { frontmatter: data } = useData();
@@ -19,7 +18,7 @@ const date = computed(() => posts[findCurrentIndex()].date);
 <template>
 <article class="centered blogpost">
     <header>
-        <BlogPostDate :date="date"> </BlogPostDate>
+        <span>{{ blogPostDate(date) }}</span>
       <!-- <Date :date="date" /> -->
             <h1>
                 {{ data.title }}

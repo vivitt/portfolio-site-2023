@@ -27,7 +27,7 @@ module.exports = {
   plugins: [
     'vue',
   ],
-  ignorePatterns: ['!docs/.vitepress/'],
+  ignorePatterns: ['!docs/.vitepress/', 'docs/.vitepress/cache', 'docs/.vitepress/dist'],
   rules: {
   },
 };

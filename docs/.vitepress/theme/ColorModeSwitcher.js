@@ -111,7 +111,7 @@ export default class VivittSwitcher extends HTMLElement {
     this.handleDisabled();
 
     const switchControl = this.shadowRoot.getElementById('control');
-    switchControl.setAttribute('aria-label', this.label)
+    switchControl.setAttribute('aria-label', this.label);
   }
 
   disconnectedCallback() {

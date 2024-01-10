@@ -1,5 +1,4 @@
 <script setup>
-// eslint-disable-next-line import/extensions
 import { data as posts } from './posts.data.js';
 import blogPostDate from './utils/blogPostDate';
 </script>

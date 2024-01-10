@@ -40,7 +40,6 @@ function loadFont(url) {
     .catch(
       cover.value = null,
     );
-  // });
 }
 
 onMounted(async () => {

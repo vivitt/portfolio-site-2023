@@ -1,7 +1,7 @@
 <script setup>
 // eslint-disable-next-line import/extensions
 import { data as posts } from './posts.data.js';
-import blogPostDate from './blogPostDate';
+import blogPostDate from './utils/blogPostDate';
 </script>
 <template>
   <div class="blog centered">

@@ -8,7 +8,7 @@ isBlogPost: true
 
 ---
 
-_Published in allWomen Alumna_
+_Published in [allWomen Alumna](https://medium.com/allwomen-alumni)_
 
 Anneli Seppola is an experienced software engineer. She shared with us this talk about the insights of being a woman in tech.
 

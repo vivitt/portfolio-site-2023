@@ -12,12 +12,6 @@ As we reach the last week of 2023, it is a nice time to reflect on the significa
 
 ---
 
-<div class='blog__cover'>
-<img  src='../../public/assets/ilustrations/wrapping2023.jpg' alt='Wrapping up the year: My 2023 tech journey'/>
-</div>
-
---- 
-
 Here are my main milestones:
 
 - **First Professional Experience as a Software Engineer**

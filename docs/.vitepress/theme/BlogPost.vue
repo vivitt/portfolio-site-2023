@@ -81,9 +81,7 @@ const generated = (titleLines) => {
 
     <header>
       <div class='blog__cover'>
-      <img  v-if='cover' :src="generated(postTitleSeparatedLines)"
-      :alt="data.title"
-      />
+      <img  v-if='cover' :src="generated(postTitleSeparatedLines)" alt=""/>
     </div>
         <span>{{ blogPostDate(date) }}</span>
             <h1>

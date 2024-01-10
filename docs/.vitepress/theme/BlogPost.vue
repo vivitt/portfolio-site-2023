@@ -2,6 +2,7 @@
 import { useData, useRoute } from 'vitepress';
 import { computed, onMounted, ref } from 'vue';
 import { data as posts } from './posts.data.js';
+import formatBlogPostTitle from './utils/formatBlogPostTitle';
 import blogPostDate from './utils/blogPostDate';
 
 const route = useRoute();
@@ -14,9 +15,9 @@ function findCurrentIndex() {
 
 const date = computed(() => posts[findCurrentIndex()].date);
 const postTitle = computed(() => posts[findCurrentIndex()].title);
-// const postTitleSeparatedLines = formatBlogPostTitle(postTitle.value);
-// const titleFontSize = (postTitleSeparatedLines.length > 4) ? '78px' : '98px';
-// const titleLineHeight = (postTitleSeparatedLines.length > 4) ? 70 : 90;
+const postTitleSeparatedLines = formatBlogPostTitle(postTitle.value);
+const titleFontSize = (postTitleSeparatedLines.length > 4) ? '78px' : '98px';
+const titleLineHeight = (postTitleSeparatedLines.length > 4) ? 70 : 90;
 
 const cover = ref(null);
 
@@ -80,9 +81,9 @@ const generated = (titleLines) => {
 
     <header>
       <div class='blog__cover'>
-      <!-- <img  v-if='cover' :src="generated(postTitleSeparatedLines)"
+      <img  v-if='cover' :src="generated(postTitleSeparatedLines)"
       :alt="data.title"
-      /> -->
+      />
     </div>
         <span>{{ blogPostDate(date) }}</span>
             <h1>

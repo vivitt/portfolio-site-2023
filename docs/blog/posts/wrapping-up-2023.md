@@ -6,7 +6,6 @@ id: 7
 link: ""
 isBlogPost: true
 
-
 ---
 As we reach the last week of 2023, it is a nice time to reflect on the significant achievements of the year. For me, 2023 was a year of first-time experiences and I'd like to take this opportunity to reflect on what I accomplished this year and the journey that got me to where I am today.
 

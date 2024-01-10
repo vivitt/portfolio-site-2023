@@ -4,6 +4,8 @@ date: 2022-08-09
 author: Viviana Yanez
 id: 1
 link: https://medium.com/allwomen-alumni/working-in-tech-going-beyond-coding-c4eb767376a6
+isBlogPost: true
+
 ---
 
 _Published in allWomen Alumna_

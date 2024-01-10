@@ -4,6 +4,7 @@ date: 2023-10-31
 author: Viviana Yanez
 id: 4
 link: https://viviyanez.hashnode.dev/a-beginners-guide-to-understanding-solid-principles
+isBlogPost: true
 
 ---
 

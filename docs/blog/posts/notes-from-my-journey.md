@@ -4,6 +4,8 @@ date: 2023-07-18
 author: Viviana Yanez
 id: 3
 link: https://diff.wikimedia.org/2023/07/18/notes-from-my-journey-as-a-software-engineering-intern-on-the-growth-team/
+isBlogPost: true
+
 ---
 
 During the last days of the past year, I was delighted to know that I would join the Wikimedia Foundation as one of the eight interns participating in the 2023 Software Engineering Internship Program. Now that the program ended, I wanted to share the highlights of what I have accomplished during these months.

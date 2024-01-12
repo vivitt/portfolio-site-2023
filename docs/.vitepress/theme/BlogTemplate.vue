@@ -10,9 +10,15 @@ import blogPostDate from './utils/blogPostDate';
         v-for="{ id, title, url, date, excerpt, link } of posts"
         :key="{id}"
       >
+      <article>
         <span>{{blogPostDate(date)}}</span>
-        <article>
-          <a :href="link">
+
+          <a
+          class="blog__feed__link"
+              aria-label="read more"
+              :href="link !== '' ?link :url"
+              :target="link !== '' ?'_blank' :''"
+              >
           <h2 class="blog__feed__preview-title">
             {{ title }}
           </h2>
@@ -23,16 +29,6 @@ import blogPostDate from './utils/blogPostDate';
             v-html="excerpt"
           ></div>
 
-          <div class="blog__feed__preview-link">
-            <a
-              v-if="link !== ''"
-              aria-label="read more"
-              :href="link"
-              target="_blank"
-              >Read more...</a
-            >
-            <a v-else aria-label="read more" :href="url">Read more...</a>
-          </div>
         </article>
       </li>
     </ul>
@@ -45,8 +41,10 @@ import blogPostDate from './utils/blogPostDate';
     padding: 0;
     a {
       text-decoration: none;
+      :hover { 
+        text-decoration: underline;
+      }
     }
-
     &__preview {
       border-bottom: 1px solid;
       padding: 1em 0;

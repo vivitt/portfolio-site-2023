@@ -1,4 +1,18 @@
 ---
+head:
+  - - link
+    - href: assets/fonts/playfairdisplay-regular-webfont.woff2
+      rel: preload
+      as: font
+      type: font/woff2
+      crossorigin: anonymous
+  - - link
+    - href: assets/fonts/playfairdisplay-regular-webfont.woff
+      rel: preload
+      as: font
+      type: font/woff
+      crossorigin: anonymous
+      
 home: true
 ---
 

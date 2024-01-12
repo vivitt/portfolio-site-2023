@@ -1,5 +1,6 @@
 ---
 title: "A beginner's guide to understanding SOLID principles"
+titleTemplate: Viviana's blog
 date: 2023-10-31
 author: Viviana Yanez
 id: 4

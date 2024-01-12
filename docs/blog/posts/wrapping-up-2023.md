@@ -1,5 +1,6 @@
 ---
 title: "Wrapping up the year: My 2023 tech journey"
+titleTemplate: Viviana's blog
 date: 2023-12-26
 author: Viviana Yanez
 id: 7

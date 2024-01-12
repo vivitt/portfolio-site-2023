@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+
   lang: 'en-US',
   title: 'Viviana Yanez',
   titleTemplate: 'Frontend Developer',
@@ -21,4 +22,17 @@ export default defineConfig({
       },
     },
   }),
+  transformPageData(pageData) {
+    pageData.frontmatter.head ??= [];
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'og:image',
+        content:
+          pageData.frontmatter.isBlogPost === true
+            ? 'data:image/jpeg'
+            : `${pageData.title} | VitePress`,
+      },
+    ]);
+  },
 });

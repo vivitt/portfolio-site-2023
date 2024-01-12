@@ -1,5 +1,6 @@
 ---
 title: "How to create your own reusable dialog with Codex"
+titleTemplate: Viviana's blog
 date: 2023-06-13
 author: Viviana Yanez
 id: 2

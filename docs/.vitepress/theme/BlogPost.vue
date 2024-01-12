@@ -19,15 +19,23 @@ const postTitleSeparatedLines = formatBlogPostTitle(postTitle.value);
 const titleFontSize = (postTitleSeparatedLines.length > 4) ? '78px' : '98px';
 const titleLineHeight = (postTitleSeparatedLines.length > 4) ? 70 : 90;
 
+const imageIsLoading = ref(true);
+
 const cover = ref(null);
 
 function loadImage(url) {
   return new Promise((resolve) => {
     const img = new Image();
-    img.onload = () => (resolve(img));
+    img.onload = () => {
+      resolve(img);
+      imageIsLoading.value = false;
+    };
     img.crossOrigin = 'Anonymous';
     img.src = url;
-    img.onerror = () => null;
+    img.onerror = () => {
+      imageIsLoading.value = false;
+      return null;
+    };
   });
 }
 
@@ -77,18 +85,26 @@ const generated = (titleLines) => {
 </script>
 <template>
 <article class="centered blogpost">
-
-    <header>
-      <div class='blog__cover'>
-      <img  v-if='cover' :src="generated(postTitleSeparatedLines)" alt=""/>
+  <header>
+    <div v-if="imageIsLoading" class="skeleton">
+      <div></div>
     </div>
-        <span>{{ blogPostDate(date) }}</span>
-            <h1>
-                {{ data.title }}
-            </h1>
-    </header>
+    <div class='blog__cover'>
+      <img
+        v-if='cover'
+        :src="generated(postTitleSeparatedLines)"
+        alt=""
+        width="1600"
+        height="840"
+        />
+    </div>
+    <span>{{ blogPostDate(date) }}</span>
+    <h1>
+        {{ data.title }}
+    </h1>
+  </header>
 
-    <Content  />
+<Content  />
 </article>
 </template>
 <style scoped lang="less">

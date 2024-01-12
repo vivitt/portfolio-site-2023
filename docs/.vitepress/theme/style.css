@@ -24,6 +24,14 @@
   font-display: swap
 }
 
+@font-face {
+  font-family: "Modak";
+  font-weight: 400;
+  src: url('/assets/fonts/modak-regular-webfont.woff2') format('woff2'),
+  url('/assets/fonts/modak-regular-webfont.woff') format('woff');
+  font-display: block
+}
+
 * {
   box-sizing: border-box;
 }
@@ -117,9 +125,20 @@ nav .menu a:hover {
   width: 80%
 }
 
-.blog__cover img {
+.skeleton {
+  display: flex;
+  max-width: 100%;
+  aspect-ratio: 1600 / 840;
+}
+
+.skeleton div {
+  background-color: '#edeff7ff';
+}
+
+.blog__cover img, .skeleton div  {
   padding: 2em 0 ;
-  width: 100%
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width: 800px) {

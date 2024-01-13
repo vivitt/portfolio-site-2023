@@ -19,41 +19,44 @@ const postTitleSeparatedLines = formatBlogPostTitle(postTitle.value);
 const titleFontSize = (postTitleSeparatedLines.length > 4) ? '78px' : '98px';
 const titleLineHeight = (postTitleSeparatedLines.length > 4) ? 70 : 90;
 
-const imageIsLoading = ref(true);
-
 const cover = ref(null);
+const font = ref(null);
 
 function loadImage(url) {
   return new Promise((resolve) => {
     const img = new Image();
+    img.height = 840;
+    img.width = 1600;
     img.onload = () => {
       resolve(img);
-      imageIsLoading.value = false;
+      cover.value = img;
     };
     img.crossOrigin = 'Anonymous';
     img.src = url;
     img.onerror = () => {
-      imageIsLoading.value = false;
-      return null;
+      cover.value = null;
     };
   });
 }
 
-function loadFont(url) {
-  const font = new FontFace('Modak', url);
-  font.load()
+async function loadFont(fontFamily, url) {
+  const newFont = new FontFace(fontFamily, url);
+  await newFont.load()
     .then((face) => {
       document.fonts.add(face);
+      font.value = face.family;
     })
-    .catch(
-      cover.value = null,
-    );
+    .catch((err) => {
+      if (err) {
+        cover.value = null;
+      }
+    });
 }
 
 onMounted(async () => {
-  await loadFont(`url('/assets/fonts/modak-regular-webfont.woff2') format('woff2'),
+  await loadImage('/assets/article-cover.svg');
+  await loadFont('Modak', `url('/assets/fonts/modak-regular-webfont.woff2') format('woff2'),
     url('/assets/fonts/modak-regular-webfont.woff') format('woff');`);
-  cover.value = await loadImage('/assets/article-cover.svg');
 });
 
 const generated = (titleLines) => {
@@ -66,7 +69,7 @@ const generated = (titleLines) => {
   context.drawImage(cover.value, 0, 0);
 
   context.fillStyle = 'black';
-  context.font = `${titleFontSize} Modak`;
+  context.font = `${titleFontSize} ${font.value}`;
 
   context.textBaseline = 'top';
   let startTitle = 280;
@@ -86,13 +89,17 @@ const generated = (titleLines) => {
 <template>
 <article class="centered blogpost">
   <header>
-    <div v-if="imageIsLoading" class="skeleton">
-      <div></div>
-    </div>
+
     <div class='blog__cover'>
       <img
         v-if='cover'
         :src="generated(postTitleSeparatedLines)"
+        alt=""
+        width="1600"
+        height="840"
+        />
+        <img
+        v-else
         alt=""
         width="1600"
         height="840"

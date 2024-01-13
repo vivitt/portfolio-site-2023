@@ -28,10 +28,21 @@ export default defineConfig({
       'meta',
       {
         name: 'og:image',
-        content:
-          pageData.frontmatter.isBlogPost === true
-            ? 'data:image/jpeg'
-            : `${pageData.title} | VitePress`,
+        content: 'data:image/jpeg',
+      },
+    ]);
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'og:title',
+        content: pageData.frontmatter.title
+      },
+    ]);
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'og:description',
+        content: pageData.frontmatter.titleTemplate
       },
     ]);
   },

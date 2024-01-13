@@ -1,5 +1,6 @@
 ---
 title: Projects
+titleTemplate: Viviana Yanez Creative Frontend Developer
 ---
 
 <script setup>

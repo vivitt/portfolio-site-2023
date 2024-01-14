@@ -27,7 +27,9 @@ export default defineConfig({
       {
         name: 'og:image',
         content: context.assets.filter((item) => {
-          item.startsWith('data:image/jpeg')
+          if (item.includes('data:image/jpeg')) {
+            return item;
+          } return '/assets/viviogimage.png';
         }),
       },
     ]);

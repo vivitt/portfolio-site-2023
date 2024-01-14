@@ -1,5 +1,4 @@
----  
-   
+---   
 home: true
 title: Viviana Yanez
 titleTemplate: Creative Frontend Developer

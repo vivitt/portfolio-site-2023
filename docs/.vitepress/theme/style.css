@@ -28,7 +28,7 @@
   font-weight: 400;
   src: url('/assets/fonts/modak-regular-webfont.woff2') format('woff2'),
   url('/assets/fonts/modak-regular-webfont.woff') format('woff');
-  font-display: block
+  font-display: swap
 }
 
 * {

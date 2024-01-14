@@ -26,7 +26,7 @@ export default defineConfig({
       'meta',
       {
         name: 'og:image',
-        content: context.assets.filter((item) => item.includes('data:image/jpeg')),
+        content: context.assets[0],
       },
     ]);
     context.head.push([

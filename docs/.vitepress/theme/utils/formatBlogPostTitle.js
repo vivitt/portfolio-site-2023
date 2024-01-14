@@ -1,19 +1,23 @@
-export default function formatBlogPostTitle(title) {
-  const words = title.split(' ');
+export default function formatBlogTitleForCoverImage(blogtitle) {
+  if (blogtitle !== '') {
+    const titleWords = blogtitle.split(' ');
 
-  let lastLine = 0;
-  const joined = [words[0]];
-  words.map((item, i, self) => {
-    if (self[i + 1]) {
-      if ((joined[lastLine] + self[i + 1]).length < 20) {
-        joined[lastLine] += ` ${self[i + 1]}`;
-      } else {
-        lastLine += 1;
-        joined[lastLine] = words[i + 1];
+    const titleLines = [titleWords[0]];
+    let currentLine = 0;
+
+    titleWords.map((item, i, self) => {
+      if (self[i + 1]) {
+        if ((titleLines[currentLine] + self[i + 1]).length < 20) {
+          titleLines[currentLine] += ` ${self[i + 1]}`;
+        } else {
+          currentLine += 1;
+          titleLines[currentLine] = titleWords[i + 1];
+        }
       }
-    }
-    return joined;
-  });
+      return titleLines;
+    });
 
-  return joined;
+    return titleLines;
+  }
+  return [];
 }

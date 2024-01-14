@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress';
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
 
   lang: 'en-US',
@@ -17,33 +16,56 @@ export default defineConfig({
   vue: ({
     template: {
       compilerOptions: {
-        // treat all tags with a dash as custom elements
+        // treat all tags with 'vivitt-' as custom elements
         isCustomElement: (tag) => tag.includes('vivitt-'),
       },
     },
   }),
-  transformPageData(pageData) {
-    pageData.frontmatter.head ??= [];
-    pageData.frontmatter.head.push([
+  async transformHead(context) {
+    context.head.push([
       'meta',
       {
         name: 'og:image',
-        content: 'data:image/jpeg',
+        content: context.assets.filter((item) => item.includes('data:image/jpeg')),
       },
     ]);
-    pageData.frontmatter.head.push([
+    context.head.push([
       'meta',
       {
         name: 'og:title',
-        content: pageData.frontmatter.title
+        content: context.title,
       },
     ]);
-    pageData.frontmatter.head.push([
+    context.head.push([
       'meta',
       {
         name: 'og:description',
-        content: pageData.frontmatter.titleTemplate
+        content: context.description,
       },
     ]);
   },
+  // transformPageData(pageData) {
+  //   pageData.frontmatter.head ??= [];
+  //   pageData.frontmatter.head.push([
+  //     'meta',
+  //     {
+  //       name: 'og:image',
+  //       content: pageData.frontmatter.image,
+  //     },
+  //   ]);
+  //   pageData.frontmatter.head.push([
+  //     'meta',
+  //     {
+  //       name: 'og:title',
+  //       content: pageData.frontmatter.title,
+  //     },
+  //   ]);
+  //   pageData.frontmatter.head.push([
+  //     'meta',
+  //     {
+  //       name: 'og:description',
+  //       content: pageData.frontmatter.titleTemplate,
+  //     },
+  //   ]);
+  // },
 });

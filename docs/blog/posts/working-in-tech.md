@@ -1,4 +1,5 @@
 ---
+
 title: "Working in Tech: Going beyond coding"
 titleTemplate: Viviana's blog
 date: 2022-08-09

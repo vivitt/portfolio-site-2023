@@ -1,9 +1,8 @@
 <script setup>
 import { useData, useRoute } from 'vitepress';
 import { computed, onMounted, ref } from 'vue';
-import { data as posts } from './posts.data.js';
-import formatBlogPostTitle from './utils/formatBlogPostTitle';
-import blogPostDate from './utils/blogPostDate';
+import { data as posts } from './posts.data';
+import formatBlogPostTitleForCoverImage from './utils/formatBlogPostTitle';
 
 const route = useRoute();
 
@@ -13,11 +12,12 @@ function findCurrentIndex() {
   return posts.findIndex((p) => p.url === route.path);
 }
 
-const date = computed(() => posts[findCurrentIndex()].date);
-const postTitle = computed(() => posts[findCurrentIndex()].title);
-const postTitleSeparatedLines = formatBlogPostTitle(postTitle.value);
-const titleFontSize = (postTitleSeparatedLines.length > 4) ? '78px' : '98px';
-const titleLineHeight = (postTitleSeparatedLines.length > 4) ? 70 : 90;
+const date = computed(() => (posts[findCurrentIndex()] ? posts[findCurrentIndex()].date : ''));
+const title = computed(() => (posts[findCurrentIndex()] ? posts[findCurrentIndex()].title : ''));
+
+const lineSeparatedBlogTitle = formatBlogPostTitleForCoverImage(title.value);
+const titleFontSize = (lineSeparatedBlogTitle.length > 4) ? '78px' : '98px';
+const titleLineHeight = (lineSeparatedBlogTitle.length > 4) ? 70 : 90;
 
 const cover = ref(null);
 const font = ref(null);
@@ -59,7 +59,7 @@ onMounted(async () => {
     url('/assets/fonts/modak-regular-webfont.woff') format('woff');`);
 });
 
-const generated = (titleLines) => {
+const generated = () => {
   const canvas = document.createElement('canvas');
 
   canvas.height = 840;
@@ -74,15 +74,15 @@ const generated = (titleLines) => {
   context.textBaseline = 'top';
   let startTitle = 280;
 
-  titleLines.forEach((item) => {
+  lineSeparatedBlogTitle.forEach((item) => {
     context.fillText(item, 173, startTitle, 1050);
     startTitle += titleLineHeight;
   });
-
   context.font = '30px Fairplay Display';
-  context.fillText(`${blogPostDate(date.value)}`, 173, 250, 1400);
+  context.fillText(`${date.value}`, 173, 250, 1400);
 
-  return canvas.toDataURL('image/jpeg');
+  const image = canvas.toDataURL('image/jpeg');
+  return image;
 };
 
 </script>
@@ -93,7 +93,7 @@ const generated = (titleLines) => {
     <div class='blog__cover'>
       <img
         v-if='cover'
-        :src="generated(postTitleSeparatedLines)"
+        :src="generated()"
         alt=""
         width="1600"
         height="840"
@@ -105,13 +105,13 @@ const generated = (titleLines) => {
         height="840"
         />
     </div>
-    <span>{{ blogPostDate(date) }}</span>
+    <span>{{ date }}</span>
     <h1>
         {{ data.title }}
     </h1>
   </header>
 
-<Content  />
+  <Content  />
 </article>
 </template>
 <style scoped lang="less">

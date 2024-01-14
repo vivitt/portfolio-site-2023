@@ -1,4 +1,5 @@
 ---
+
 title: "Recap of Software Crafters Barcelona 2023: things I learned and loved"
 titleTemplate: Viviana's blog
 date: 2023-10-27

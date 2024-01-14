@@ -1,7 +1,7 @@
 <script setup>
 import { data as posts } from './posts.data.js';
-import blogPostDate from './utils/blogPostDate';
 </script>
+
 <template>
   <div class="blog centered">
     <ul class="blog__feed">
@@ -11,7 +11,7 @@ import blogPostDate from './utils/blogPostDate';
         :key="{id}"
       >
       <article>
-        <span>{{blogPostDate(date)}}</span>
+        <span>{{ date }}</span>
 
           <a
           class="blog__feed__link"
@@ -34,6 +34,7 @@ import blogPostDate from './utils/blogPostDate';
     </ul>
   </div>
 </template>
+
 <style scoped lang="less">
 .blog {
   &__feed {
@@ -41,7 +42,7 @@ import blogPostDate from './utils/blogPostDate';
     padding: 0;
     a {
       text-decoration: none;
-      :hover { 
+      :hover {
         text-decoration: underline;
       }
     }

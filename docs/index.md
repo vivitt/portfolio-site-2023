@@ -1,7 +1,9 @@
----     
+---  
+   
 home: true
 title: Viviana Yanez
 titleTemplate: Creative Frontend Developer
+
 ---
 
 <div class="about centered">

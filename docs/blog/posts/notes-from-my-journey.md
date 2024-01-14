@@ -1,4 +1,5 @@
 ---
+
 title: "Notes from my journey as a Software Engineering intern on the Growth team"
 titleTemplate: Viviana's blog
 date: 2023-07-18

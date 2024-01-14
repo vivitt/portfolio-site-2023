@@ -1,6 +1,8 @@
 ---
+
 title: Blog
 titleTemplate: Viviana Yanez Creative Frontend Developer
+
 ---
 
 

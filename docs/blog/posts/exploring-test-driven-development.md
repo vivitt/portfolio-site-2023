@@ -1,4 +1,5 @@
 ---
+
 title: "Exploring Test-Driven Development: “The TDD Companion” by Scott L Bain"
 titleTemplate: Viviana's blog
 date: 2023-11-07

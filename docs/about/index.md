@@ -1,3 +1,10 @@
+---
+
+title: About
+titleTemplate: Viviana Yanez Creative Frontend Developer
+
+---
+
 <div class="about centered">
     <p>
         I am a Junior Software Developer, with a background in audiovisual and visual arts.

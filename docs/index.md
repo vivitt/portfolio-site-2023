@@ -2,16 +2,16 @@
 home: true
 title: Viviana Yanez
 titleTemplate: Creative Frontend Developer
-head:
-  - - meta
-    - name: og:image
-      content: assets/viviogimage.png
-  - - meta
-    - name: og:title
-      content: Viviana Yanez
-  - - meta
-    - name: og:description
-      content: Creative Frontend Developer
+# head:
+#   - - meta
+#     - name: og:image
+#       content: assets/viviogimage.png
+#   - - meta
+#     - name: og:title
+#       content: Viviana Yanez
+#   - - meta
+#     - name: og:description
+#       content: Creative Frontend Developer
 
 ---
 

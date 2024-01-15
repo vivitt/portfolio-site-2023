@@ -26,11 +26,7 @@ export default defineConfig({
       'meta',
       {
         name: 'og:image',
-        content: context.assets.filter((item) => {
-          if (item.includes('data:image/jpeg')) {
-            return item;
-          } return '/assets/viviogimage.png';
-        }),
+        content: context.pageData.frontmatter.isBlogPost ? 'assets/article-cover.svg' : 'assets/viviogimage.png',
       },
     ]);
     context.head.push([
@@ -48,28 +44,28 @@ export default defineConfig({
       },
     ]);
   },
-  // transformPageData(pageData) {
-  //   pageData.frontmatter.head ??= [];
-  //   pageData.frontmatter.head.push([
-  //     'meta',
-  //     {
-  //       name: 'og:image',
-  //       content: pageData.frontmatter.image,
-  //     },
-  //   ]);
-  //   pageData.frontmatter.head.push([
-  //     'meta',
-  //     {
-  //       name: 'og:title',
-  //       content: pageData.frontmatter.title,
-  //     },
-  //   ]);
-  //   pageData.frontmatter.head.push([
-  //     'meta',
-  //     {
-  //       name: 'og:description',
-  //       content: pageData.frontmatter.titleTemplate,
-  //     },
-  //   ]);
-  // },
+  transformPageData(pageData) {
+    pageData.frontmatter.head ??= [];
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'og:image',
+        content: pageData.frontmatter.isBlogPost ? 'assets/article-cover.svg' : 'assets/viviogimage.png',
+      },
+    ]);
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'og:title',
+        content: pageData.frontmatter.title,
+      },
+    ]);
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'og:description',
+        content: pageData.frontmatter.titleTemplate,
+      },
+    ]);
+  },
 });

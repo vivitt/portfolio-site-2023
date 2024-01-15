@@ -21,36 +21,13 @@ export default defineConfig({
       },
     },
   }),
-  async transformHead(context) {
-    context.head.push([
-      'meta',
-      {
-        name: 'og:image',
-        content: context.title === 'Home' ? '/assets/article-cover.svg' : context.assets,
-      },
-    ]);
-    context.head.push([
-      'meta',
-      {
-        name: 'og:title',
-        content: context.title,
-      },
-    ]);
-    context.head.push([
-      'meta',
-      {
-        name: 'og:description',
-        content: context.description,
-      },
-    ]);
-  },
   transformPageData(pageData) {
     pageData.frontmatter.head ??= [];
     pageData.frontmatter.head.push([
       'meta',
       {
         name: 'og:image',
-        content: pageData.frontmatter.isBlogPost ? '/assets/article-cover.svg' : '/assets/viviogimage.png',
+        content: '/assets/viviogimage.png',
       },
     ]);
     pageData.frontmatter.head.push([

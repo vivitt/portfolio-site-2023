@@ -26,7 +26,7 @@ export default defineConfig({
       'meta',
       {
         name: 'og:image',
-        content: context.pageData.frontmatter.isBlogPost ? 'assets/article-cover.svg' : 'assets/viviogimage.png',
+        content: context.pageData.frontmatter.isBlogPost ? '/assets/article-cover.svg' : '/assets/viviogimage.png',
       },
     ]);
     context.head.push([

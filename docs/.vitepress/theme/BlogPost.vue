@@ -53,12 +53,6 @@ async function loadFont(fontFamily, url) {
     });
 }
 
-onMounted(async () => {
-  await loadImage('/assets/article-cover.svg');
-  await loadFont('Modak', `url('/assets/fonts/modak-regular-webfont.woff2') format('woff2'),
-    url('/assets/fonts/modak-regular-webfont.woff') format('woff');`);
-});
-
 const generated = () => {
   const canvas = document.createElement('canvas');
 
@@ -81,9 +75,18 @@ const generated = () => {
   context.font = '30px Fairplay Display';
   context.fillText(`${date.value}`, 173, 250, 1400);
 
-  const image = canvas.toDataURL('image/jpeg');
-  return image;
+  const dataUrl = canvas.toDataURL('image/jpeg');
+
+  return dataUrl;
 };
+
+onMounted(async () => {
+  await loadImage('/assets/article-cover.svg');
+  await loadFont('Modak', `url('/assets/fonts/modak-regular-webfont.woff2') format('woff2'),
+    url('/assets/fonts/modak-regular-webfont.woff') format('woff');`);
+
+  document.querySelector('meta[name="og:image"]').setAttribute('content', generated());
+});
 
 </script>
 <template>

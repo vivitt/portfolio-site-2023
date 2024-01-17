@@ -21,6 +21,9 @@ export default defineConfig({
       },
     },
   }),
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+  ],
   transformPageData(pageData) {
     pageData.frontmatter.head ??= [];
     pageData.frontmatter.head.push([
@@ -42,6 +45,34 @@ export default defineConfig({
       {
         name: 'og:description',
         content: pageData.frontmatter.titleTemplate,
+      },
+    ]);
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+    ]);
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'twitter:title',
+        content: pageData.frontmatter.titleTemplate,
+      },
+    ]);
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'twitter:description',
+        content: pageData.frontmatter.titleTemplate,
+      },
+    ]);
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'twitter:image',
+        content: '/assets/viviyanezdev.png',
       },
     ]);
   },

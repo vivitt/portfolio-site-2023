@@ -27,7 +27,7 @@ export default defineConfig({
       'meta',
       {
         name: 'og:image',
-        content: './assets/viviyanezdev.png'
+        content: '/assets/viviyanezdev.png',
       },
     ]);
     pageData.frontmatter.head.push([

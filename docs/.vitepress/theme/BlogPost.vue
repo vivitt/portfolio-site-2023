@@ -86,6 +86,7 @@ onMounted(async () => {
     url('/assets/fonts/modak-regular-webfont.woff') format('woff');`);
 
   document.querySelector('meta[name="og:image"]').setAttribute('content', generated());
+  document.querySelector('meta[name="twitter:image"]').setAttribute('content', generated());
 });
 
 </script>

@@ -37,6 +37,18 @@ export default defineConfig({
         content: '/assets/viviyanezdev.png',
       },
     ],
+    [
+      'script',
+      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-8FT7WMMNQY' },
+    ],
+    [
+      'script',
+      {},
+      ` window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8FT7WMMNQY');`,
+    ],
   ],
   transformHead({ assets }) {
     const myFontFile = assets.find((file) => /playfairdisplay\.\w+\.woff2/);

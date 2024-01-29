@@ -1,14 +1,15 @@
 ---
 
 title: "Wrapping up the year: My 2023 tech journey"
-titleTemplate: Viviana's blog
 date: 2023-12-26
 author: Viviana Yanez
 id: 7
 link: ""
 isBlogPost: true
+excerpt: As we reach the last week of 2023, it is a nice time to reflect on the significant achievements of the year
 
 ---
+
 As we reach the last week of 2023, it is a nice time to reflect on the significant achievements of the year. For me, 2023 was a year of first-time experiences and I'd like to take this opportunity to reflect on what I accomplished this year and the journey that got me to where I am today.
 
 ---

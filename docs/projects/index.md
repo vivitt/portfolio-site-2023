@@ -1,7 +1,7 @@
 ---
 
-title: Projects
-titleTemplate: Viviana Yanez Creative Frontend Developer
+title: Viviana Yanez | Creative Frontend Developer
+titleTemplate: Discover the projects I am most proud of...
 
 ---
 

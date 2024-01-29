@@ -5,7 +5,8 @@ import { data as posts } from './posts.data.js';
 <template>
   <div class="blog centered">
     <p class="blog__intro">
-      Explore my articles covering frontend development, web accessibility, and my journey transitioning my career to the tech industry...
+      Explore my articles covering frontend development,
+       web accessibility, and my journey transitioning my career to the tech industry...
     </p>
     <ul class="blog__feed">
       <li

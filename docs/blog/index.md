@@ -1,7 +1,7 @@
 ---
 
-title: Blog
-titleTemplate: Viviana Yanez Creative Frontend Developer
+title: Viviana's Blog
+titleTemplate: Explore my articles covering frontend development, web accessibility, and my journey transitioning my career to the tech industry...
 
 ---
 

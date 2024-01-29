@@ -1,12 +1,12 @@
 ---
 
 title: "Recap of Software Crafters Barcelona 2023: things I learned and loved"
-titleTemplate: Viviana's blog
 date: 2023-10-27
 author: Viviana Yanez
 id: 5
 link: ""
 isBlogPost: true
+excerpt: I had the opportunity to attend the Software Crafters Barcelona event last weekend. It was the 10th edition but for me, it was my first in-person tech event
 
 ---
 I had the opportunity to attend the Software Crafters Barcelona event last weekend. It was the 10th edition but for me, it was my first in-person tech event and I've collected some notes, learnings, and thoughts that I wanted to share about this experience.

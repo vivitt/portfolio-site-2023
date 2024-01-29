@@ -36,12 +36,11 @@ export default defineConfig({
         name: 'twitter:image',
         content: '/assets/viviyanezdev.png',
       },
-    ]
+    ],
   ],
   transformHead({ assets }) {
     const myFontFile = assets.find((file) => /playfairdisplay\.\w+\.woff2/);
     if (myFontFile) {
-      console.log(myFontFile)
       return [
         [
           'link',
@@ -69,28 +68,32 @@ export default defineConfig({
       'meta',
       {
         name: 'og:description',
-        content: pageData.frontmatter.titleTemplate,
+        content: pageData.frontmatter.isBlogPost
+          ? pageData.frontmatter.excerpt
+          : pageData.frontmatter.titleTemplate,
       },
     ]);
     pageData.frontmatter.head.push([
       'meta',
       {
         name: 'twitter:card',
-        content: 'summary_large_image',
+        content: 'summary',
       },
     ]);
     pageData.frontmatter.head.push([
       'meta',
       {
         name: 'twitter:title',
-        content: pageData.frontmatter.titleTemplate,
+        content: pageData.frontmatter.title,
       },
     ]);
     pageData.frontmatter.head.push([
       'meta',
       {
         name: 'twitter:description',
-        content: pageData.frontmatter.titleTemplate,
+        content: pageData.frontmatter.isBlogPost
+          ? pageData.frontmatter.excerpt
+          : pageData.frontmatter.titleTemplate,
       },
     ]);
   },

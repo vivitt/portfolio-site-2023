@@ -17,7 +17,7 @@ const VivittSwitcher = defineClientComponent(
     <nav>
       <div class="logo">
       <a  href="/">
-        <img src="/logo-viviyanez.png" alt="viviyanez.dev home"/>
+        <img src="/logo-viviyanez.png" width="635" height="166" alt="viviyanez.dev home"/>
       </a>
     </div>
     <div class="switcher">

@@ -24,6 +24,24 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
+  transformHead({ assets }) {
+    const myFontFile = assets.find((file) => /playfairdisplay\.\w+\.woff2/);
+    if (myFontFile) {
+      console.log(myFontFile)
+      return [
+        [
+          'link',
+          {
+            rel: 'preload',
+            href: myFontFile,
+            as: 'font',
+            type: 'font/woff2',
+            crossorigin: '',
+          },
+        ],
+      ];
+    } return [];
+  },
   transformPageData(pageData) {
     pageData.frontmatter.head ??= [];
     pageData.frontmatter.head.push([

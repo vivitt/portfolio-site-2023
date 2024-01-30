@@ -20,8 +20,8 @@ import { data as projects } from './project.data.js';
         } of projects"
         :key="{id}"
       >
-      <div class="project__feed__preview__image">
-        <img :src="imageUrl" :alt="alt" height="430" width="430" />
+      <div class="project__feed__preview__image" :style="`background-image: url(${imageUrl});`">
+        <!-- <img :src="imageUrl" :alt="alt" height="430" width="430" /> -->
       </div>
       <div class="project__feed__preview__description">
         <h2 class="project__feed__preview__description-title">
@@ -87,20 +87,20 @@ import { data as projects } from './project.data.js';
       border-bottom: 1px solid black;
       border-inline-start: 1px solid black;
       border-inline-end: 1px solid black;
-      padding: 1em 0 ;
+      padding: 0 0 1em 0 ;
       background-color: white;
 
       @media screen and (max-width: 800px) {
         padding: auto;
       }
       &__image {
+        background-position: 50% 0%;
+        background-size: cover;
+        padding: 0;
+        background-clip: border-box;
         display: flex;
-        justify-content: center;
-        img {
-          object-fit: cover;
-          width: 50%;
-          height: 50%;
-        }
+        height: 300px;
+        width: 100%;
         border-bottom: 1px solid black;
       }
       &__description {

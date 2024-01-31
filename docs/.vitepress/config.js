@@ -24,20 +24,6 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     [
-      'meta',
-      {
-        name: 'og:image',
-        content: '/assets/viviyanezdev.png',
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'twitter:image',
-        content: '/assets/viviyanezdev.png',
-      },
-    ],
-    [
       'script',
       { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-8FT7WMMNQY' },
     ],
@@ -72,6 +58,13 @@ export default defineConfig({
     pageData.frontmatter.head.push([
       'meta',
       {
+        name: 'og:image',
+        content: 'https://www.viviyanez.dev/assets/viviyanezdev.png',
+      },
+    ]);
+    pageData.frontmatter.head.push([
+      'meta',
+      {
         name: 'og:title',
         content: pageData.frontmatter.title,
       },
@@ -90,22 +83,6 @@ export default defineConfig({
       {
         name: 'twitter:card',
         content: 'summary',
-      },
-    ]);
-    pageData.frontmatter.head.push([
-      'meta',
-      {
-        name: 'twitter:title',
-        content: pageData.frontmatter.title,
-      },
-    ]);
-    pageData.frontmatter.head.push([
-      'meta',
-      {
-        name: 'twitter:description',
-        content: pageData.frontmatter.isBlogPost
-          ? pageData.frontmatter.excerpt
-          : pageData.frontmatter.titleTemplate,
       },
     ]);
   },

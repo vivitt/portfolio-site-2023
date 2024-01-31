@@ -1,5 +1,13 @@
 ---
-
+head:
+  - - meta
+    - name: link
+      rel: 'preload',
+      href: '/assets/fonts/modak-regular-webfont.woff2',
+      as: 'font',
+      type: 'font/woff2',
+      crossorigin: '',
+      
 title: Viviana's Blog
 titleTemplate: Explore my articles covering frontend development, web accessibility, and my journey transitioning my career to the tech industry...
 

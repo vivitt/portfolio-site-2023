@@ -9,23 +9,25 @@ excerpt:
 
 ---
 
-I created a custom cover template for my blog entries. I like it because it gives consistency and a  personal touch to my site. Event though it only takes a few minutes to create each image with a editing image software, I though it would be great to dynamically generate the images. 
+I have created a customized cover template for my blog posts, which includes a background image with the title and date of the post. This adds a personal touch to my website and also maintains a visual consistency.
+However, creating and uploading these images for each post can be time-consuming. So, I really wanted a solution to generate these images dynamically.
+—-
 
-
-
-I wanted to add personalized cover images in my blog entries so started wondering how I could add dynamically generated images that allow me to include the title and date of each blog post.
-
-My blog is a Vitepress site and I found that using the HTML Canvas API was a great fit for what I wanted to do. I got inspired by the approach in this blogspot and adapted it to my current needs. This approach allows me to draw the blog title and date, inside a previously created image, adding consistency and a personal touch to my blog. 
+After researching, I found that the Canvas API could help. I was inspired by a series of blog posts and adapted the approach to my needs. In this blog post, I will explain my solution and provide an example in this codesandbox.
 
 
 Intro
-The [canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) provides a way for drawing graphics using Javascript into an HTML <canvas> element.
-It is focused on 2D graphics and is commonly used for animation, games, data visualization, generative art, among others.
-It provides an set of methods to  used it to add the text of the blog post to my blog post cover
+The [canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) provides a way for drawing graphics using Javascript and HTML. It is focused on 2D graphics and is commonly used for animation, games, data visualization, generative art, among others.
+It provides an set of methods to draw with Javascript inside an HTML <canvas> element, we will see more on that just below.
 
 Base image
-First, you will need to create an image that would be the base for your images. This will work as the surface where you will insert the text, and can be a pen file or an SVG.
+To begin with, we need an image that we can use as a background. We'll then add dynamic data such as the title and date to it. The first step is to create this image, which can be either a PNG or a SIG file.
+
 This is mine:
+<div class='blog__illustration'>
+<img  src=‘/assets/article-cover.svg’/>
+</div>
+
 
 
 First, let’s create a ref to save the image value once it is loaded.

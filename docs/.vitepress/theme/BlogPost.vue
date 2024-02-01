@@ -76,7 +76,7 @@ const generated = () => {
   context.fillText(`${date.value}`, 173, 250, 1400);
 
   const dataUrl = canvas.toDataURL('image/jpeg');
-  
+
   return dataUrl;
 };
 
@@ -84,9 +84,7 @@ onMounted(async () => {
   await loadImage('/assets/article-cover.svg');
   await loadFont('Modak', `url('/assets/fonts/modak-regular-webfont.woff2') format('woff2'),
     url('/assets/fonts/modak-regular-webfont.woff') format('woff');`);
-
   document.querySelector('meta[name="og:image"]').setAttribute('content', `https://www.viviyanez.dev/assets/${generated()}`);
-
 });
 
 </script>

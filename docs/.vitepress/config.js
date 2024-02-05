@@ -100,7 +100,7 @@ export default defineConfig({
       image: 'https://www.viviyanez.dev/assets/vivisblog.png',
       // favicon: `${hostname}/favicon.ico`,
     });
-    const posts = await createContentLoader('posts/*.md', {
+    const posts = await createContentLoader('/blog/posts/*.md', {
       excerpt: true,
       render: true,
     }).load();

@@ -40,20 +40,15 @@ function loadImage(url) {
 }
 
 async function loadFont(fontFamily, url) {
-  const newFont = new FontFace(fontFamily, url);
-  await newFont.load()
-    .then((face) => {
-      document.fonts.add(face);
-      font.value = face.family;
-    })
-    .catch((err) => {
-      if (err) {
-        cover.value = null;
-      }
-    });
+  return new Promise((resolve, reject) => {
+    const face = new FontFace(fontFamily, url);
+    face.onload = () => document.fonts.add(face);
+    font.value = face.family;
+    face.onerror = reject;
+  });
 }
 
-const generated = () => {
+const generateCover = () => {
   const canvas = document.createElement('canvas');
 
   canvas.height = 840;
@@ -95,7 +90,7 @@ onMounted(async () => {
     <div class='blog__cover'>
       <img
         v-if='cover'
-        :src="generated()"
+        :src="generateCover()"
         alt=""
         width="1600"
         height="840"

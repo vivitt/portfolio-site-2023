@@ -1,46 +1,11 @@
-import { defineConfig } from 'vitepress';
+import { defineConfig, createContentLoader } from 'vitepress';
 import path from 'path';
 import { writeFileSync } from 'fs';
 import { Feed } from 'feed';
-import { data as posts } from './theme/posts.data';
 
-const hostname = 'https://www.viviyanez.dev/blog';
+const hostname = 'https://www.viviyanez.dev/blog/';
 
 export default defineConfig({
-  buildEnd: async (config) => {
-    const feed = new Feed({
-      title: "Vivi's Blog",
-      description: 'A collection of articles on web development, accessibility and career transition',
-      id: hostname,
-      link: hostname,
-      language: 'en',
-      image: 'https://laros.io/images/paul-laros.jpg',
-      favicon: `${hostname}/favicon.ico`,
-      copyright:
-        'Copyright (c) 2024 Viviana Yanez',
-    });
-    posts.map((post) => {
-      const {
-        url, excerpt, frontmatter, html,
-      } = post;
-      feed.addItem({
-        title: frontmatter.title,
-        id: `${hostname}${url}`,
-        link: `${hostname}${url}`,
-        description: excerpt,
-        content: html,
-        author: [
-          {
-            name: 'Viviana Yanez',
-            email: 'hey@laros.io',
-            link: 'https://www.viviyanez.dev',
-          },
-        ],
-        date: frontmatter.date,
-      });
-    });
-    writeFileSync(path.join(config.outDir, 'feed.rss'), feed.rss2());
-  },
   lang: 'en-US',
   title: 'Viviana Yanez',
   titleTemplate: 'Frontend Developer',
@@ -124,5 +89,45 @@ export default defineConfig({
         content: 'summary',
       },
     ]);
+  },
+  buildEnd: async (config) => {
+    const feed = new Feed({
+      title: "Vivi's Blog",
+      description: 'A series of articles on web development, accessibility and career transition',
+      id: hostname,
+      link: hostname,
+      language: 'en',
+      image: 'https://www.viviyanez.dev/assets/vivisblog.png',
+      // favicon: `${hostname}/favicon.ico`,
+    });
+    const posts = await createContentLoader('posts/*.md', {
+      excerpt: true,
+      render: true,
+    }).load();
+
+    posts.sort(
+      (a, b) => +new Date(b.frontmatter.date)
+        - +new Date(a.frontmatter.date),
+    );
+    posts.forEach((post) => {
+      const {
+        url, excerpt, frontmatter, html,
+      } = post;
+      feed.addItem({
+        title: frontmatter.title,
+        id: `${hostname}${url}`,
+        link: `${hostname}${url}`,
+        description: excerpt,
+        content: html,
+        author: [
+          {
+            name: 'Viviana Yanez',
+            link: 'https://www.viviyanez.dev',
+          },
+        ],
+        date: frontmatter.date,
+      });
+    });
+    writeFileSync(path.join(config.outDir, 'feed.rss'), feed.rss2());
   },
 });

@@ -3,7 +3,7 @@ import path from 'path';
 import { writeFileSync } from 'fs';
 import { Feed } from 'feed';
 
-const hostname = 'https://www.viviyanez.dev/blog/';
+const hostname = 'https://www.viviyanez.dev';
 
 export default defineConfig({
   lang: 'en-US',
@@ -100,7 +100,7 @@ export default defineConfig({
       image: 'https://www.viviyanez.dev/assets/vivisblog.png',
       // favicon: `${hostname}/favicon.ico`,
     });
-    const posts = await createContentLoader('posts/*.md', {
+    const posts = await createContentLoader('/blog/posts/*.md', {
       excerpt: true,
       render: true,
     }).load();

@@ -2,6 +2,7 @@ import { defineConfig, createContentLoader } from 'vitepress';
 import path from 'path';
 import { writeFileSync } from 'fs';
 import { Feed } from 'feed';
+import footnote from 'markdown-it-footnote';
 
 const hostname = 'https://www.viviyanez.dev';
 
@@ -17,6 +18,11 @@ export default defineConfig({
     ],
   },
   appearance: false,
+  markdown: {
+    config: (md) => {
+      md.use(footnote);
+    },
+  },
   vue: ({
     template: {
       compilerOptions: {

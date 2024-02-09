@@ -4,10 +4,6 @@ import { data as posts } from './posts.data.js';
 
 <template>
   <div class="blog centered">
-    <p class="blog__intro">
-      A set of articles that cover web development,
-      accessibility, and my journey into the tech industry...
-    </p>
     <ul class="blog__feed">
       <li
         class="blog__feed__preview"

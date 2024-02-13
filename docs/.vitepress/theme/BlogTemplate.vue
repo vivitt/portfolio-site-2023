@@ -37,10 +37,7 @@ import { data as posts } from './posts.data.js';
 
 <style scoped lang="less">
 .blog {
-  &__intro {
-    font-size: 30px;
-    padding: 2em 0;
-  }
+  padding-top: 5em;
   &__feed {
     list-style-type: none;
     padding: 0;

@@ -122,4 +122,3 @@ As a final comment, maybe you noted that I am leaving the "alt" attribute of the
 Now that I have beautiful cover images for my blog posts, I'm thinking of using the Open Graph protocol to create nicely shareable links for my entries. This might be the subject of my next blog post... For now, that's all. Thanks for reading :)
 
 [^1]: However, take into account that with the CanvasAPI we are writing pixels, so the ``maxWidth`` param will narrow the text if needed. I used some Javascript calculation to add line breaks to the title when needed before it is drawn, to make sure it only takes the place I want it to take inside the image.
-I have created a customized cover template for my blog posts, which includes a background image with the title and date of the post. This adds a personal touch to my website and also maintains a visual consistency.

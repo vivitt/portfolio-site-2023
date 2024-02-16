@@ -6,7 +6,9 @@ author: Viviana Yanez
 id: 8
 link: 'https://dev.to/vivitt/participating-in-the-collab-lab-week-1-3gg6'
 isBlogPost: true
+excerpt: "This is a summary of my first week participating in [The Collab Lab](https://the-collab-lab.codes/).
 
+I decided to join because, while searching for a full-time role as a developer, I realized that working on my own projects was not providing me with a me a big part of what a developer job is about. I found myself missing the experience of collaborating with others to build something together and the opportunity to improve my communication and presentation skills."
 ---
 
 This is a summary of my first week participating in [The Collab Lab](https://the-collab-lab.codes/).

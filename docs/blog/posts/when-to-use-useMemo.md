@@ -2,7 +2,7 @@
 title: "React Hooks: When to Use useMemo"
 date: 2024-02-22
 author: Viviana Yanez
-id: 13
+id: 12
 link: "https://dev.to/vivitt/react-hooks-when-to-use-usememo-5cc"
 excerpt: "I am currently working on a client-side application using React and Firebase, and I am taking the opportunity to delve deeper into React hooks and patterns."
 isBlogPost: true

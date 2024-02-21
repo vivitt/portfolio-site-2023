@@ -1,5 +1,5 @@
 ---
-title: "React Hooks: When to Use useMemo"
+title: "React Hooks: how to cache calculations with useMemo"
 date: 2024-02-22
 author: Viviana Yanez
 id: 12

@@ -10,7 +10,7 @@ isBlogPost: true
 
 I am currently working on a client-side application using React and Firebase, and I am taking the opportunity to delve deeper into React hooks and patterns.
 
-Last week, while working on a new feature, I had the chance to learn about the [usage of the useEffects hook](https://dev.to/vivitt/react-hooks-when-not-to-use-useeffects-1bbb). This led me to explore the useMemo hook, which is a great solution if you need to store information from previous renders, avoiding expensive calculations that could impact your app's performance.
+Last week, while working on a new feature, I had the chance to learn about the usage of the useEffects hook. This led me to explore the useMemo hook, which is a great solution if you need to store information from previous renders, avoiding expensive calculations that could impact your app's performance.
 
 ---
 

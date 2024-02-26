@@ -24,7 +24,7 @@ I am a collaborative team player <span role='img' aria-label='soccer ball' aria-
 Last year, I completed a software engineering internship at the Wikimedia Foundation. Currently, I am contributing as a frontend developer at The Collab Lab. See <a href="https://github.com/wikimedia/mediawiki-extensions-GrowthExperiments/commits?author=vivitt" target='_blank'>my contributions</a> or <a href="/cv/cv-VIVIANA-YANEZ-software-developer.pdf" target="_blank" >download my CV</a>.
 </p>
 <p>
-I love to share what I learn, so I started a <a href="/blog/">blog</a> <span role='img' aria-label='notebook' aria-hidden="true">📓</span> to talk about my developer journey.
+I love to share what I learn, so I started a blog <span role='img' aria-label='notebook' aria-hidden="true">📓</span> where you can find <a href="/blog/">a series of articles on web development, accessibility, and my experiences transitioning into tech</a>. I also volunteer as a tech coach at <a href="https://techfems.org/">TechFems</a>.
 </p>
 <p>
 <span role='img' aria-label='message' aria-hidden="true">💌</span> Please feel free to reach out on <a href="https://www.linkedin.com/in/viviana-yanez/" target='_blank'>Linkedin</a>, I am always happy to exchange experiences, learnings, and thoughts... Thanks for your visit!

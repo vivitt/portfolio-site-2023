@@ -21,7 +21,7 @@ I am passionate <span role='img' aria-label='heart' aria-hidden="true">💗</spa
 I am a collaborative team player <span role='img' aria-label='soccer ball' aria-hidden="true">⚽️</span> who can quickly adapt to new environments and tasks. I am keen <span role='img' aria-label='eyes' aria-hidden="true">👀</span> on design details and empathize with the user's perspective.
 </p>
 <p>
-During the last few months, I have worked as a Software Engineering intern at Wikimedia Foundation. See <a href="https://github.com/wikimedia/mediawiki-extensions-GrowthExperiments/commits?author=vivitt" target='_blank'>my contributions</a> or <a href="/cv/cv-VIVIANA-YANEZ-software-developer.pdf" target="_blank" >download my CV</a>.
+Last year, I completed a software engineering internship at the Wikimedia Foundation. Currently, I am contributing as a frontend developer at The Collab Lab. See <a href="https://github.com/wikimedia/mediawiki-extensions-GrowthExperiments/commits?author=vivitt" target='_blank'>my contributions</a> or <a href="/cv/cv-VIVIANA-YANEZ-software-developer.pdf" target="_blank" >download my CV</a>.
 </p>
 <p>
 I love to share what I learn, so I started a <a href="/blog/">blog</a> <span role='img' aria-label='notebook' aria-hidden="true">📓</span> to talk about my developer journey.

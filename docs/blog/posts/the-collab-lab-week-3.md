@@ -1,34 +1,35 @@
 ---
-
-title: "Participating in The Collab Lab: Week #3"
-date: 2024-02-22
+title: "Participating in The Collab Lab: Week #4"
+date: 2024-03-04
 author: Viviana Yanez
-id: 13
-link: ''
+id: 16
+link: ""
 isBlogPost: true
-excerpt: "This is week number 3 for my Collab Lab project. 
-Since week 1, I have been contributing by adding different features to our app. I've had the opportunity to pair with all the developers in the team on these issues."
+excerpt: "I have already finished week 4 in [The Collab Lab](https://the-collab-lab.codes/). I am glad to see the project taking shape, with the issues becoming more complex. As a team, we have still managed to deliver the new features on time."
+---
+
+I have already finished week 4 in [The Collab Lab](https://the-collab-lab.codes/). I am glad to see the project taking shape, with the issues becoming more complex. As a team, we have still managed to deliver the new features on time.
 
 ---
 
-This is week number 3 for my Collab Lab project.
-Since week 1, I have been contributing by adding different features to our app. I've had the opportunity to pair with all the developers in the team on these issues.
+This week, I want to highlight a great moment in the weekly schedule and one of my favorite aspects of participating in this project - the ✨ Office Hours ✨ .
 
----
+These are optional weekly sync meetings where you can share your questions, concerns, or ideas, whether they are related to the project or not.
 
-Last Sunday, we had our first team retrospective, so I am sharing here some personal thoughts after spending some time reflecting on the job done so far.
+I find this space truly helpful and have already gained valuable insights from other participants, not only about my project-related questions but also regarding career-related issues.
 
-✨ One of my goals when joining The Collab Lab was to refresh and deepen my React knowledge, so I am glad I am making progress in that sense. Also, I was missing the collaborative part of the development process, so I am really enjoying the teamwork.
+Having a safe space where you can freely share anything and receive guidance from mentors is a privilege, and it really generates a supportive environment.
 
-💪🏽 I am also learning a lot from the collaboration process and feel quite confident using GitHub. The team is communicating very well, and the project is well on track.
-
-🚧 I am always looking forward to improving my communication skills and becoming more confident when presenting my work at the demos.
-
----
+Apart from the project work, it's definitely one of the aspects I would highlight to anyone considering participating in future cohorts.
 
 ## Learning highlights of my week
 
-My learnings have been focusing on React, this week I continued my [React's blog post series](https://dev.to/vivitt/series/26502) with the useMemo hook that was new for me and is a solution to improve app performance by avoiding unnecessary calculations, especially when working with slow methods or large amounts of data.
+I have been working on an issue that pushed me to learn about the Date object in JavaScript. This led me to write two blog posts during the week to document my learnings:
+
+- [Learning about Date objects in JS](https://dev.to/vivitt/learning-about-date-objects-in-js-56l1)
+- [JavaScript Date: calculating elapsed time](https://dev.to/vivitt/javascript-date-calculating-elapsed-time-5bfl)
+
+Simultaneously, I have been working on a draft for another article for my React Hooks series, taking a deep dive into the useState hook.
 
 ---
 

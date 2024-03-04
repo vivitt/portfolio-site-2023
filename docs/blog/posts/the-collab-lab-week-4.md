@@ -3,7 +3,7 @@ title: "Participating in The Collab Lab: Week #4"
 date: 2024-03-04
 author: Viviana Yanez
 id: 16
-link: ""
+link: "https://dev.to/vivitt/participating-in-the-collab-lab-week-4-2977"
 isBlogPost: true
 excerpt: "I have already finished week 4 in [The Collab Lab](https://the-collab-lab.codes/). I am glad to see the project taking shape, with the issues becoming more complex. As a team, we have still managed to deliver the new features on time."
 ---

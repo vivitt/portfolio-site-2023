@@ -2,7 +2,7 @@
 title: "Comparing Strings in JavaScript: How to check for Equal Normalized Values"
 date: 2024-03-22
 author: Viviana Yanez
-id: 16
+id: 17
 link: ""
 isBlogPost: true
 excerpt: "Last week, I contributed to the implementation of a feature that prevent users from submitting input values that already exist in the database.
@@ -60,8 +60,6 @@ Finally, we iterate over the retrieved data and use the stringsHaveSameValue fun
         		return;
         		}
         let response = await addItem(listPath, { itemName, daysUntilNextPurchase });
-
-
 
 ## Final note
 

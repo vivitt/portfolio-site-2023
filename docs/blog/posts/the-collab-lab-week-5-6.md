@@ -1,5 +1,5 @@
 ---
-title: "Participating in The Collab Lab:\n\n\n\n\n\n Week #5 & #6"
+title: "Participating in The Collab Lab: Week #5 & #6"
 date: 2024-03-22
 author: Viviana Yanez
 id: 18

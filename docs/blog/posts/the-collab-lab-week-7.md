@@ -3,7 +3,7 @@ title: "Participating in The Collab Lab: Week #7"
 date: 2024-03-25
 author: Viviana Yanez
 id: 21
-link: "https://dev.to/vivitt/participating-in-the-collab-lab-week-7-1lif"
+link: ""
 isBlogPost: true
 excerpt: "We are pretty close to the end of our Collab Lab project 🤯.
 
@@ -42,3 +42,5 @@ It was a really enjoyable week for me, as it involved writing code, but also a l
 ---
 
 See you next week! Thanks for reading :)
+
+_This blog post was originally published on [dev.to](https://dev.to/vivitt/participating-in-the-collab-lab-week-7-1lif) on Mar 25, 2024_

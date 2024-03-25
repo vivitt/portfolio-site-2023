@@ -1,7 +1,7 @@
 ---
 
 title: "Participating in The Collab Lab: Week #3"
-date: 2024-02-22
+date: 2024-02-24
 author: Viviana Yanez
 id: 13
 link: ''
@@ -33,3 +33,5 @@ My learnings have been focusing on React, this week I continued my [React's blog
 ---
 
 See you next week! Thanks for reading :)
+
+_This blog post was originally published on [dev.to](https://dev.to/vivitt/participating-in-the-collab-lab-week-3-g38) on Feb 22, 2024_

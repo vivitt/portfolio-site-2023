@@ -59,7 +59,7 @@ import { data as projects } from './project.data.js';
 <style scoped lang="less">
 .project {
 
-  padding: 2em;
+  padding: 4em;
   &__feed {
     display: grid;
     // Change number of colums when more project are added

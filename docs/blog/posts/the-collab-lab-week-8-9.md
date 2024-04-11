@@ -45,8 +45,6 @@ I came across a posible solution for this adding an [optional segment](https://r
 
 ---
 
-As we just concluded the program, and I published a summary of the final app and the highlights of my journey in [the final blog post of my Collab Lab series](/blog/posts/the-collab-wrapping-up).
-
 Thanks for reading :)
 
 

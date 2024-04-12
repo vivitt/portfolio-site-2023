@@ -24,7 +24,7 @@
 }
 
 @font-face {
-  font-family: "Modak";
+  font-family: 'Modak';
   font-weight: 400;
   src: url('../../public/assets/fonts/modak-regular-webfont.woff2') format('woff2'),
   url('../../public/assets/fonts/modak-regular-webfont.woff') format('woff');
@@ -64,8 +64,6 @@ nav img {
     height: auto; 
   }
 }
-
-
 
 .switcher {
   order: 2;

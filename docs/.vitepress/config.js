@@ -51,40 +51,20 @@ export default defineConfig({
     ],
   ],
   transformHead({ assets }) {
-    const playfairFontFile = assets.find((file) =>
-      file.match(/playfairdisplay-regular-webfont\.\w+\.woff2/)
+    const myFonts = assets.filter((file) =>
+      file.match(/\w*-regular-webfont\.\w+\.woff2/)
     );
-
-    const modakFontFile = assets.find((file) =>
-      file.match(/modak-regular-webfont\.\w+\.woff2/)
-    );
-    if (playfairFontFile) {
-      return [
-        [
-          "link",
-          {
-            rel: "preload",
-            href: playfairFontFile,
-            as: "font",
-            type: "font/woff2",
-            crossorigin: "",
-          },
-        ],
-      ];
-    }
-    if (modakFontFile) {
-      return [
-        [
-          "link",
-          {
-            rel: "preload",
-            href: modakFontFile,
-            as: "font",
-            type: "font/woff2",
-            crossorigin: "",
-          },
-        ],
-      ];
+    if (myFonts.length > 0) {
+      return myFonts.forEach((font) => [
+        "link",
+        {
+          rel: "preload",
+          href: font,
+          as: "font",
+          type: "font/woff2",
+          crossorigin: "",
+        },
+      ]);
     }
     return [];
   },

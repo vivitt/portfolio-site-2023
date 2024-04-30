@@ -2,11 +2,11 @@
 title: "Shopping List App"
 date: 2024-03-05
 author: Viviana Yanez
-id: 3
+id: 2
 imageUrl: "/assets/775shots_so.png"
 alt: "Screenshot displaying the landing page of the shopping list app when user is not logged in"
 stack: React | Tailwind | Firebase
-deploy: "https://tcl-71-smart-shopping-list.web.app/"
+deploy: "https://despiensa.site"
 github: "https://github.com/the-collab-lab/tcl-71-smart-shopping-list"
 ---
 

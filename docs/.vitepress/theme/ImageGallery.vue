@@ -3,13 +3,13 @@ import { ref, computed } from 'vue';
 
 const IMAGES = [
   {
-    src: '../../public/assets/gallery/01.png',
+    src: '/assets/gallery/01.png',
     alt: 'smiling pink hair and blue skin face illustration',
   },
-  { src: '../../public/assets/gallery/02.png', alt: 'smiling blue hair and pink skin face illustration' },
-  { src: '../../public/assets/gallery/03.png', alt: 'smiling pink hair and yellow skin face illustration' },
-  { src: '../../public/assets/gallery/04.png', alt: 'smiling purple hair and blue skin face illustration' },
-  { src: '../../public/assets/gallery/05.png', alt: 'smiling yellow hair and purple skin face illustration' },
+  { src: '/assets/gallery/02.png', alt: 'smiling blue hair and pink skin face illustration' },
+  { src: '/assets/gallery/03.png', alt: 'smiling pink hair and yellow skin face illustration' },
+  { src: '/assets/gallery/04.png', alt: 'smiling purple hair and blue skin face illustration' },
+  { src: '/assets/gallery/05.png', alt: 'smiling yellow hair and purple skin face illustration' },
 
 ];
 
@@ -26,7 +26,7 @@ const current = ref(IMAGES[0]);
         <ul class="gallery__aside__thumbnails">
             <li v-for="image in IMAGES" @click="() => current = image" >
                 <img
-                :src="image.src"
+                :src="`http://viviyanez.dev/gallery/.netlify/images?url=${image.src}`"
                 :alt="image.alt"
                 class="gallery__aside__thumbnails__element"
                 :class="{'gallery__aside__thumbnails__element--active' : current.src === image.src}"

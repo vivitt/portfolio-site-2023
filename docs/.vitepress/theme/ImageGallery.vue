@@ -26,7 +26,7 @@ const current = ref(IMAGES[0]);
         <ul class="gallery__aside__thumbnails">
             <li v-for="image in IMAGES" @click="() => current = image" >
                 <img
-                :src="`http://viviyanez.dev/gallery/.netlify/images?url=${image.src}`"
+                :src="`http://viviyanez.dev/.netlify/images?url=${image.src}`"
                 :alt="image.alt"
                 class="gallery__aside__thumbnails__element"
                 :class="{'gallery__aside__thumbnails__element--active' : current.src === image.src}"

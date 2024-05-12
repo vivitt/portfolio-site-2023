@@ -116,10 +116,7 @@ onMounted(() => {
 
     <div class="gallery__aside">
       <ul>
-        <div
-          class="gallery__aside__thumbnails"
-          :style="`height: ${mainHeight}px`"
-        >
+        <div class="gallery__aside__thumbnails">
           <li v-for="image in IMAGES">
             <div class="gallery__aside__thumbnails__element">
               <button @click="() => (current = image)">
@@ -143,6 +140,10 @@ onMounted(() => {
 
 <style scoped lang="less">
 .gallery {
+  --main-width: 500px;
+  --main-height: 500px;
+  --thumb-width: 100px;
+  --thumb-height: 70px;
   border: pink 1px solid;
   display: flex;
   justify-content: center;
@@ -151,6 +152,7 @@ onMounted(() => {
 
   @media (max-width: 700px) {
     flex-direction: column;
+    align-items: center;
   }
 
   button {
@@ -187,17 +189,19 @@ onMounted(() => {
     filter: blur(1.5em);
     backdrop-filter: blur(1.5em);
   }
-  &__main {
-    border: violet 1px solid;
-    margin: 0 2em;
 
+  &__main {
+    margin-right: 1em;
     button {
       border-radius: 15%;
+    }
+
+    @media (max-width: 700px) {
+      margin-bottom: 1em;
     }
   }
 
   &__aside {
-    border: violet 1px solid;
     ul {
       padding: 0;
       margin: 0;
@@ -214,21 +218,30 @@ onMounted(() => {
       ::-webkit-scrollbar {
         display: none;
       }
+      height: var(--main-height);
+
       @media (max-width: 700px) {
-        flex-flow: row nowrap;
-        align-items: start;
-        justify-content: start;
+        flex-direction: row;
         overflow-x: scroll;
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none;
+        overflow-y: hidden;
+        width: var(--main-width);
+        height: 100%;
+      }
+
+      li {
+        @media (max-width: 700px) {
+          display: flex;
+          flex-direction: column;
+        }
       }
 
       &__element {
         cursor: pointer;
         margin-bottom: 1em;
+        width: var(--thumb-width);
 
         &__image {
-          max-width: 90%;
+          max-width: 80%;
           &--active {
             max-width: 100%;
           }

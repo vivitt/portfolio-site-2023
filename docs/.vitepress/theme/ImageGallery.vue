@@ -32,52 +32,22 @@ const IMAGES = [
     width: 500,
     height: 500,
   },
-  {
-    src: "/assets/gallery/01.png",
-    alt: "smiling pink hair and blue skin face illustration",
-    width: 500,
-    height: 500,
-  },
-  {
-    src: "/assets/gallery/02.png",
-    alt: "smiling blue hair and pink skin face illustration",
-    width: 500,
-    height: 500,
-  },
-  {
-    src: "/assets/gallery/03.png",
-    alt: "smiling pink hair and yellow skin face illustration",
-    width: 500,
-    height: 500,
-  },
-  {
-    src: "/assets/gallery/04.png",
-    alt: "smiling purple hair and blue skin face illustration",
-    width: 500,
-    height: 500,
-  },
-  {
-    src: "/assets/gallery/05.png",
-    alt: "smiling yellow hair and purple skin face illustration",
-    width: 500,
-    height: 500,
-  },
+
 ];
 
 const current = ref(IMAGES[0]);
 
 const dialog = ref(null);
 
-const windowWidth = ref(null);
+const mainWidth = ref(500);
 
-const mainWidth = ref((windowWidth.value / 100) * 80 || 500);
+const mainHeight = ref(mainWidth.value/4 * 3);
 
-const mainHeight = ref(mainWidth);
+const thumbWidth = ref(Math.ceil(mainWidth.value *20 / 100));
 
-const thumbSize = ref(Math.ceil(mainWidth.value / 6));
+const thumbHeight = ref(Math.ceil(mainHeight.value *20 / 100));
 
 onMounted(() => {
-  windowWidth.value = window.innerWidth;
   window.addEventListener("click", (event) => {
     if (event.target === dialog.value) {
       dialog.value.close();
@@ -94,7 +64,8 @@ onMounted(() => {
           :src="`http://viviyanez.dev/.netlify/images?url=${current.src}&fit=fill&w=${current.width}&h=${current.height}`"
           :alt="current.alt"
         />
-        <button @click="() => dialog.close()">Close full view</button>
+        <button @click="() => dialog.close()" class="gallery__dialog__content__button"
+          >Close full image</button>
       </div>
     </dialog>
 
@@ -103,11 +74,12 @@ onMounted(() => {
         @click="
           () => {
             dialog.showModal();
+            window.document.body.style.overflowY = 'hidden'
           }
         "
       >
         <img
-          :src="`http://viviyanez.dev/.netlify/images?url=${current.src}&fit=fill&w=${mainWidth}&h=${mainHeight}`"
+          :src="`http://viviyanez.dev/.netlify/images?url=${current.src}&fit=cover&w=${mainWidth}&h=${mainHeight}`"
           :alt="current.alt"
         />
       </button>
@@ -125,7 +97,7 @@ onMounted(() => {
                     'gallery__aside__thumbnails__element__image--active':
                       current.src === image.src,
                   }"
-                  :src="`http://viviyanez.dev/.netlify/images?url=${image.src}&fit=cover&w=${thumbSize}`"
+                  :src="`http://viviyanez.dev/.netlify/images?url=${image.src}&fit=cover&w=${thumbWidth}&h=${thumbHeight}`"
                   :alt="image.alt"
                 />
               </button>
@@ -138,12 +110,13 @@ onMounted(() => {
 </template>
 
 <style scoped lang="less">
+
 .gallery {
+
   --main-width: 500px;
-  --main-height: 500px;
-  --thumb-width: 100px;
-  --thumb-height: 70px;
-  border: pink 1px solid;
+  --main-height: calc((var(--main-width) / 4) * 3);
+  --thumb-width: calc(var(--main-width) * 20 / 100);
+  --thumb-height: calc(var(--main-height) * 20 / 100);
   display: flex;
   justify-content: center;
   align-items: start;
@@ -176,9 +149,16 @@ onMounted(() => {
 
     &__content {
       display: flex;
-      flex-direction: column;
-      button {
-        font-size: 1.2em;
+      flex-direction: column;s
+
+      img {
+        max-width: 100%
+      }
+
+      &__button {
+        padding: 1em;
+        margin: 1em;
+        align-self: end;
       }
     }
   }
@@ -211,9 +191,8 @@ onMounted(() => {
       align-items: center;
       justify-content: start;
       overflow-y: scroll;
-      -ms-overflow-style: none; /* IE and Edge */
+      -ms-overflow-style: none; 
       scrollbar-width: none;
-      /* Hide scrollbar for Chrome, Safari and Opera */
       ::-webkit-scrollbar {
         display: none;
       }
@@ -240,27 +219,27 @@ onMounted(() => {
         width: var(--thumb-width);
 
         &__image {
-          max-width: 80%;
-
+          max-width: 85%;
+          &:hover {
+            animation: resize-thumb 100ms forwards;
+          }
           &--active {
-            max-width: 100%;
+            max-width: 95%;
+            &:hover {
+              animation: none;
+            }
           }
         }
-      }
-      &__element::hover {
-        animation: resize-thumb 1s forwards;
-        border: green 2px solid;
-        background-color: green;
       }
     }
   }
 
   @keyframes resize-thumb {
     0% {
-      max-width: 80%;
+      max-width: 85%;
     }
     100% {
-      max-width: 100%;
+      max-width: 95%;
     }
   }
 }

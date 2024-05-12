@@ -103,7 +103,6 @@ onMounted(() => {
         @click="
           () => {
             dialog.showModal();
-            console.log(fullImage);
           }
         "
       >
@@ -242,11 +241,26 @@ onMounted(() => {
 
         &__image {
           max-width: 80%;
+
           &--active {
             max-width: 100%;
           }
         }
       }
+      &__element::hover {
+        animation: resize-thumb 1s forwards;
+        border: green 2px solid;
+        background-color: green;
+      }
+    }
+  }
+
+  @keyframes resize-thumb {
+    0% {
+      max-width: 80%;
+    }
+    100% {
+      max-width: 100%;
     }
   }
 }

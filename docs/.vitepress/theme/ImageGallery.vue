@@ -11,19 +11,19 @@ const IMAGES = [
   {
     src: "/assets/gallery/02.png",
     alt: "smiling blue hair and pink skin face illustration",
-    width: 500,
+    width: 600,
     height: 500,
   },
   {
     src: "/assets/gallery/03.png",
     alt: "smiling pink hair and yellow skin face illustration",
-    width: 500,
+    width: 1800,
     height: 500,
   },
   {
     src: "/assets/gallery/04.png",
     alt: "smiling purple hair and blue skin face illustration",
-    width: 500,
+    width: 100,
     height: 500,
   },
   {
@@ -139,7 +139,7 @@ onMounted(() => {
   }
 
   img {
-    border-radius: 15%;
+    border-radius: calc(var(--main-width) / 30);
   }
 
   &__dialog {
@@ -152,7 +152,7 @@ onMounted(() => {
       flex-direction: column;s
 
       img {
-        max-width: 100%
+        max-width: 100%;
       }
 
       &__button {

@@ -3,36 +3,42 @@ import { ref, computed, onMounted } from "vue";
 
 const IMAGES = [
   {
-    src: "/assets/gallery/01.png",
-    alt: "smiling pink hair and blue skin face illustration",
-    width: 500,
-    height: 500,
+    src: "/assets/gallery/01.jpg",
+    alt: "Illustration of a person in a downward dog yoga pose, with a series of different objects under their body.",
+    width: 1994,
+    height: 2123,
   },
   {
-    src: "/assets/gallery/02.png",
-    alt: "smiling blue hair and pink skin face illustration",
-    width: 600,
-    height: 500,
+    src: "/assets/gallery/02.jpg",
+    alt: "Black and white illustration of two kids hiding in a tree to attack a monster bird.",
+    width: 2187 
+    height: 3024,
   },
   {
-    src: "/assets/gallery/03.png",
-    alt: "smiling pink hair and yellow skin face illustration",
-    width: 1800,
-    height: 500,
-  },
-  {
-    src: "/assets/gallery/04.png",
-    alt: "smiling purple hair and blue skin face illustration",
-    width: 100,
-    height: 500,
-  },
-  {
-    src: "/assets/gallery/05.png",
-    alt: "smiling yellow hair and purple skin face illustration",
-    width: 500,
-    height: 500,
+    src: "/assets/gallery/03.jpg",
+    alt: "Illustration of the beginning of Kafka's 'Metamorphosis,' featuring a bedroom in blue tones.",
+    width: 2476,
+    height: 3097,
   },
 
+  {
+    src: "/assets/gallery/05.jpg",
+    alt: "Illustration of a blue bear traveling in a rocket.",
+    width: 2033,
+    height: 2692,
+  },
+  {
+    src: "/assets/gallery/06.jpg",
+    alt: "Illustration featuring a woman sitting on a bench with a dog by her side in a peaceful setting.",
+    width: 2161,
+    height: 3305,
+  },
+  {
+    src: "/assets/gallery/07.jpg",
+    alt: "Vibrant colored illustration of A woman sitting on a rock looking to a group of people on bikes in the background.",
+    width: 1117,
+    height: 489,
+  },
 ];
 
 const current = ref(IMAGES[0]);
@@ -41,11 +47,11 @@ const dialog = ref(null);
 
 const mainWidth = ref(500);
 
-const mainHeight = ref(mainWidth.value/4 * 3);
+const mainHeight = ref((mainWidth.value / 4) * 3);
 
-const thumbWidth = ref(Math.ceil(mainWidth.value *20 / 100));
+const thumbWidth = ref(Math.ceil((mainWidth.value * 20) / 100));
 
-const thumbHeight = ref(Math.ceil(mainHeight.value *20 / 100));
+const thumbHeight = ref(Math.ceil((mainHeight.value * 20) / 100));
 
 onMounted(() => {
   window.addEventListener("click", (event) => {
@@ -64,8 +70,12 @@ onMounted(() => {
           :src="`http://viviyanez.dev/.netlify/images?url=${current.src}&fit=fill&w=${current.width}&h=${current.height}`"
           :alt="current.alt"
         />
-        <button @click="() => dialog.close()" class="gallery__dialog__content__button"
-          >Close full image</button>
+        <button
+          @click="() => dialog.close()"
+          class="gallery__dialog__content__button"
+        >
+          Close full image
+        </button>
       </div>
     </dialog>
 
@@ -74,12 +84,12 @@ onMounted(() => {
         @click="
           () => {
             dialog.showModal();
-            window.document.body.style.overflowY = 'hidden'
+            window.document.body.style.overflowY = 'hidden';
           }
         "
       >
         <img
-          :src="`http://viviyanez.dev/.netlify/images?url=${current.src}&fit=cover&w=${mainWidth}&h=${mainHeight}`"
+          :src="`http://viviyanez.dev/.netlify/images?url=${current.src}&fit=cover&w=${mainWidth}&h=${mainHeight}&fm=webp`"
           :alt="current.alt"
         />
       </button>
@@ -97,7 +107,7 @@ onMounted(() => {
                     'gallery__aside__thumbnails__element__image--active':
                       current.src === image.src,
                   }"
-                  :src="`http://viviyanez.dev/.netlify/images?url=${image.src}&fit=cover&w=${thumbWidth}&h=${thumbHeight}`"
+                  :src="`http://viviyanez.dev/.netlify/images?url=${image.src}&fit=cover&w=${thumbWidth}&h=${thumbHeight}&fm=webp&q=25`"
                   :alt="image.alt"
                 />
               </button>
@@ -110,9 +120,7 @@ onMounted(() => {
 </template>
 
 <style scoped lang="less">
-
 .gallery {
-
   --main-width: 500px;
   --main-height: calc((var(--main-width) / 4) * 3);
   --thumb-width: calc(var(--main-width) * 20 / 100);
@@ -149,9 +157,8 @@ onMounted(() => {
 
     &__content {
       display: flex;
-      flex-direction: column;s
-
-      img {
+      flex-direction: column;
+      s img {
         max-width: 100%;
       }
 
@@ -191,7 +198,7 @@ onMounted(() => {
       align-items: center;
       justify-content: start;
       overflow-y: scroll;
-      -ms-overflow-style: none; 
+      -ms-overflow-style: none;
       scrollbar-width: none;
       ::-webkit-scrollbar {
         display: none;

@@ -67,7 +67,7 @@ onMounted(() => {
     <dialog class="gallery__dialog" ref="dialog">
       <div class="gallery__dialog__content">
         <img
-          :src="`http://viviyanez.dev/.netlify/images?url=${current.src}&fit=fill&w=${current.width}&h=${current.height}`"
+          :src="`http://viviyanez.dev/.netlify/images?url=${current.src}&w=${current.width}&h=${current.height}`"
           :alt="current.alt"
         />
         <button
@@ -158,8 +158,9 @@ onMounted(() => {
     &__content {
       display: flex;
       flex-direction: column;
-      s img {
-        max-width: 100%;
+      img {
+        max-height: 100vh;
+        max-width: 100vw;
       }
 
       &__button {

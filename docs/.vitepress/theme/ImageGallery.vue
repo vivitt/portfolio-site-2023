@@ -11,7 +11,7 @@ const IMAGES = [
   {
     src: "/assets/gallery/02.jpg",
     alt: "Black and white illustration of two kids hiding in a tree to attack a monster bird.",
-    width: 2187 
+    width: 2187,
     height: 3024,
   },
   {

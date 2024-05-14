@@ -43,8 +43,6 @@ const IMAGES = [
 
 const current = ref(IMAGES[0]);
 
-const dialog = ref(null);
-
 const mainWidth = ref(500);
 
 const mainHeight = ref((mainWidth.value / 4) * 3);
@@ -52,47 +50,15 @@ const mainHeight = ref((mainWidth.value / 4) * 3);
 const thumbWidth = ref(Math.ceil((mainWidth.value * 20) / 100));
 
 const thumbHeight = ref(Math.ceil((mainHeight.value * 20) / 100));
-
-onMounted(() => {
-  window.addEventListener("click", (event) => {
-    if (event.target === dialog.value) {
-      dialog.value.close();
-    }
-  });
-});
 </script>
 
 <template>
   <div class="gallery">
-    <dialog class="gallery__dialog" ref="dialog">
-      <div class="gallery__dialog__content">
-        <img
-          :src="`http://viviyanez.dev/.netlify/images?url=${current.src}&w=${current.width}&h=${current.height}`"
-          :alt="current.alt"
-        />
-        <button
-          @click="() => dialog.close()"
-          class="gallery__dialog__content__button"
-        >
-          Close full image
-        </button>
-      </div>
-    </dialog>
-
     <div class="gallery__main">
-      <button
-        @click="
-          () => {
-            dialog.showModal();
-            window.document.body.style.overflowY = 'hidden';
-          }
-        "
-      >
-        <img
-          :src="`http://viviyanez.dev/.netlify/images?url=${current.src}&fit=cover&w=${mainWidth}&h=${mainHeight}&fm=webp`"
-          :alt="current.alt"
-        />
-      </button>
+      <img
+        :src="`http://viviyanez.dev/.netlify/images?url=${current.src}&fit=cover&w=${mainWidth}&h=${mainHeight}&position=top&fm=webp`"
+        :alt="current.alt"
+      />
     </div>
 
     <div class="gallery__aside">

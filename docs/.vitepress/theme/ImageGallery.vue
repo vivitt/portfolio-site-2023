@@ -45,6 +45,12 @@ const current = ref(IMAGES[0]);
 
 const mainWidth = ref(500);
 
+const calculateHeight = (originalWidth, originalHeight, currentWidth) => {
+  const ratio = originalWidth / currentWidth;
+  const currentHeight = ratio * originalHeight;
+  return Math.ceil(currentHeight);
+};
+
 const mainHeight = ref((mainWidth.value / 4) * 3);
 
 const thumbWidth = ref(Math.ceil((mainWidth.value * 20) / 100));
@@ -56,7 +62,9 @@ const thumbHeight = ref(Math.ceil((mainHeight.value * 20) / 100));
   <div class="gallery">
     <div class="gallery__main">
       <img
-        :src="`http://viviyanez.dev/.netlify/images?url=${current.src}&fit=cover&w=${mainWidth}&h=${mainHeight}&position=top&fm=webp`"
+        :src="`http://viviyanez.dev/.netlify/images?url=${
+          current.src
+        }&fit=contain&w=${mainWidth}&h=${400}&fm=webp`"
         :alt="current.alt"
       />
     </div>

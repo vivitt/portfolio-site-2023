@@ -25,11 +25,16 @@ const VivittSwitcher = defineClientComponent(
       </div>
       <div class="menu">
         <a
-          :class="{ active: frontmatter.title === 'Projects' }"
+          :class="{ active: frontmatter.title === 'About me' }"
+          href="/about/"
+          ><span aria-hidden="true">/</span>about</a
+        >
+        <a
+          :class="{ active: frontmatter.title === 'My projects' }"
           href="/projects/"
           ><span aria-hidden="true">/</span>projects</a
         >
-        <a :class="{ active: frontmatter.title === 'Blog' }" href="/blog/"
+        <a :class="{ active: frontmatter.title === `Viviana's Blog` }" href="/blog/"
           ><span aria-hidden="true">/</span>blog</a
         >
         <a href="https://github.com/vivitt" target="_blank"><span aria-hidden="true">/</span>GitHub</a>

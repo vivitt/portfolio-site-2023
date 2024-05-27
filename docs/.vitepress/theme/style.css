@@ -110,6 +110,7 @@ nav .menu a:hover {
 
 .menu .active {
   color: rgb(72, 48, 226);
+  text-decoration: underline;
 }
 
 .blog__illustration, .blog__cover {

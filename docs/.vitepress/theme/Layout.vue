@@ -16,19 +16,17 @@ const VivittSwitcher = defineClientComponent(
   <div class="main">
     <nav>
       <div class="logo">
-      <a  href="/">
+        <a  v-if="frontmatter.title === `Viviana's Blog`" href="/blog/">
+        <img src="/blog-viviyanez.png" width="476" height="129" alt="vivi's blog"/>
+      </a>
+      <a v-else href="/">
         <img src="/logo-viviyanez.png" width="635" height="166" alt="viviyanez.dev home"/>
       </a>
     </div>
     <div class="switcher">
    <VivittSwitcher />
       </div>
-      <div class="menu">
-        <a
-          :class="{ active: frontmatter.title === 'About me' }"
-          href="/about/"
-          ><span aria-hidden="true">/</span>about</a
-        >
+      <div class="menu" >
         <a
           :class="{ active: frontmatter.title === 'My projects' }"
           href="/projects/"
@@ -36,6 +34,11 @@ const VivittSwitcher = defineClientComponent(
         >
         <a :class="{ active: frontmatter.title === `Viviana's Blog` }" href="/blog/"
           ><span aria-hidden="true">/</span>blog</a
+        >
+        <a
+          :class="{ active: frontmatter.title === 'About me' }"
+          href="/about/"
+          ><span aria-hidden="true">/</span>about</a
         >
         <a href="https://github.com/vivitt" target="_blank"><span aria-hidden="true">/</span>GitHub</a>
 
@@ -45,7 +48,6 @@ const VivittSwitcher = defineClientComponent(
       </div>
     </nav>
     <div class="content">
-
       <not-found v-if="page.isNotFound" />
       <BlogPost v-else-if="frontmatter.isBlogPost" />
       <Content v-else />

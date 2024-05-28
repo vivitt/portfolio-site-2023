@@ -8,7 +8,7 @@ titleTemplate: Creative Frontend Developer
 #       content: assets/viviyanezdev.png
 ---
 
-<div class="about centered">
+<div class="home centered">
 <p>
 I am a creative frontend developer, with a background in audiovisual and visual communication <span role='img' aria-label='woman technologist' aria-hidden="true">👩🏽‍💻</span>.
 </p>

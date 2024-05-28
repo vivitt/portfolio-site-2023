@@ -90,6 +90,11 @@ nav ul {
   margin: auto;
 }
 
+.home {
+  padding-top: 2em;
+  font-size: 2.5em;
+  line-height: 150%;
+}
 
 .about {
   margin-top: 5em;

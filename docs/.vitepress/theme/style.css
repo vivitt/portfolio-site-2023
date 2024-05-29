@@ -1,33 +1,40 @@
 @font-face {
-  font-family: 'Playfair';
+  font-family: "Playfair";
   font-weight: 400;
-  src: url('../../public/assets/fonts/playfairdisplay-regular-webfont.woff2') format('woff2'),
-  url('../../public/assets/fonts/playfairdisplay-regular-webfont.woff') format('woff');
+  src: url("../../public/assets/fonts/playfairdisplay-regular-webfont.woff2")
+      format("woff2"),
+    url("../../public/assets/fonts/playfairdisplay-regular-webfont.woff")
+      format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Playfair';
+  font-family: "Playfair";
   font-weight: 400;
   font-style: italic;
-  src: url('../../public/assets/fonts/playfairdisplay-italic-webfont.woff2') format('woff2'),
-  url('../../public/assets/fonts/playfairdisplay-italic-webfont.woff') format('woff');
+  src: url("../../public/assets/fonts/playfairdisplay-italic-webfont.woff2")
+      format("woff2"),
+    url("../../public/assets/fonts/playfairdisplay-italic-webfont.woff")
+      format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Playfair';
+  font-family: "Playfair";
   font-weight: 900;
-  src: url('../../public/assets/fonts/playfairdisplay-bold-webfont.woff2') format('woff2'),
-  url('../../public/assets/fonts/playfairdisplay-bold-webfont.woff') format('woff');
+  src: url("../../public/assets/fonts/playfairdisplay-bold-webfont.woff2")
+      format("woff2"),
+    url("../../public/assets/fonts/playfairdisplay-bold-webfont.woff")
+      format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Modak';
+  font-family: "Modak";
   font-weight: 400;
-  src: url('../../public/assets/fonts/modak-regular-webfont.woff2') format('woff2'),
-  url('../../public/assets/fonts/modak-regular-webfont.woff') format('woff');
+  src: url("../../public/assets/fonts/modak-regular-webfont.woff2")
+      format("woff2"),
+    url("../../public/assets/fonts/modak-regular-webfont.woff") format("woff");
   font-display: swap;
 }
 
@@ -37,53 +44,13 @@
 body {
   min-width: 300px;
   margin: 0;
-  font-family: 'Playfair', serif;
+  font-family: "Playfair", serif;
   font-size: 1.2em;
 }
 
 .main {
   color: black;
 }
-
-nav {
-  margin: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  font-size: 1.5em;
-}
-
-nav img {
-  max-width: 60%;
-  height: auto;
-  
-}
-@media screen and (max-width: 1000px) {
-  nav img {
-    max-width: 80%;
-    height: auto; 
-  }
-}
-
-.switcher {
-  order: 2;
-  padding: 0.4em;
-}
-.menu {
-  margin-inline-end: 0.3em;
-  flex-grow: 3;
-}
-
-nav ul {
-  list-style: none;
-}
-
-
-.content {
-  margin-top: 5em;
-
-}
-
 
 .centered {
   max-width: 70%;
@@ -110,46 +77,34 @@ nav ul {
 }
 
 .about a,
-nav a,
 .blog a {
   color: black;
 }
 
-.about__image{
-max-width: 100%;
-padding: 1em;
+.about__image {
+  max-width: 100%;
+  padding: 1em;
 }
 
 @media screen and (max-width: 900px) {
   .about__intro {
     flex-direction: column;
   }
-  .about__image{
-  align-self: flex-end
-    }
-
+  .about__image {
+    align-self: flex-end;
+  }
 }
 
-
-
-nav .menu a:hover {
-  color: slateblue;
-}
-
-.menu .active {
-  color: rgb(72, 48, 226);
-  text-decoration: underline;
-}
-
-.blog__illustration, .blog__cover {
- display: flex;
- justify-content: center;
- width: 100%;
+.blog__illustration,
+.blog__cover {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .blog__illustration img {
-  padding: 2em 0 ;
-  width: 80%
+  padding: 2em 0;
+  width: 80%;
 }
 
 .skeleton {
@@ -159,78 +114,24 @@ nav .menu a:hover {
 }
 
 .skeleton div {
-  background-color: '#edeff7ff';
+  background-color: "#edeff7ff";
 }
 
-.blog__cover img, .skeleton div  {
-  padding: 2em 0 ;
+.blog__cover img,
+.skeleton div {
+  padding: 2em 0;
   width: 100%;
   height: auto;
 }
 
 @media screen and (max-width: 800px) {
-  nav {
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-  .logo {
-    max-width: 80%;
-    width: auto;
-  }
-  .switcher {
-    padding: 0.2em;
-    order: 0;
-    margin-left: auto;
-  }
-  nav .menu {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  nav .menu a {
-    padding: 0.2em;
-  }
-  
   .about {
     margin-top: 5em;
     font-weight: 400;
     font-size: 1.2em;
   }
-  
 }
 
-@media screen and (max-width: 500px) {
-  nav {
-    flex-direction: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
-  nav img {
-    max-width: 80%;
-    height: auto;
-  }
-
-  vivitt-switcher {
-    display: inline;
-  }
-}
-
-.menu {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-evenly;
-}
-
-.menu a {
-  text-decoration: none;
-  margin-inline-start: 5px;
-}
-
-.content {
-  margin-top: 2em;
-}
 
 
 .blog div > a,

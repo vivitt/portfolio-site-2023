@@ -85,11 +85,27 @@ const VivittSwitcher = defineClientComponent(() =>
       <div class="layout__footer__menu">
         <ul>
           <li>
-            <a href="/blog/"><span role="image">/</span>blog</a>
+            <a
+              href="/projects/"
+              :class="{ active: frontmatter.title === 'My projects' }"
+              ><span role="image">/</span>projects</a
+            >
           </li>
           <li>
-            <a href="/projects/"><span role="image">/</span>projects</a>
+            <a
+              href="/blog/"
+              :class="{ active: frontmatter.title === `Viviana's Blog` }"
+              ><span role="image">/</span>blog</a
+            >
           </li>
+          <li>
+            <a
+              :class="{ active: frontmatter.title === 'About me' }"
+              href="/about/"
+              ><span aria-hidden="true">/</span>about</a
+            >
+          </li>
+
           <li>
             <a href="https://github.com/vivitt" target="_blank"
               ><span role="image">/</span>GitHub</a
@@ -142,37 +158,18 @@ const VivittSwitcher = defineClientComponent(() =>
       }
       li a {
         color: black;
+        text-decoration: none;
       }
       li a:hover {
         color: slateblue;
       }
-      li a .active {
+      li a.active {
         color: rgb(72, 48, 226);
         text-decoration: underline;
       }
     }
     &__switcher {
       padding: 0.4em;
-    }
-
-    @media screen and (max-width: 1000px) {
-      &__logo img {
-      max-width: 100%;}
-      ul {
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: repeat(10, auto);
-        li {
-          grid-column: 1/10;
-          grid-row: auto;
-        }
-        li:first-child {
-        grid-column: 1/10;
-      }
-        li:not(:first-child) {
-          padding: 0.5em 1em;
-          margin: 0;
-        }
-      }
     }
   }
 
@@ -202,52 +199,40 @@ const VivittSwitcher = defineClientComponent(() =>
               color: rgb(188, 178, 255);
             }
           }
+          a.active {
+            color: rgb(72, 48, 226);
+            text-decoration: underline;
+          }
         }
       }
     }
-    &__atribution {
+  }
+
+  @media screen and (max-width: 1000px) {
+    &__navigation {
+      &__logo img {
+        max-width: 100%;
+      }
+      ul {
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(10, auto);
+        li {
+          grid-column: 1/10;
+          grid-row: auto;
+        }
+        li:first-child {
+          grid-column: 1/10;
+        }
+        li:not(:first-child) {
+          padding: 0.5em 1em;
+          margin: 0;
+        }
+      }
+    }
+
+    &__content {
+      margin-top: 0.5em;
     }
   }
 }
-
-.content {
-  margin-top: 5em;
-}
-
-// @media screen and (max-width: 800px) {
-//   nav {
-//     justify-content: flex-start;
-//     align-items: flex-start;
-//     flex-wrap: wrap;
-//   }
-//   nav img {
-//     max-width: 80%;
-//     height: auto;
-//   }
-//   .switcher {
-//     padding: 0.2em;
-//     order: 0;
-//     margin-left: auto;
-//   }
-//   nav .menu {
-//     flex-direction: column;
-//     align-items: flex-start;
-//     justify-content: flex-start;
-//   }
-//   nav .menu a {
-//     padding: 0.2em;
-//   }
-// }
-
-// @media screen and (max-width: 500px) {
-//   nav {
-//     flex-direction: row wrap;
-//     justify-content: flex-start;
-//     align-items: flex-start;
-//   }
-
-//   vivitt-switcher {
-//     display: inline;
-//   }
-// }
 </style>

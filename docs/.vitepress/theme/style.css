@@ -166,7 +166,7 @@ a.active {
   color: var(--color-primary-dark);
 }
 
-.dark .footer a,
+.dark footer a,
 .dark .blog div > a,
 .dark .projects div > a,
 .dark .menu .active {

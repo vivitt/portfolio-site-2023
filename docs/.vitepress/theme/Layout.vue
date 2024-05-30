@@ -1,6 +1,5 @@
 <script setup>
 import { useData, defineClientComponent } from "vitepress";
-import FooterTemplate from "./FooterTemplate.vue";
 import NotFound from "./NotFoundTemplate.vue";
 import BlogPost from "./BlogPost.vue";
 

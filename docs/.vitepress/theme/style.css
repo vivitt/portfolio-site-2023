@@ -40,6 +40,16 @@
 
 * {
   box-sizing: border-box;
+  --color-background: rgb(251, 251, 251);
+  --color-background-dark: rgb(4, 4, 4);
+
+  --color-text: rgb(0, 0, 0);
+  --color-text-dark: rgb(255, 255, 255);
+  --color-primary: rgb(77, 59, 195);
+  --color-primary-dark: rgb(195, 186, 255);
+  --color-secondary: rgb(99, 81, 222);
+  --color-secondary-dark: rgb(156, 141, 255);
+  --color-slate: rgb(221, 221, 221);
 }
 body {
   min-width: 300px;
@@ -49,7 +59,7 @@ body {
 }
 
 .main {
-  color: black;
+  color: var(--color-text);
 }
 
 .centered {
@@ -76,9 +86,16 @@ body {
   display: flex;
 }
 
-.about a,
-.blog a {
-  color: black;
+a {
+  color: var(--color-text);
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+a.active {
+  color: var(--color-primary);
 }
 
 .about__image {
@@ -114,7 +131,7 @@ body {
 }
 
 .skeleton div {
-  background-color: "#edeff7ff";
+  background-color: var(--color-slate);
 }
 
 .blog__cover img,
@@ -132,45 +149,26 @@ body {
   }
 }
 
-
-
-.blog div > a,
-.projects div > a {
-  color: rgb(72, 48, 226);
-}
-
-.blog div > a:hover,
-.projects div > a:hover {
-  color: rgb(188, 178, 255);
-}
-
 .dark {
-  background-color: black;
+  background-color: var(--color-background-dark);
+  color: var(--color-text-dark);
 }
 
-.dark .main,
-.dark nav a,
-.dark .about,
-.dark .main a,
-.dark .blog,
-.dark .projects,
-.dark h2 {
-  color: white;
+.dark a {
+  color: var(--color-text-dark);
+}
+
+.dark a:hover {
+  color: var(--color-secondary-dark);
+}
+
+.dark a.active {
+  color: var(--color-primary-dark);
 }
 
 .dark .footer a,
 .dark .blog div > a,
 .dark .projects div > a,
 .dark .menu .active {
-  color: rgb(188, 178, 255);
-}
-
-.dark .blog div > a:hover,
-.dark .projects div > a:hover {
-  color: rgb(72, 48, 226);
-}
-
-.dark .footer a:hover,
-.dark .menu a:hover {
-  color: slateblue;
+  color: var(--color-secondary-dark);
 }

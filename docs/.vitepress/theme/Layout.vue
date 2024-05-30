@@ -157,14 +157,10 @@ const VivittSwitcher = defineClientComponent(() =>
         align-content: center;
       }
       li a {
-        color: black;
         text-decoration: none;
       }
-      li a:hover {
-        color: slateblue;
-      }
+
       li a.active {
-        color: rgb(72, 48, 226);
         text-decoration: underline;
       }
     }
@@ -194,13 +190,8 @@ const VivittSwitcher = defineClientComponent(() =>
           padding-inline-end: 1em;
           a {
             text-decoration: none;
-            color: slateblue;
-            &:hover {
-              color: rgb(188, 178, 255);
-            }
           }
           a.active {
-            color: rgb(72, 48, 226);
             text-decoration: underline;
           }
         }

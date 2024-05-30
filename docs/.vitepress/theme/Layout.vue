@@ -103,7 +103,7 @@ const VivittSwitcher = defineClientComponent(() =>
         </ul>
       </div>
       <div class="layout__footer__atribution">
-        Viviana Yanez 2023 | Made with
+        Viviana Yanez 2024 | Made with
         <span role="img" aria-label="heart">♥︎</span>
       </div>
     </div>
@@ -114,11 +114,24 @@ const VivittSwitcher = defineClientComponent(() =>
   &__navigation {
     margin: 5px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+    &__switcher {
+      order: -1;
+      align-self: flex-end;
+    }
+    &__logo img {
+      max-width: 70%;
+      height: auto;
+    }
     ul {
       display: grid;
+      width: 100%;
+      padding: 0;
       grid-template-columns: repeat(10, auto);
       list-style: none;
+      font-size: 1.1em;
       li:first-child {
         grid-column: 1/6;
       }
@@ -143,24 +156,56 @@ const VivittSwitcher = defineClientComponent(() =>
     }
 
     @media screen and (max-width: 1000px) {
+      &__logo img {
+      max-width: 100%;}
       ul {
         grid-template-columns: repeat(10, 1fr);
         grid-template-rows: repeat(10, auto);
         li {
           grid-column: 1/10;
-          border: red 1px solid;
+          grid-row: auto;
         }
+        li:first-child {
+        grid-column: 1/10;
+      }
         li:not(:first-child) {
-          padding: 0;
+          padding: 0.5em 1em;
           margin: 0;
-          justify-self: end;
         }
       }
     }
+  }
 
-    &__logo img {
-      max-width: 100%;
-      height: auto;
+  &__content {
+    margin-top: 2em;
+  }
+
+  &__footer {
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 10em;
+    &__menu {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 1em 0;
+      ul {
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+        li {
+          padding-inline-end: 1em;
+          a {
+            text-decoration: none;
+            color: slateblue;
+            &:hover {
+              color: rgb(188, 178, 255);
+            }
+          }
+        }
+      }
+    }
+    &__atribution {
     }
   }
 }
@@ -205,29 +250,4 @@ const VivittSwitcher = defineClientComponent(() =>
 //     display: inline;
 //   }
 // }
-
-.content {
-  margin-top: 2em;
-}
-
-.footer {
-  text-align: center;
-  padding: 1em 0;
-  margin-top: 10em;
-  &__menu {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1em 0;
-    a {
-      text-decoration: none;
-      color: slateblue;
-      &:hover {
-        color: rgb(188, 178, 255);
-      }
-    }
-  }
-  &__atribution {
-    padding: 6em 0 3em 0;
-  }
-}
 </style>

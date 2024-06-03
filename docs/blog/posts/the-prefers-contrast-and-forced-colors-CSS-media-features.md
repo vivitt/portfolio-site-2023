@@ -7,16 +7,15 @@ link: ""
 isBlogPost: true
 excerpt: "Last week, I learnt about the possibility of a background image disappearing from the UI Windows High Contrast Mode.
 
-I really didn't know much about scenarios in which users have expressed certain color preferences in their operating system settings and how this impacts styles and accessibility on a website.
-
-So, I engaged in what I call CDL (Curiosity-Driven Learning), and spent some hours exploring links related to the subject of contrast preferences and its impact on website accessibility and styles. This blog post is a summary of the highlights from this research."
+I really didn't know much about scenarios in which users have expressed certain color preferences in their operating system settings and how this impacts styles and accessibility on a website...
+"
 ---
 
 Last week, I learnt about the possibility of a background image disappearing from the UI [Windows High Contrast Mode](https://support.microsoft.com/en-gb/windows/change-color-contrast-in-windows-fedc744c-90ac-69df-aed5-c8a90125e696).
 
 I really didn't know much about scenarios in which users have expressed certain color preferences in their operating system settings and how this impacts styles and accessibility on a website.
 
-So, I engaged in what I call CDL (Curiosity-Driven Learning), and spent some hours exploring links related to the subject of contrast preferences and its impact on website accessibility and styles. This blog post is a summary of the highlights from this research.
+So, I spent some hours exploring links related to the subject of contrast preferences and its impact on website accessibility and styles. This blog post is a summary of the highlights from this research.
 
 ---
 

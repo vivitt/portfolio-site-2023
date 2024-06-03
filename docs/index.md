@@ -10,6 +10,11 @@ titleTemplate: Creative Frontend Developer
 
 <div class="home centered">
 <p>
+<span aria-hidden="true">👋🏽</span> 
+Hi there! I am Viviana. 
+</p>
+<p>
+
 I am a creative frontend developer, with a background in audiovisual and visual communication <span role='img' aria-label='woman technologist' aria-hidden="true">👩🏽‍💻</span>.
 </p>
 <p>

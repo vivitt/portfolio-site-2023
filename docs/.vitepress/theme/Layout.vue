@@ -18,8 +18,8 @@ const VivittSwitcher = defineClientComponent(() =>
             <a v-if="frontmatter.title === `Viviana's Blog`" href="/blog/">
               <img
                 src="/blog-viviyanez.png"
-                width="476"
-                height="129"
+                width="635"
+                height="173"
                 alt="vivi's blog"
               />
             </a>
@@ -27,7 +27,7 @@ const VivittSwitcher = defineClientComponent(() =>
               <img
                 src="/logo-viviyanez.png"
                 width="635"
-                height="166"
+                height="173"
                 alt="viviyanez.dev home"
               />
             </a>

@@ -87,41 +87,22 @@ a.active {
 
 .about {
   margin-top: 5em;
-  font-weight: 400;
   font-size: 1.5em;
   line-height: 150%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-direction: column;
 }
 
-.about img {
+.about .highlighted {
+  font-size: 1.2em;
+  line-height: 120%;
+}
+
+.about .highlighted img {
+  min-width: 200px;
   max-width: 100%;
   height: auto;
-  justify-self: center;
-  align-self: center;
   padding-inline-end: 0.5em;
-}
-.about p:nth-child(2) {
-  grid-column: 2/5;
-  align-self: end;
-  margin-bottom: 0;
-}
-
-.about p {
-  grid-column: 1/5;
-}
-
-@media screen and (max-width: 800px) {
-  .about img {
-    min-width: 200px;
-    height: auto;
-    grid-row: 2/3;
-  }
-  .about p:nth-child(2) {
-    grid-column: 1/5;
-    align-self: start;
-    margin-bottom: 1em;
-  }
 }
 
 .blog__illustration,

@@ -4,13 +4,14 @@ titleTemplate: Viviana Yanez | Creative Frontend Developer
 ---
 
 <div class="about centered">
+
 <div class='highlighted'>
-<div class='highlighted__text'>
+
+<img src="../public/vivitt.png" alt="Viviana is smiling at the camera in a black and white selfie." class="about__image" width="282" height="403" />
+
 <p ><span aria-hidden="true">👋🏽</span> Hello! I am Viviana.</p>
 <p >I am a creative web developer with a background in audiovisual communication.</p>
 <p >I care about crafting enjoyable experiences that make the web more accessible and inclusive.</p>
-</div>
-<img src="../public/vivitt.png" alt="Viviana is smiling at the camera in a black and white selfie." class="about__image" width="282" height="403" />
 
 </div>
 

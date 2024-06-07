@@ -101,6 +101,7 @@ a.active {
   grid-template-rows: repeat(3, auto-fit, minmax(50px, 1fr));
   justify-content: start;
   font-size: 1.1em;
+  margin-bottom: 1.1em;
 }
 
 .about .highlighted img {

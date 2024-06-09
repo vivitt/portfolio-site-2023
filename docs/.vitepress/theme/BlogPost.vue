@@ -68,7 +68,7 @@ const generateCover = () => {
     context.fillText(item, 173, startTitle, 1050);
     startTitle += titleLineHeight;
   });
-  context.font = '30px Fairplay Display';
+  context.font = '30px Inter';
   context.fillText(`${date.value}`, 173, 250, 1400);
 
   const dataUrl = canvas.toDataURL('image/jpeg');
@@ -79,9 +79,8 @@ const generateCover = () => {
 onMounted(async () => {
   await loadImage(`/assets/Blog-post-cover-${getRandomNumberForCoverImages(4) + 1}.svg`);
   await loadFont(
-    'Modak',
-    `url('/assets/fonts/modak-regular-webfont.woff2') format('woff2'),
-    url('/assets/fonts/modak-regular-webfont.woff') format('woff');`,
+    'Inter',
+    `url('/assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('ttf')`,
   );
   document
     .querySelector('meta[name="og:image"]')

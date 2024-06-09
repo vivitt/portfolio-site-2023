@@ -38,6 +38,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  src: url("../../public/assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
+    format("ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 600;
+  src: url("../../public/assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
+    format("ttf");
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   --color-background: rgb(251, 251, 251);

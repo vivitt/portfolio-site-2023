@@ -3,6 +3,7 @@ import { useData, useRoute } from 'vitepress';
 import { computed, onMounted, ref } from 'vue';
 import { data as posts } from './posts.data';
 import formatBlogPostTitleForCoverImage from './utils/formatBlogPostTitle';
+import getRandomNumberForCoverImages from './utils/getRandomNumberForCoverImages';
 
 const route = useRoute();
 
@@ -16,8 +17,8 @@ const date = computed(() => (posts[findCurrentIndex()] ? posts[findCurrentIndex(
 const title = computed(() => (posts[findCurrentIndex()] ? posts[findCurrentIndex()].title : ''));
 
 const lineSeparatedBlogTitle = formatBlogPostTitleForCoverImage(title.value);
-const titleFontSize = (lineSeparatedBlogTitle.length > 4) ? '78px' : '98px';
-const titleLineHeight = (lineSeparatedBlogTitle.length > 4) ? 70 : 90;
+const titleFontSize = lineSeparatedBlogTitle.length > 4 ? '78px' : '98px';
+const titleLineHeight = lineSeparatedBlogTitle.length > 4 ? 70 : 90;
 
 const cover = ref(null);
 const font = ref(null);
@@ -76,40 +77,38 @@ const generateCover = () => {
 };
 
 onMounted(async () => {
-  await loadImage('/assets/article-cover.svg');
-  await loadFont('Modak', `url('/assets/fonts/modak-regular-webfont.woff2') format('woff2'),
-    url('/assets/fonts/modak-regular-webfont.woff') format('woff');`);
-  document.querySelector('meta[name="og:image"]').setAttribute('content', `https://www.viviyanez.dev/assets/${generated()}`);
+  await loadImage(`/assets/Blog-post-cover-${getRandomNumberForCoverImages(4) + 1}.svg`);
+  await loadFont(
+    'Modak',
+    `url('/assets/fonts/modak-regular-webfont.woff2') format('woff2'),
+    url('/assets/fonts/modak-regular-webfont.woff') format('woff');`,
+  );
+  document
+    .querySelector('meta[name="og:image"]')
+    .setAttribute('content', `https://www.viviyanez.dev/assets/${generated()}`);
 });
-
 </script>
 <template>
-<article class="centered blogpost">
-  <header>
-
-    <div class='blog__cover'>
-      <img
-        v-if='cover'
-        :src="generateCover()"
-        alt=""
-        width="1600"
-        height="840"
-        />
+  <article class="centered blogpost">
+    <header>
+      <div class="blog__cover">
         <img
-        v-else
-        alt=""
-        width="1600"
-        height="840"
+          v-if="cover"
+          :src="generateCover()"
+          alt=""
+          width="1600"
+          height="840"
         />
-    </div>
-    <span>{{ date }}</span>
-    <h1>
+        <img v-else alt="" width="1600" height="840" />
+      </div>
+      <span>{{ date }}</span>
+      <h1>
         {{ data.title }}
-    </h1>
-  </header>
+      </h1>
+    </header>
 
-  <Content  />
-</article>
+    <Content />
+  </article>
 </template>
 <style scoped lang="less">
 .blogpost {

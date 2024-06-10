@@ -73,7 +73,7 @@ const generateCover = () => {
   context.font = `600 ${titleFontSize} ${font.value}`;
 
   context.textBaseline = 'top';
-  let startTitle = 280;
+  let startTitle = 180;
 
   lineSeparatedBlogTitle.forEach((item) => {
     context.fillText(item.toUpperCase(), 173, startTitle, 1300);
@@ -100,9 +100,9 @@ const generateCover = () => {
 
   context.font = '600 30px Inter';
 
-  context.fillText('viviyanez.dev', 173, 700, 1400);
+  context.fillText('viviyanez.dev', 173, 730, 1400);
 
-  context.fillText(`${date.value}`, 873, 700, 1400);
+  context.fillText(`${date.value}`, 873, 730, 1400);
 
   const dataUrl = canvas.toDataURL('image/jpeg');
 

@@ -7,6 +7,7 @@ id: 9
 isBlogPost: true
 excerpt: "I have created a customized cover template for my blog posts, which includes a background image with the title and date of the post."
 link: ""
+tags: 'frontend,javascript,canvasAPI'
 
 ---
 

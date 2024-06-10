@@ -85,10 +85,16 @@ const generateCover = () => {
     let firstTagPosition = 175;
     tags.value.split(',').forEach((item) => {
       const text = context.measureText(item);
-      console.log(text)
-      roundedRect(context, firstTagPosition-10, startTitle-5, text.width + 40, 40, 20);
+      roundedRect(
+        context,
+        firstTagPosition - 10,
+        startTitle - 5,
+        text.width + 40,
+        40,
+        20,
+      );
       context.fillText(`#${item}`, firstTagPosition, startTitle, 1300);
-      firstTagPosition += text.width+50
+      firstTagPosition += text.width + 50;
     });
   }
 
@@ -109,7 +115,7 @@ onMounted(async () => {
   );
   await loadFont(
     'Inter',
-    'url(\'/assets/fonts/Inter-VariableFont_slnt\,wght.ttf\') format(\'ttf\')',
+    "url('/assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('ttf')",
   );
   document
     .querySelector('meta[name="og:image"]')

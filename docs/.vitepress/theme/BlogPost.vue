@@ -88,12 +88,12 @@ const generateCover = () => {
       roundedRect(
         context,
         firstTagPosition - 10,
-        startTitle - 5,
+        startTitle + 5,
         text.width + 40,
         40,
         20,
       );
-      context.fillText(`#${item}`, firstTagPosition, startTitle, 1300);
+      context.fillText(`#${item}`, firstTagPosition, startTitle + 10, 1300);
       firstTagPosition += text.width + 50;
     });
   }
@@ -115,7 +115,7 @@ onMounted(async () => {
   );
   await loadFont(
     'Inter',
-    "url('/assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('ttf')",
+    "url('/assets/fonts/inter-regular-webfont.woff') format('woff')",
   );
   document
     .querySelector('meta[name="og:image"]')

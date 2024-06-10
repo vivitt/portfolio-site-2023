@@ -1,21 +1,21 @@
-import { defineConfig, createContentLoader } from "vitepress";
-import path from "path";
-import { writeFileSync } from "fs";
-import { Feed } from "feed";
-import footnote from "markdown-it-footnote";
+import { defineConfig, createContentLoader } from 'vitepress';
+import path from 'path';
+import { writeFileSync } from 'fs';
+import { Feed } from 'feed';
+import footnote from 'markdown-it-footnote';
 
-const hostname = "https://www.viviyanez.dev";
+const hostname = 'https://www.viviyanez.dev';
 
 export default defineConfig({
-  lang: "en-US",
-  title: "Viviana Yanez",
-  titleTemplate: "Frontend Developer",
+  lang: 'en-US',
+  title: 'Viviana Yanez',
+  titleTemplate: 'Frontend Developer',
   description:
-    "I am Viviana Yanez (aka Vivi Yañez). I am a creative visual and audiovisual communicator who transitioned to software development. I create and build accessible and inclusive user interfaces to deliver enjoyable web experiences.",
+    'I am Viviana Yanez (aka Vivi Yañez). I am a creative visual and audiovisual communicator who transitioned to software development. I create and build accessible and inclusive user interfaces to deliver enjoyable web experiences.',
   cleanUrls: true,
   themeConfig: {
     socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
     ],
   },
   appearance: false,
@@ -28,21 +28,21 @@ export default defineConfig({
     template: {
       compilerOptions: {
         // treat all tags with 'vivitt-' as custom elements
-        isCustomElement: (tag) => tag.includes("vivitt-"),
+        isCustomElement: (tag) => tag.includes('vivitt-'),
       },
     },
   },
   head: [
-    ["link", { rel: "icon", href: "/favicon.ico" }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
     [
-      "script",
+      'script',
       {
-        async: "",
-        src: "https://www.googletagmanager.com/gtag/js?id=G-8FT7WMMNQY",
+        async: '',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-8FT7WMMNQY',
       },
     ],
     [
-      "script",
+      'script',
       {},
       ` window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -51,18 +51,16 @@ export default defineConfig({
     ],
   ],
   transformHead({ assets }) {
-    const myFonts = assets.filter((file) =>
-      file.match(/\w*-regular-webfont\.\w+\.woff2/)
-    );
+    const myFonts = assets.filter((file) => file.match(/\w*-regular-webfont\.\w+\.woff2/));
     if (myFonts.length > 0) {
       return myFonts.forEach((font) => [
-        "link",
+        'link',
         {
-          rel: "preload",
+          rel: 'preload',
           href: font,
-          as: "font",
-          type: "font/woff2",
-          crossorigin: "",
+          as: 'font',
+          type: 'font/woff2',
+          crossorigin: '',
         },
       ]);
     }
@@ -71,33 +69,33 @@ export default defineConfig({
   transformPageData(pageData) {
     pageData.frontmatter.head ??= [];
     pageData.frontmatter.head.push([
-      "meta",
+      'meta',
       {
-        name: "og:image",
-        content: "https://www.viviyanez.dev/assets/viviyanezdev.png",
+        name: 'og:image',
+        content: 'https://www.viviyanez.dev/assets/viviyanezdev.png',
       },
     ]);
     pageData.frontmatter.head.push([
-      "meta",
+      'meta',
       {
-        name: "og:title",
+        name: 'og:title',
         content: pageData.frontmatter.title,
       },
     ]);
     pageData.frontmatter.head.push([
-      "meta",
+      'meta',
       {
-        name: "og:description",
+        name: 'og:description',
         content: pageData.frontmatter.isBlogPost
           ? pageData.frontmatter.excerpt
           : pageData.frontmatter.titleTemplate,
       },
     ]);
     pageData.frontmatter.head.push([
-      "meta",
+      'meta',
       {
-        name: "twitter:card",
-        content: "summary",
+        name: 'twitter:card',
+        content: 'summary',
       },
     ]);
   },
@@ -105,23 +103,25 @@ export default defineConfig({
     const feed = new Feed({
       title: "Vivi's Blog",
       description:
-        "A series of articles on web development, accessibility and career transition",
+        'A series of articles on web development, accessibility and career transition',
       id: hostname,
       link: hostname,
-      language: "en",
-      image: "https://www.viviyanez.dev/assets/vivisblog.png",
+      language: 'en',
+      image: 'https://www.viviyanez.dev/assets/vivisblog.png',
       // favicon: `${hostname}/favicon.ico`,
     });
-    const posts = await createContentLoader("/blog/posts/*.md", {
+    const posts = await createContentLoader('/blog/posts/*.md', {
       excerpt: true,
       render: true,
     }).load();
 
     posts.sort(
-      (a, b) => +new Date(b.frontmatter.date) - +new Date(a.frontmatter.date)
+      (a, b) => +new Date(b.frontmatter.date) - +new Date(a.frontmatter.date),
     );
     posts.forEach((post) => {
-      const { url, excerpt, frontmatter, html } = post;
+      const {
+        url, excerpt, frontmatter, html,
+      } = post;
       feed.addItem({
         title: frontmatter.title,
         id: `${hostname}${url}`,
@@ -130,13 +130,13 @@ export default defineConfig({
         content: html,
         author: [
           {
-            name: "Viviana Yanez",
-            link: "https://www.viviyanez.dev",
+            name: 'Viviana Yanez',
+            link: 'https://www.viviyanez.dev',
           },
         ],
         date: frontmatter.date,
       });
     });
-    writeFileSync(path.join(config.outDir, "feed.rss"), feed.rss2());
+    writeFileSync(path.join(config.outDir, 'feed.rss'), feed.rss2());
   },
 });

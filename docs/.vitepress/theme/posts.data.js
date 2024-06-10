@@ -25,6 +25,7 @@ export default createContentLoader('blog/posts/*.md', {
         date: formatPostDate(frontmatter.date).date,
         id: frontmatter.id,
         link: frontmatter.link,
+        tags: frontmatter.tags,
       }))
       .sort((a, b) => b.id - a.id);
   },

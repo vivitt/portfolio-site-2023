@@ -5,10 +5,12 @@ author: Viviana Yanez
 id: 25
 link: ""
 isBlogPost: true
+tags: "a11y,frontend"
 excerpt: "Last week, I learnt about the possibility of a background image disappearing from the UI Windows High Contrast Mode.
 
 I really didn't know much about scenarios in which users have expressed certain color preferences in their operating system settings and how this impacts styles and accessibility on a website...
 "
+
 ---
 
 Last week, I learnt about the possibility of a background image disappearing from the UI [Windows High Contrast Mode](https://support.microsoft.com/en-gb/windows/change-color-contrast-in-windows-fedc744c-90ac-69df-aed5-c8a90125e696).

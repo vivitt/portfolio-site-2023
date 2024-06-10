@@ -6,7 +6,7 @@ author: Viviana Yanez
 id: 4
 link: https://viviyanez.hashnode.dev/a-beginners-guide-to-understanding-solid-principles
 isBlogPost: true
-
+tags: "solid,softwareengineering"
 ---
 I have been reviewing the SOLID principles and wanted to share some notes collecting the main concepts I've been learning.
 

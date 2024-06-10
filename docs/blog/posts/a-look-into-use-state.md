@@ -6,6 +6,7 @@ id: 20
 link: ""
 excerpt: "There are some React Hooks that I have been using for a while and others that are completely news for me, but I am still using this opportunity to review the most popular React hooks to gain a deeper understanding about it."
 isBlogPost: true
+tags: 'react,frontend'
 ---
 
 There are some React Hooks that I have been using for a while and others that are completely news for me, but I am still using this opportunity to review the most popular React hooks to gain a deeper understanding about it.

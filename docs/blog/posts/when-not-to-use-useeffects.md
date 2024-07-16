@@ -6,6 +6,7 @@ id: 11
 link: "https://dev.to/vivitt/react-hooks-when-not-to-use-useeffects-1bbb"
 excerpt: "I am working on a client-side application using React and Firebase. This week, I paired with another team member to add a new feature allowing users to submit a list name and create a new list in the database."
 isBlogPost: true
+tags: "react,frontend"
 ---
 
 I am working on a client-side application using React and Firebase. This week, I paired with another team member to add a new feature allowing users to submit a list name and create a new list in the database.

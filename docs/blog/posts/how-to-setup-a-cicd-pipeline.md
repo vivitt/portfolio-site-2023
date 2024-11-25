@@ -18,3 +18,5 @@ CI/CD is a core practice in the modern software development ecosystem. It helps 
 Let's explore what CI/CD is, and set up a CI/CD pipeline using Husky and GitHub Actions in a Next.js application.
 
 ---
+
+Read the full article on [freeCodeCamp](https://www.freecodecamp.org/news/how-to-set-up-a-ci-cd-pipeline-with-husky-and-github-actions/)

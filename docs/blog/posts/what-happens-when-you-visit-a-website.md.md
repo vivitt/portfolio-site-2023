@@ -18,3 +18,5 @@ In this article, I’ll guide you through an overview of what happens when you n
 Whether you’re new to web development or have some experience, this post will help you gain a better understanding of how the web and its core technologies work.
 
 ---
+
+Read the full article on [freeCodeCamp](https://www.freecodecamp.org/news/what-happens-when-you-visit-a-website)

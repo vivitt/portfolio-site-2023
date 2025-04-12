@@ -1,8 +1,10 @@
 <div align="center">
 
-# [viviyanez.dev](https://www.viviyanez.dev/)
+# My 2023 portfolio site template, created with [Vitepress](https://vitepress.dev/)
 
-### My portfolio site, created with [Vitepress](https://vitepress.dev/) using a custom theme
+‼️ This project is not longer live but I'm keeping it here as a reference/template for working with custom Vitepress themes.
 
+
+Find [my updated porfolio](https://github.com/vivitt/astro-portfolio) here.
   
 </div>
